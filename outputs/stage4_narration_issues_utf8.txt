@@ -1,0 +1,2 @@
+breath_in 0 | щау. || heard: щйту
+breath_out 0 | деца. || heard: децад

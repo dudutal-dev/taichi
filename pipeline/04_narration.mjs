@@ -6,7 +6,7 @@ import path from 'node:path';
 import { ROOT, config, api, hash, logCost } from './lib.mjs';
 
 const CACHE = path.join(ROOT, 'pipeline', '.cache');
-const wordsOf = s => s.replace(/[.,;:!?"'()\-–—]/g, ' ').split(/\s+/).filter(Boolean);
+const wordsOf = s => s.replace(/[֑-ׇ]/g, '').replace(/[.,;:!?"'()\-–—]/g, ' ').split(/\s+/).filter(Boolean); // מתעלם מניקוד
 
 /** TTS עם cache ותמלול חזרה. מחזיר {file, text, match}. */
 export async function tts({ text, voiceId, modelId, settings = config.tts.voice_settings, label }) {

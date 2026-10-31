@@ -202,5 +202,569 @@
       "match": 1
     },
     "qa": "approved"
+  },
+  "session_open": {
+    "text": "שלום. נעמוד רגע בשקט. שתי נשימות עמוקות. היום נתרגל לאט, ובנוחות.",
+    "key": "a18726b1e6a81aa5",
+    "durationMs": 8780,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שלום נעמוד רגע בשקט. שתי נשימות עמוקות. היום נתרגל לאט ובנוחות",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "session_open_w1": {
+    "text": "שבוע ראשון. היום לומדים לעמוד, לנשום, ולהעביר משקל. זה הבסיס של הכול.",
+    "key": "7602f76b3bed02bf",
+    "durationMs": 8858,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שבוע ראשון היום לומדים לעמוד, לנשום ולהעביר משקל. זה הבסיס של הכל",
+      "match": 0.9166666666666666
+    },
+    "qa": "approved"
+  },
+  "session_open_w2": {
+    "text": "שבוע שני. היום מוסיפים את אחיזת זנב הציפור. לאט, חלק אחד בכל פעם.",
+    "key": "c4276dbae0b49f09",
+    "durationMs": 8466,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שבוע שני היום מוסיפים את אחיזת זנב הציפור לאט, חלק אחד בכל פעם",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "session_open_w3": {
+    "text": "שבוע שלישי. היום לומדים את ליטוף הברך. ומחברים לראשונה כמה תנועות ברצף.",
+    "key": "5e9960ab9c3c21f1",
+    "durationMs": 7735,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שבוע שלישי היום לומדים את ליטוף הברך ומחברים לראשונה כמה תנועות ברצף",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "session_open_w4": {
+    "text": "שבוע רביעי. היום מוסיפים את תרנגול הזהב, ליד כיסא. ומסיימים את יסודות צורת שמונה.",
+    "key": "9d9da535d8828ed6",
+    "durationMs": 8780,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שבוע רביעי היום מוסיפים את תרנגול הזהב ליד כיסא ומסיימים את יסודות צורת שמונה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "session_close": {
+    "text": "ועכשיו עמידת סיום. הידיים יורדות לאט. שלוש נשימות. כל הכבוד על היום הזה.",
+    "key": "48e5ed1f44ead7f2",
+    "durationMs": 8466,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועכשיו עמידת סיום. הידיים יורדות לאט. שלוש נשימות. כל הכבוד על היום הזה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "session_close_short": {
+    "text": "סיימנו להיום. עשר דקות שנספרות. נתראה מחר.",
+    "key": "e2f51077eb1e6846",
+    "durationMs": 4705,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "סיימנו להיום עשר דקות שנספרות נתראה מחר",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "safety_reminder": {
+    "text": "תזכורת קטנה. ברך מעל כף הרגל. כיפוף קל בלבד. אם משהו כואב, להזדקף ולנוח.",
+    "key": "d71a4a8af4849168",
+    "durationMs": 8466,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "תזכורת קטנה ברך מעל כף הרגל כיפוף קל בלבד אם משהו כואב להזדקף ולנוח",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "warm_intro": {
+    "text": "חימום. שלוש דקות לברכיים ולקרסוליים. ליד הכיסא.",
+    "key": "6609e726a519066f",
+    "durationMs": 5175,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "חימום שלוש דקות לברכיים ולקרסוליים ליד הכיסא",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "warm_ankle": {
+    "text": "יד על הכיסא. מרימים את העקב הימני, הבהונות על הרצפה. ומסובבים את הקרסול לאט. חמש פעמים לכל כיוון. ואז רגל שמאל.",
+    "key": "506e0c407d294ae0",
+    "durationMs": 12306,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "יד על הכיסא, מרימים את העקב הימני, הבהונות על הרצפה, ומסובבים את הקרסול לאט חמש פעמים לכל כיוון, ואז רגל שמאל",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "warm_knee": {
+    "text": "ידיים על הירכיים. מכופפים את הברכיים קצת. ממש קצת. הגב ישר. ומזדקפים. עשר פעמים, לאט.",
+    "key": "fb51f74e36c66191",
+    "durationMs": 10478,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ידיים על הירכיים, מכופפים את הברכיים קצת, ממש קצת. הגב ישר ומזדקפים עשר פעמים לאט",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "warm_waist": {
+    "text": "ידיים על המותניים. מסובבים את הגו לימין. ולשמאל. הרגליים נשארות במקום. הראש הולך עם הכתפיים.",
+    "key": "ca29d36954c4a3a4",
+    "durationMs": 9746,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ידיים על המותניים מסובבים את הגו לימין ולשמאל. הרגליים נשארות במקום, הראש הולך עם הכתפיים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "warm_shoulder": {
+    "text": "מרימים את הכתפיים לאוזניים. ומשחררים. עוד פעם. ועכשיו סיבובים איטיים לאחור.",
+    "key": "09ee5903ea65bdb3",
+    "durationMs": 8780,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "מרימים את הכתפיים לאוזניים ומשחררים עוד פעם. ועכשיו סיבובים איטיים לאחור",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "warm_done": {
+    "text": "החימום הסתיים. הגוף מוכן.",
+    "key": "a98359b84f34defa",
+    "durationMs": 3190,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "החימום הסתיים. הגוף מוכן",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "opening_intro": {
+    "text": "עמידת פתיחה. כף רגל מקבילה לכף רגל, ברוחב הכתפיים. הברכיים רכות. הגב ארוך.",
+    "key": "191429fcc6cf8bbc",
+    "durationMs": 9668,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "עמידת פתיחה. כף רגל מקבילה לכף רגל ברוחב הכתפיים. הברכיים רכות, הגב ארוך",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "opening_arms": {
+    "text": "הידיים צפות לאט למעלה, ישר קדימה, עד גובה הכתפיים. כפות הידיים למטה. ויורדות לאט חזרה.",
+    "key": "35dde2e639e69e13",
+    "durationMs": 9746,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "הידיים צפות לאט למעלה, ישר קדימה עד גובה הכתפיים, כפות הידיים למטה ויורדות לאט חזרה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "opening_left": {
+    "text": "ועכשיו כל המשקל לרגל שמאל. לאט. הראש באותו גובה. וחזרה למרכז.",
+    "key": "88c1047d77b8c9de",
+    "durationMs": 8388,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועכשיו כל המשקל לרגל שמאל. לאט. הראש באותו גובה וחזרה למרכז",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cloud_hands_left": {
+    "text": "ועכשיו לצד שמאל. המשקל לרגל שמאל. יד שמאל עולה לגובה הפנים. יד ימין יורדת לירך.",
+    "key": "b8ca1fb4694e7a65",
+    "durationMs": 10060,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועכשיו לצד שמאל. המשקל לרגל שמאל, יד שמאל עולה לגובה הפנים, יד ימין יורדת לירך",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cloud_hands_repeat": {
+    "text": "וממשיכים. ימין. שמאל. ימין. שמאל. כמו עננים שעוברים לאט.",
+    "key": "9f5c222b3090f9c1",
+    "durationMs": 8388,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "וממשיכים. ימין, שמאל, ימין, שמאל. כמו עננים שעוברים לאט",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_rollback": {
+    "text": "החלק השני. משיכה. יושבים אחורה על רגל שמאל. הידיים נמשכות אל הבטן. כף ימין למעלה, כף שמאל למעלה ממנה.",
+    "key": "37f8ac75513a2161",
+    "durationMs": 11993,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "החלק השני משיכה. יושבים אחורה על רגל שמאל, הידיים נמשכות אל הבטן, כף ימין למעלה, כף שמאל למעלה ממנה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_press": {
+    "text": "החלק השלישי. לחיצה. האמה הימנית אופקית מול החזה. כף יד שמאל על פרק היד הימני. ולוחצים קדימה בעדינות.",
+    "key": "9b1bc203d4bd58ec",
+    "durationMs": 11497,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "החלק השלישי לחיצה. האמה הימנית אופקית מול החזה, כף יד שמאל על פרק היד הימני ולוחצים קדימה בעדינות",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_push": {
+    "text": "החלק הרביעי. דחיפה. שתי הכפות פונות קדימה, בגובה החזה. ודוחפים לאט, כמו כדור גדול.",
+    "key": "07793424eb18a26a",
+    "durationMs": 9746,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "החלק הרביעי דחיפה. שתי הכפות פונות קדימה בגובה החזה ודוחפים לאט כמו כדור גדול",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_all": {
+    "text": "ועכשיו ארבעת החלקים ברצף. הדיפה. משיכה. לחיצה. דחיפה. לאט, בלי להפסיק.",
+    "key": "28c538a8ce267247",
+    "durationMs": 9825,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועכשיו ארבעת החלקים ברצף: הדיפה, משיכה, לחיצה, דחיפה. לאט, בלי להפסיק",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cross_hands_intro": {
+    "text": "ידיים צולבות. עומדים ברוחב הכתפיים. הידיים עולות מול הגוף, ומצטלבות בגובה עצם הבריח. כף יד ימין בחוץ.",
+    "key": "5db00a034005432c",
+    "durationMs": 11026,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ידיים צולבות. עומדים ברוחב הכתפיים, הידיים עולות מול הגוף ומצטלבות בגובה עצם הבריח. כף יד ימין בחוץ",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cross_hands_cue": {
+    "text": "המרפקים רכים, קצת מתחת לפרקי הידיים. הכתפיים משוחררות. ונושמים.",
+    "key": "2e1291f48693eb0f",
+    "durationMs": 8310,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "המרפקים רכים קצת מתחת לפרקי הידיים, הכתפיים משוחררות ונושמים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "brush_knee_intro": {
+    "text": "ליטוף הברך וצעד. תנועה עם צעד קטן קדימה. ממש קטן. חצי כף רגל.",
+    "key": "9cb0f56e9f8dddd2",
+    "durationMs": 7657,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ליטוף הברך וצעד. תנועה עם צעד קטן קדימה, ממש קטן, חצי כף רגל",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "brush_knee_left": {
+    "text": "רגל שמאל קדימה, צעד קטן. יד שמאל מלטפת לפני הברך ונחה ליד הירך. יד ימין דוחפת קדימה, בגובה הכתף.",
+    "key": "7baafa791bf6b098",
+    "durationMs": 11105,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "רגל שמאל קדימה, צעד קטן. יד שמאל מלטפת לפני הברך ונחה ליד הירך. יד ימין דוחפת קדימה בגובה הכתף",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "brush_knee_right": {
+    "text": "ועכשיו הצד השני. רגל ימין קדימה. יד ימין מלטפת לפני הברך. יד שמאל דוחפת קדימה.",
+    "key": "67d2e1dc89233d46",
+    "durationMs": 9433,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועכשיו הצד השני. רגל ימין קדימה, יד ימין מלטפת לפני הברך, יד שמאל דוחפת קדימה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "brush_knee_side": {
+    "text": "מבט מהצד. הברך הקדמית מעל כף הרגל, לא לפניה. העקב האחורי על הרצפה. הגב אנכי.",
+    "key": "3b91c151fd78e100",
+    "durationMs": 9511,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "מבט מהצד. הברך הקדמית מעל כף הרגל, לא לפניה. העקב האחורי על הרצפה, הגב אנכי",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "golden_rooster_intro": {
+    "text": "תרנגול הזהב על רגל אחת. תנועת שיווי משקל. הכיסא ליד, יד אחת עליו.",
+    "key": "96aac6197ce48781",
+    "durationMs": 7578,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "תרנגול הזהב על רגל אחת. תנועת שיווי משקל. הכיסא ליד, יד אחת עליו",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "golden_rooster_cue": {
+    "text": "מרימים את הברך הימנית. נמוך. רק כמה סנטימטרים. היד הימנית עולה, המרפק מעל הברך. ויורדים לאט.",
+    "key": "7dcf11de7d4e557f",
+    "durationMs": 10791,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "מרימים את הברך הימנית נמוך רק כמה סנטימטרים. היד הימנית עולה, המרפק מעל הברך ויורדים לאט",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "golden_rooster_hold": {
+    "text": "אם זה יציב, אפשר לעזוב את הכיסא לרגע. ואם לא, לא. הכיסא כאן בשביל זה.",
+    "key": "4b0c615f53755dee",
+    "durationMs": 6716,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "אם זה יציב אפשר לעזוב את הכיסא לרגע ואם לא, לא. הכיסא כאן בשביל זה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "closing_intro": {
+    "text": "עמידת סיום. הידיים עולות מול הגוף, ויורדות לאט אל הירכיים. כאילו לוחצים את האוויר למטה.",
+    "key": "f0796e4289499911",
+    "durationMs": 9511,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "עמידת סיום. הידיים עולות מול הגוף ויורדות לאט אל הירכיים, כאילו לוחצים את האוויר למטה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "closing_breath": {
+    "text": "שלוש נשימות. שואפים. נושפים. שואפים. נושפים. שואפים. נושפים.",
+    "key": "6d8848f937a91530",
+    "durationMs": 10556,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שלוש נשימות. שואפים, נושפים, שואפים, נושפים, שואפים, נושפים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "sequence_intro": {
+    "text": "ועכשיו מחברים. פתיחה. ידיים כעננים. אחיזת זנב הציפור. ידיים צולבות. וסיום. לאט, בלי להפסיק בין תנועה לתנועה.",
+    "key": "ae730b933b19a730",
+    "durationMs": 13665,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועכשיו מחברים. פתיחה, ידיים כעננים, אחיזת זנב הציפור, ידיים צולבות וסיום. לאט, בלי להפסיק בין תנועה לתנועה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "sequence_again": {
+    "text": "ועוד פעם, את כל הרצף. הפעם קצת יותר חלק.",
+    "key": "e7252d200e323197",
+    "durationMs": 5018,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועוד פעם את כל הרצף. הפעם קצת יותר חלק",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "breath_in": {
+    "text": "שְׁאַף.",
+    "key": "630013f8daa70102",
+    "durationMs": 1257,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שאף",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "breath_out": {
+    "text": "הוֹצֵא.",
+    "key": "f5e778c739439f40",
+    "durationMs": 1100,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "הוצא",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "breath_cue": {
+    "text": "שואפים כשהידיים עולות. נושפים כשהן יורדות. הנשימה מובילה, לא הידיים.",
+    "key": "3cde8553c243e4d3",
+    "durationMs": 8075,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שואפים כשהידיים עולות, נושפים כשהן יורדות. הנשימה מובילה לא הידיים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "teacher_w1": {
+    "text": "שלום, אני המורה שלך לשנים עשר השבועות הקרובים. השבוע הראשון הוא על עמידה ונשימה. לא על תנועות יפות. אם בסוף השבוע הברכיים שלך זוכרות איפה כף הרגל, זה הישג. בשבוע השישי הגוף מתחיל להרגיש הבדל בשיווי המשקל. עד אז, פשוט לבוא. חמישה ימים בשבוע, עשרים דקות. זה הכול.",
+    "key": "0714242dacfe17b3",
+    "durationMs": 26151,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שלום, אני המורה שלך לשנים עשר השבועות הקרובים. השבוע הראשון הוא על עמידה ונשימה, לא על תנועות יפות. אם בסוף השבוע הברכיים שלך זוכרות איפה כף הרגל זה הישג. בשבוע השישי הגוף מתחיל להרגיש הבדל בשיווי המשקל. עד אז פשוט לבוא חמישה ימים בשבוע עשרים דקות זה הכל.",
+      "match": 0.9791666666666666
+    },
+    "qa": "approved"
+  },
+  "teacher_w2": {
+    "text": "שבוע שני. אם הרגשת השבוע שהתנועות עדיין מגושמות, זה בדיוק כמו שצריך. בשבוע השני הגוף עוד לומד איפה הוא במרחב. עוד דבר: ארבעת השבועות הראשונים הם הזמן הכי טוב ללמוד גם עם מדריך, בחוג או בזום. האפליקציה היא השגרה. המדריך רואה מה שהמצלמה לא רואה.",
+    "key": "431924f70972ff00",
+    "durationMs": 25185,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שבוע שני. אם הרגשת השבוע שהתנועות עדיין מגושמות, זה בדיוק כמו שצריך. בשבוע השני הגוף עוד לומד איפה הוא במרחב. עוד דבר, ארבעת השבועות הראשונים הם הזמן הכי טוב ללמוד גם עם מדריך בחוג או בזום. האפליקציה היא השגרה. המדריך רואה מה שהמצלמה לא רואה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "teacher_w4": {
+    "text": "שבוע רביעי. סיימת את יסודות צורת שמונה. מהשבוע הבא החימום קצר יותר, אבל לא מבטלים אותו. ובשבוע השישי נמדוד שוב: עמידה על רגל אחת, קימה מכיסא. שם רואים בעיניים מה שארבעה שבועות עשו.",
+    "key": "a2ca999fbc31d5c2",
+    "durationMs": 18706,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שבוע רביעי סיימת את יסודות צורת שמונה. מהשבוע הבא החימום קצר יותר, אבל לא מבטלים אותו, ובשבוע השישי נמדוד שוב עמידה על רגל אחת, קימה מכיסא. שם רואים בעיניים מה שארבעה שבועות עשו",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "celebrate_green_week": {
+    "text": "שבוע ירוק. שלושה מפגשים לפחות. זה מה שבונה את ההרגל.",
+    "key": "9c7790caacbf8e76",
+    "durationMs": 5279,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שבוע ירוק שלושה מפגשים לפחות זה מה שבונה את ההרגל",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "celebrate_3_weeks": {
+    "text": "שלושה שבועות ברצף. רוב האנשים לא מגיעים לכאן. את או אתה כן.",
+    "key": "20562299e24d6731",
+    "durationMs": 6951,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שלושה שבועות ברצף. רוב האנשים לא מגיעים לכאן. את או אתה כן",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "celebrate_form8": {
+    "text": "צורת שמונה שלמה, מהפתיחה ועד הסיום. זאת הייתה המטרה של החודש הראשון.",
+    "key": "c4d02be31671a10b",
+    "durationMs": 6873,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "צורת שמונה שלמה מהפתיחה ועד הסיום. זאת הייתה המטרה של החודש הראשון",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "nudge_2days": {
+    "text": "יומיים בלי תרגול. עשר דקות היום? הבמבוק מחכה.",
+    "key": "1b6bc8384b581e29",
+    "durationMs": 4470,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "יומיים בלי תרגול. עשר דקות היום? הבמבוק מחכה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "nudge_short": {
+    "text": "אין זמן? יש גרסה של עשר דקות. גם היא נספרת.",
+    "key": "2712083602e1f807",
+    "durationMs": 4705,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "אין זמן? יש גרסה של עשר דקות, גם היא נספרת",
+      "match": 1
+    },
+    "qa": "approved"
   }
 }

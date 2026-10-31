@@ -1,0 +1,2 @@
+breath_in "שאף." -> heard "שיעף" 1100ms
+breath_out "הוצא." -> heard "הוצאה" 1021ms

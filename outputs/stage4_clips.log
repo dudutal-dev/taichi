@@ -1,0 +1,67 @@
+  [submit] kf grasp_bird_tail_rollback_front → VrSzExd9dmLaQpLSFIbF
+  [submit] kf weight_shift_front_left → bwG1wGP5DI7o7cRbA4VC
+  [submit] kf cloud_hands_left_side → 95sgSVuvcKiFTyVXbu6A
+  [submit] kf grasp_bird_tail_press_side → WolFZJlFDCy2L7uLmjP9
+  [submit] kf grasp_bird_tail_push_front → uFtH9eHVwARg4RckygHP
+  [submit] kf cloud_hands_left_front → OeDjWG4nR3jV6NYYZY1h
+  [submit] kf grasp_bird_tail_rollback_side → Se5rv2zdstfuSGoVnAN1
+  [submit] kf grasp_bird_tail_press_front → 0J3R0IgzFCSzbXIyGaGK
+........................................................  [done] kf grasp_bird_tail_rollback_front 1.6MB ב-83 ש'
+....  [done] kf cloud_hands_left_side 1.5MB ב-83 ש'
+.  [done] kf cloud_hands_left_front 1.3MB ב-83 ש'
+  [done] kf grasp_bird_tail_press_side 1.5MB ב-93 ש'
+  [done] kf grasp_bird_tail_push_front 1.7MB ב-93 ש'
+.  [done] kf weight_shift_front_left 1.4MB ב-94 ש'
+  [done] kf grasp_bird_tail_rollback_side 1.6MB ב-93 ש'
+  [done] kf grasp_bird_tail_press_front 1.8MB ב-104 ש'
+weight_shift_front_left: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_front_left_kf.mp4
+cloud_hands_left_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\cloud_hands_left_front_kf.mp4
+cloud_hands_left_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\cloud_hands_left_side_kf.mp4
+grasp_bird_tail_rollback_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_rollback_front_kf.mp4
+grasp_bird_tail_rollback_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_rollback_side_kf.mp4
+grasp_bird_tail_press_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_press_front_kf.mp4
+grasp_bird_tail_press_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_press_side_kf.mp4
+grasp_bird_tail_push_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_push_front_kf.mp4
+  [submit] kf grasp_bird_tail_push_side → v6C7UBYlsGE53Z2QpwfK
+  [submit] kf closing_front → XyRbB832ylWZbmxP4Mo1
+  [submit] kf cross_hands_side → KObdENFuloc8r1kf5noX
+  [submit] kf brush_knee_right_front → AWTN38epDHGnEAWHLEk1
+  [submit] kf brush_knee_right_side → vh6m9sUvWFUvSfxuf38I
+  [submit] kf cross_hands_front → lms9a9Hchu72tXzne4uf
+  [submit] kf brush_knee_left_front → H3QUQiAbznspzKPe8N88
+  [submit] kf brush_knee_left_side → 0STUD9cJ1mBELtgsbgtn
+...............................................................  [done] kf brush_knee_right_side 1.5MB ב-84 ש'
+....  [done] kf cross_hands_front 1.3MB ב-93 ש'
+  [done] kf brush_knee_left_front 1.7MB ב-94 ש'
+  [done] kf brush_knee_left_side 1.5MB ב-93 ש'
+...  [done] kf grasp_bird_tail_push_side 1.5MB ב-104 ש'
+.....  [done] kf cross_hands_side 1.2MB ב-124 ש'
+..  [done] kf brush_knee_right_front 1.7MB ב-144 ש'
+  [done] kf closing_front 1.3MB ב-145 ש'
+grasp_bird_tail_push_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_push_side_kf.mp4
+cross_hands_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\cross_hands_front_kf.mp4
+cross_hands_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\cross_hands_side_kf.mp4
+brush_knee_left_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\brush_knee_left_front_kf.mp4
+brush_knee_left_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\brush_knee_left_side_kf.mp4
+brush_knee_right_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\brush_knee_right_front_kf.mp4
+brush_knee_right_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\brush_knee_right_side_kf.mp4
+closing_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\closing_front_kf.mp4
+  [submit] kf weight_shift_front_arms → R99AvHvTtviWawpHD5wG
+  [submit] kf warm_ankle_front → qr8uS8QxQbrvVjD3lS8m
+  [submit] kf warm_shoulder_front → AI1VIh1O1AZ8VEBZR1OV
+  [submit] kf closing_side → 7rV1Mh5d3gPYLKBSvUzv
+  [submit] kf warm_waist_front → jUmQRv0sWMymbmeHdbNF
+  [submit] kf warm_knee_side → cDBnwzRLVMvMab7v5qVP
+.............................................  [done] kf weight_shift_front_arms 1.3MB ב-84 ש'
+  [done] kf warm_shoulder_front 1.2MB ב-83 ש'
+..  [done] kf warm_ankle_front 1.7MB ב-94 ש'
+  [done] kf warm_waist_front 1.3MB ב-93 ש'
+  [done] kf warm_knee_side 1.3MB ב-94 ש'
+....  [done] kf closing_side 1.2MB ב-145 ש'
+closing_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\closing_side_kf.mp4
+warm_ankle_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\warm_ankle_front_kf.mp4
+warm_knee_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\warm_knee_side_kf.mp4
+warm_waist_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\warm_waist_front_kf.mp4
+warm_shoulder_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\warm_shoulder_front_kf.mp4
+weight_shift_front_arms: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_front_arms_kf.mp4
+exit 0

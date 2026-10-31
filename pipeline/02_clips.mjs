@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, config, generate, imageRef, copyTo } from './lib.mjs';
+import { KEYFRAME_CLIPS_4A, KEYFRAME_CLIPS_REDO } from './clips_4a.mjs';
 
 const OUT = path.join(ROOT, 'outputs', 'stage3'); fs.mkdirSync(OUT, { recursive: true });
 
@@ -72,6 +73,8 @@ export const KEYFRAME_CLIPS = {
   weight_shift_front_right: { movement: 'weight_shift', view: 'front', text: 'Her pelvis glides slowly sideways to her right until the weight is fully on the right leg, the head staying at the same height. The feet never move, the arms stay relaxed at the sides.' },
 };
 
+Object.assign(KEYFRAME_CLIPS, KEYFRAME_CLIPS_4A, KEYFRAME_CLIPS_REDO);
+
 export function keyframeClipPrompt(k) {
   const c = KEYFRAME_CLIPS[k];
   return [
@@ -83,8 +86,9 @@ export function keyframeClipPrompt(k) {
 
 export async function makeKeyframeClip(k, { model = config.video.model_id } = {}) {
   const c = KEYFRAME_CLIPS[k];
-  const start = path.join(ROOT, 'content', 'character', `${c.view}.png`);
-  const end = path.join(ROOT, 'outputs', 'stage3', 'keyframes', `${k}.png`);
+  const start = c.start ? path.join(ROOT, 'outputs', 'stage3', 'keyframes', `${c.start}.png`) : path.join(ROOT, 'content', 'character', `${c.view}.png`);
+  const endKey = c.end || k;
+  const end = path.join(ROOT, 'outputs', 'stage3', 'keyframes', `${endKey}.png`);
   const request = { model_id: model, prompt: keyframeClipPrompt(k), negative_prompt: COMMON.negative, duration_secs: 4, aspect_ratio: '16:9', resolution: config.video.resolution, generate_audio: false, enhance_prompt: true, start_frame: imageRef(start), end_frame: imageRef(end) };
   const r = await generate('video', request, { ext: 'mp4', pollMs: 10000, stage: 3, label: `kf ${k}` });
   const dest = copyTo(r.file, path.join(OUT, `${k}_kf.mp4`));

@@ -1,0 +1,16 @@
+{
+  "prompt_version": 3,
+  "method": "keyframe",
+  "model_id": "veo-3.1-generate-001",
+  "prompt": "Gentle, slow movement therapy for seniors at home, NOT martial arts. The same woman, same studio, same clothes and lighting. She moves slowly and smoothly from the pose in the first frame to exactly the pose in the last frame, in one continuous motion, nothing else. Both arms float up in front of the body and round inward until the wrists cross at collarbone height, palms toward the body, right hand outside, elbows soft. The feet never move. She stays TALL the whole time: her hips remain high, her knees are only softly unlocked (a slight bend of a few degrees, never a squat, never a lunge, never a deep stance), each knee stays above its own foot, the back heels stay on the floor, the spine is vertical, shoulders relaxed, chin level, calm gentle face, natural breathing. Static locked camera, no camera movement, no zoom, no cuts, full body always in frame from head to feet, feet visible on the floor, background unchanged.",
+  "negative_prompt": "squat, deep squat, lunge, horse stance, bow stance, low stance, bent knees, knees past toes, knees caving inward, heel lifting, stepping, walking, leaning forward, jumping, fast or jerky motion, martial arts, kung fu, camera movement, zoom, cuts, scene change, extra people, text, captions, logos, watermark, distorted hands, extra fingers, blurry face, mirror, music",
+  "duration_secs": 4,
+  "aspect_ratio": "16:9",
+  "resolution": "1080p",
+  "generate_audio": false,
+  "enhance_prompt": true,
+  "start_frame": "<C:\\Users\\dudut\\OneDrive\\Desktop\\taichi150\\content\\character\\front.png>",
+  "end_frame": "<C:\\Users\\dudut\\OneDrive\\Desktop\\taichi150\\outputs\\stage3\\keyframes\\cross_hands_front.png>",
+  "generation_id": "lms9a9Hchu72tXzne4uf",
+  "cache_key": "e61cb23441898508"
+}
