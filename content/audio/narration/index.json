@@ -1,0 +1,206 @@
+{
+  "safety_knee": {
+    "text": "ברך מעל כף הרגל. כיפוף קל בלבד. אם כואב, להזדקף.",
+    "key": "1a738b3d7c79281f",
+    "durationMs": 5985,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ברך מעל כף הרגל כיפוף קל בלבד אם כואב להזדקף",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "support_near": {
+    "text": "כיסא או קיר בהישג יד.",
+    "key": "141e727f3673ffeb",
+    "durationMs": 2876,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "כיסא או קיר בהישג יד",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cloud_hands_intro": {
+    "text": "עכשיו, ידיים כעננים. עומדים ברוחב הכתפיים. הברכיים רכות. הגב זקוף.",
+    "key": "605728f232d7ae5e",
+    "durationMs": 8075,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "עכשיו ידיים כעננים עומדים ברוחב הכתפיים, הברכיים רכות, הגב זקוף",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cloud_hands_cue1": {
+    "text": "מעבירים את המשקל לאט לרגל ימין. יד ימין עולה לגובה הפנים. כף היד פונה פנימה.",
+    "key": "aaef61c41c2af630",
+    "durationMs": 8780,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "מעבירים את המשקל לאט לרגל ימין. יד ימין עולה לגובה הפנים, כף היד פונה פנימה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cloud_hands_cue2": {
+    "text": "ועכשיו לרגל שמאל. יד שמאל עולה. יד ימין יורדת לגובה הירך. לאט, כמו עננים.",
+    "key": "d04c4b85570208e5",
+    "durationMs": 9433,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "ועכשיו לרגל שמאל. יד שמאל עולה, יד ימין יורדת לגובה הירך. לאט כמו עננים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cloud_hands_side": {
+    "text": "מבט מהצד. שימו לב: הגב ישר. הראש מעל האגן. לא נשענים קדימה.",
+    "key": "0bdb468d6854cd87",
+    "durationMs": 7918,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "מבט מהצד. שימו לב הגב ישר, הראש מעל האגן לא נשענים קדימה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "cloud_hands_breath": {
+    "text": "שואפים כשהיד עולה. נושפים כשהיא יורדת.",
+    "key": "6d2deb9780590085",
+    "durationMs": 4783,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שואפים כשהיד עולה נושפים כשהיא יורדת",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_intro": {
+    "text": "אחיזת זנב הציפור. תנועה בארבעה חלקים. היום לומדים את שני הראשונים.",
+    "key": "9be386cf5f1c512b",
+    "durationMs": 6951,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "אחיזת זנב הציפור. תנועה בארבעה חלקים. היום לומדים את שני הראשונים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_cue1": {
+    "text": "המשקל לרגל שמאל. צעד קטן קדימה ברגל ימין. הברך הקדמית מעל כף הרגל, כיפוף קל.",
+    "key": "f0485f1e7040f224",
+    "durationMs": 9119,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "המשקל לרגל שמאל, צעד קטן קדימה ברגל ימין. הברך הקדמית מעל כף הרגל, כיפוף קל",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_cue2": {
+    "text": "האמה הימנית עולה מעוגלת מול החזה. זאת ההדיפה. היד השנייה מאחוריה.",
+    "key": "ae27c6e6e986f47a",
+    "durationMs": 7265,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "האמה הימנית עולה מעוגלת מול החזה, זאת ההדיפה. היד השנייה מאחוריה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_cue3": {
+    "text": "שתי הידיים לוחצות קדימה בעדינות, בגובה החזה. ואז יושבים אחורה על רגל שמאל, והידיים חוזרות אל החזה.",
+    "key": "6063f02ff3bf2403",
+    "durationMs": 10060,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "שתי הידיים לוחצות קדימה בעדינות בגובה החזה ואז יושבים אחורה על רגל שמאל והידיים חוזרות אל החזה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "grasp_bird_tail_side": {
+    "text": "מבט מהצד. הרגל האחורית כמעט ישרה. הגב אנכי. הברך הקדמית לא עוברת את כף הרגל.",
+    "key": "b7b61eade7216335",
+    "durationMs": 9119,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "מבט מהצד. הרגל האחורית כמעט ישרה, הגב אנכי, הברך הקדמית לא עוברת את כף הרגל",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "weight_shift_intro": {
+    "text": "העברת משקל. זה הבסיס של כל טאי צ'י. כף רגל מקבילה לכף רגל, ברוחב הכתפיים.",
+    "key": "b07d570e973780ad",
+    "durationMs": 8701,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "העברת משקל זה הבסיס של כל טאי צ'י. כף רגל מקבילה לכף רגל ברוחב הכתפיים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "weight_shift_cue1": {
+    "text": "הידיים צפות לאט למעלה, עד גובה הכתפיים. כפות הידיים למטה. ויורדות לאט אל הירכיים.",
+    "key": "9b3999a5654fddd4",
+    "durationMs": 9433,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "הידיים צפות לאט למעלה עד גובה הכתפיים, כפות הידיים למטה ויורדות לאט אל הירכיים",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "weight_shift_cue2": {
+    "text": "עכשיו כל המשקל לרגל ימין. לאט. הראש נשאר באותו גובה. האגן זז הצידה, לא למטה.",
+    "key": "9e58339603177d07",
+    "durationMs": 9355,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "עכשיו כל המשקל לרגל ימין. לאט. הראש נשאר באותו גובה, האגן זז הצידה לא למטה",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "weight_shift_cue3": {
+    "text": "וחזרה למרכז. וכל המשקל לרגל שמאל. ושוב למרכז.",
+    "key": "6afa24803af4770b",
+    "durationMs": 6559,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "וחזרה למרכז וכל המשקל לרגל שמאל ושוב למרכז",
+      "match": 1
+    },
+    "qa": "approved"
+  },
+  "weight_shift_side": {
+    "text": "מבט מהצד. הגב ישר לאורך כל הדרך. לא נשענים, לא מתכופפים.",
+    "key": "0ea80e02d18518f1",
+    "durationMs": 7421,
+    "model": "eleven_v4",
+    "voice": "3i8AEHdRIbmSE7VcoKkk",
+    "verify": {
+      "heard": "מבט מהצד. הגב ישר לאורך כל הדרך. לא נשענים, לא מתכופפים",
+      "match": 1
+    },
+    "qa": "approved"
+  }
+}

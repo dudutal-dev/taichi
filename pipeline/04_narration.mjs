@@ -54,3 +54,31 @@ if (mode === 'samples') {
   }
   fs.writeFileSync(path.join(OUT, 'samples.json'), JSON.stringify({ sentence: SENTENCE, settings: config.tts.voice_settings, report }, null, 2));
 }
+
+// ---- מצב קובץ: הפקת כל השורות `id: <id> | <טקסט>` מתסריט md ----
+if (mode && mode.endsWith('.md')) {
+  if (!config.tts.voice_id) throw new Error('config.tts.voice_id ריק — לבחור קול קודם');
+  const src = path.resolve(mode);
+  const lines = fs.readFileSync(src, 'utf8').split(/\r?\n/).filter(l => l.startsWith('id:'));
+  const outDir = path.join(ROOT, 'content', 'audio', 'narration'); fs.mkdirSync(outDir, { recursive: true });
+  const indexPath = path.join(outDir, 'index.json');
+  const index = fs.existsSync(indexPath) ? JSON.parse(fs.readFileSync(indexPath, 'utf8')) : {};
+  let bad = 0;
+  for (const l of lines) {
+    const m = l.match(/^id:\s*([\w-]+)\s*\|\s*(.+)$/); if (!m) continue;
+    const [, id, text] = m;
+    const prev = `${id}: ${text}`; // (אפשר להוסיף previous_text להמשכיות בעתיד)
+    const { file, key } = await tts({ text, voiceId: config.tts.voice_id, modelId: config.tts.model_id, settings: config.tts.voice_settings, label: id });
+    const dest = path.join(outDir, `${id}.mp3`);
+    const changed = index[id]?.key !== key;
+    fs.copyFileSync(file, dest);
+    let v = index[id]?.verify;
+    if (changed || !v) v = await verify(dest, text);
+    const bytes = fs.statSync(dest).size;
+    index[id] = { text, key, durationMs: Math.round(bytes * 8 / 128), model: config.tts.model_id, voice: config.tts.voice_id, verify: v, qa: v.match >= 0.9 ? 'approved' : 'pending' };
+    if (v.match < 0.9) bad++;
+    console.log(`${changed ? '[new]' : '[cache]'} ${id}: ${(bytes * 8 / 128000).toFixed(1)} ש' · תמלול ${Math.round(v.match * 100)}%${v.match < 1 ? ' · ' + v.heard : ''}`);
+  }
+  fs.writeFileSync(indexPath, JSON.stringify(index, null, 2));
+  console.log(`\n${lines.length} שורות · ${bad} מתחת ל-90% תמלול`);
+}
