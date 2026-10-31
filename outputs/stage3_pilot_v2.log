@@ -1,0 +1,16 @@
+  [submit] grasp_bird_tail side → 23J2q8uZD08VUgn72Nlr
+  [submit] grasp_bird_tail front → ArBD4Ed5bflvGEq5a6kS
+  [submit] weight_shift front → N6i5tnwarrDHJt29lbXU
+  [submit] weight_shift side → IeNvmp2wnuXo51p88Bxz
+  [submit] cloud_hands side → BfAQg5bqX5zqjNZoqez2
+.............................................  [done] grasp_bird_tail front 3.0MB ב-104 ש'
+  [done] grasp_bird_tail side 3.1MB ב-105 ש'
+  [done] weight_shift front 2.2MB ב-103 ש'
+  [done] weight_shift side 2.0MB ב-103 ש'
+  [done] cloud_hands side 1.7MB ב-103 ש'
+cloud_hands side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\cloud_hands_side_v2.mp4
+grasp_bird_tail front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_front_v2.mp4
+grasp_bird_tail side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_side_v2.mp4
+weight_shift front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_front_v2.mp4
+weight_shift side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_side_v2.mp4
+exit 0

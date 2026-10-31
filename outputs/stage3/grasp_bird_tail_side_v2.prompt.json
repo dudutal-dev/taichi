@@ -1,0 +1,15 @@
+{
+  "prompt_version": 2,
+  "model_id": "veo-3.1-generate-001",
+  "prompt": "Gentle, slow movement therapy for seniors at home, NOT martial arts and NOT a workout. The same woman from the reference image, in the same plain studio with the same clothes and lighting, demonstrates one simple Tai Chi movement at beginner level. Movement: Grasp the Bird's Tail (Lan Que Wei), simplified ward-off and press, seen in exact side profile from her right side, moving toward the left edge of the frame. Standing tall, she slides the front foot ONE SMALL STEP forward (about half a foot length) so the stance stays short and tall: the front knee bends only slightly and stays above the front foot, the back leg nearly straight, BOTH HEELS ON THE FLOOR, hips high, spine vertical. The front forearm rises rounded at chest height (ward off), then both palms press gently forward, then she sits back softly onto the rear leg drawing the hands toward the chest, and finally slides the front foot back and lowers the arms. No lunge, no deep stance. She stays TALL the whole time: her hips remain high, her knees are only softly unlocked (a slight bend of a few degrees, never a squat, never a lunge, never a deep stance), each knee stays above its own foot, the back heels stay on the floor, the spine is vertical, shoulders relaxed, chin level, calm gentle face, natural breathing. Everything is very slow, smooth and continuous, like a gentle sway, with no pauses and no sudden changes. The range of motion is small and comfortable. She begins and ends in exactly the neutral standing posture of the reference image (feet shoulder-width apart, arms relaxed at the sides) so the clip loops seamlessly. Static locked camera, no camera movement, no zoom, no cuts, full body always in frame from head to feet, feet visible on the floor, background unchanged.",
+  "negative_prompt": "squat, deep squat, lunge, horse stance, bow stance, low stance, bent knees, knees past toes, knees caving inward, heel lifting, stepping, walking, leaning forward, jumping, fast or jerky motion, martial arts, kung fu, camera movement, zoom, cuts, scene change, extra people, text, captions, logos, watermark, distorted hands, extra fingers, blurry face, mirror, music",
+  "duration_secs": 8,
+  "aspect_ratio": "16:9",
+  "resolution": "1080p",
+  "generate_audio": false,
+  "enhance_prompt": true,
+  "start_frame": "<C:\\Users\\dudut\\OneDrive\\Desktop\\taichi150\\content\\character\\side.png>",
+  "end_frame": "<C:\\Users\\dudut\\OneDrive\\Desktop\\taichi150\\content\\character\\side.png>",
+  "generation_id": "23J2q8uZD08VUgn72Nlr",
+  "cache_key": "ea55e14bf459eea5"
+}

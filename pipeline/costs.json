@@ -547,5 +547,65 @@
     "seconds": 166,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:50:19.825Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "grasp_bird_tail front",
+    "generation_id": "ArBD4Ed5bflvGEq5a6kS",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 3044361,
+    "seconds": 104,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:50:20.139Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "grasp_bird_tail side",
+    "generation_id": "23J2q8uZD08VUgn72Nlr",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 3104742,
+    "seconds": 105,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:50:20.402Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "weight_shift front",
+    "generation_id": "N6i5tnwarrDHJt29lbXU",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 2207532,
+    "seconds": 103,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:50:20.547Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "weight_shift side",
+    "generation_id": "IeNvmp2wnuXo51p88Bxz",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 2035765,
+    "seconds": 103,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:50:23.482Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "cloud_hands side",
+    "generation_id": "BfAQg5bqX5zqjNZoqez2",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1734500,
+    "seconds": 103,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]

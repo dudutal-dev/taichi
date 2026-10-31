@@ -1,5 +1,5 @@
 {
-  "version": "pilot-1",
+  "version": "pilot-2",
   "generatedAt": "2026-10-31",
   "character": {
     "front": "content/character/front.png",
@@ -43,6 +43,20 @@
           "qa": "rejected",
           "qaNote": "לאנג׳ עמוק + צעדים",
           "attempt": 1
+        },
+        {
+          "view": "side",
+          "file": "content/video/cloud_hands_side.mp4",
+          "source": "outputs/stage3/cloud_hands_side_v2.mp4",
+          "hash": "e7916d31f7e02304",
+          "durationMs": 6000,
+          "loop": true,
+          "model": "veo-3.1-generate-001",
+          "generation_id": "BfAQg5bqX5zqjNZoqez2",
+          "qa": "rejected",
+          "qaNote": "v2: זקופה, אבל הרמת רגל בפריים 2",
+          "attempt": 2,
+          "promptVersion": 2
         }
       ],
       "narration": [
@@ -116,6 +130,34 @@
           "qa": "rejected",
           "qaNote": "לאנג׳ ~90°, עקב מתרומם",
           "attempt": 1
+        },
+        {
+          "view": "front",
+          "file": "content/video/grasp_bird_tail_front.mp4",
+          "source": "outputs/stage3/grasp_bird_tail_front_v2.mp4",
+          "hash": "c6cd72a701c438ff",
+          "durationMs": 8000,
+          "loop": true,
+          "model": "veo-3.1-generate-001",
+          "generation_id": "ArBD4Ed5bflvGEq5a6kS",
+          "qa": "rejected",
+          "qaNote": "v2: לאנג׳ ארוך + עמידת קשת עמוקה",
+          "attempt": 2,
+          "promptVersion": 2
+        },
+        {
+          "view": "side",
+          "file": "content/video/grasp_bird_tail_side.mp4",
+          "source": "outputs/stage3/grasp_bird_tail_side_v2.mp4",
+          "hash": "b6f689ac15dcbe61",
+          "durationMs": 8000,
+          "loop": true,
+          "model": "veo-3.1-generate-001",
+          "generation_id": "23J2q8uZD08VUgn72Nlr",
+          "qa": "rejected",
+          "qaNote": "v2: צעד ארוך, עמידת קשת, הליכה",
+          "attempt": 2,
+          "promptVersion": 2
         }
       ],
       "narration": [
@@ -189,6 +231,34 @@
           "qa": "rejected",
           "qaNote": "צעד/הליכה במקום העברת משקל",
           "attempt": 1
+        },
+        {
+          "view": "front",
+          "file": "content/video/weight_shift_front.mp4",
+          "source": "outputs/stage3/weight_shift_front_v2.mp4",
+          "hash": "84a40ff0966fe6c5",
+          "durationMs": 6000,
+          "loop": true,
+          "model": "veo-3.1-generate-001",
+          "generation_id": "N6i5tnwarrDHJt29lbXU",
+          "qa": "rejected",
+          "qaNote": "v2: ידיים לצדדים ומעל הראש, סקוואט",
+          "attempt": 2,
+          "promptVersion": 2
+        },
+        {
+          "view": "side",
+          "file": "content/video/weight_shift_side.mp4",
+          "source": "outputs/stage3/weight_shift_side_v2.mp4",
+          "hash": "f0e1b5e1445bf9cf",
+          "durationMs": 6000,
+          "loop": true,
+          "model": "veo-3.1-generate-001",
+          "generation_id": "IeNvmp2wnuXo51p88Bxz",
+          "qa": "rejected",
+          "qaNote": "v2: רגליים על הרצפה ✓, אבל ידיים מעל הראש + סקוואט קל",
+          "attempt": 2,
+          "promptVersion": 2
         }
       ],
       "narration": [
