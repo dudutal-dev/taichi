@@ -34,6 +34,9 @@ jobs:
           VITE_BASE: /${{ github.event.repository.name }}/
       - run: |
           test -z "$(grep -rl 'sk_[A-Za-z0-9]\{20,\}' app/dist || true)" || (echo "API key found in build" && exit 1)
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
           path: app/dist
