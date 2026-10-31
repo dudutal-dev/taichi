@@ -1,0 +1,56 @@
+// שלב 2/4 — קריינות. הרצה:
+//   node pipeline/04_narration.mjs samples      → דוגמאות קול (3 קולות × 2 מודלים) לבחירת דודו
+//   node pipeline/04_narration.mjs <file.md>    → (שלב 4) הפקת כל הקריינות מתסריט — ייכתב אחרי בחירת הקול
+import fs from 'node:fs';
+import path from 'node:path';
+import { ROOT, config, api, hash, logCost } from './lib.mjs';
+
+const CACHE = path.join(ROOT, 'pipeline', '.cache');
+const wordsOf = s => s.replace(/[.,;:!?"'()\-–—]/g, ' ').split(/\s+/).filter(Boolean);
+
+/** TTS עם cache ותמלול חזרה. מחזיר {file, text, match}. */
+export async function tts({ text, voiceId, modelId, settings = config.tts.voice_settings, label }) {
+  const req = { text, model_id: modelId, language_code: config.tts.language_code, voice_settings: settings };
+  const key = hash({ voiceId, req });
+  const file = path.join(CACHE, `${key}.mp3`);
+  if (!fs.existsSync(file)) {
+    const r = await api(`/v1/text-to-speech/${voiceId}?output_format=${config.tts.output_format}`, { method: 'POST', body: req });
+    if (!r.ok) throw new Error(`tts ${label} ${r.status}: ${(await r.text()).slice(0, 300)}`);
+    fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
+    logCost({ stage: 'narration', kind: 'tts', label, model_id: modelId, voice_id: voiceId, chars: text.length, usd: +(text.length / 1000 * (modelId.includes('turbo') ? 0.04 : 0.08)).toFixed(4), note: 'לפי pricing/api: $0.08/1K תווים' });
+  }
+  return { file, key };
+}
+
+export async function verify(file, text) {
+  const fd = new FormData();
+  fd.append('file', new Blob([fs.readFileSync(file)], { type: 'audio/mpeg' }), 'a.mp3');
+  fd.append('model_id', config.stt.model_id);
+  fd.append('language_code', config.stt.language_code);
+  const r = await api('/v1/speech-to-text', { method: 'POST', body: fd });
+  if (!r.ok) return { heard: `STT ${r.status}`, match: 0 };
+  const heard = (await r.json()).text || '';
+  const a = wordsOf(text), b = new Set(wordsOf(heard));
+  return { heard, match: a.filter(w => b.has(w)).length / a.length };
+}
+
+const mode = process.argv[2];
+if (mode === 'samples') {
+  const OUT = path.join(ROOT, 'outputs', 'stage2'); fs.mkdirSync(OUT, { recursive: true });
+  const SENTENCE = 'שלום, וברוכים הבאים לטאי צ\'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות, והנשימה איטית. כיסא או קיר בהישג יד.';
+  const VOICES = { matilda: 'XrExE9yKIg1WjnnlVkGX', rachel: '21m00Tcm4TlvDq8ikWAM', lily: 'pFZP5JQG7iQjIQuC4Bku' };
+  const MODELS = ['eleven_v4', 'eleven_v3'];
+  const report = [];
+  for (const [name, voiceId] of Object.entries(VOICES)) for (const modelId of MODELS) {
+    const label = `${name}_${modelId}`;
+    try {
+      const { file } = await tts({ text: SENTENCE, voiceId, modelId, label });
+      const dest = path.join(OUT, `${label}.mp3`); fs.copyFileSync(file, dest);
+      const bytes = fs.statSync(dest).size;
+      const v = await verify(dest, SENTENCE);
+      report.push({ label, voiceId, modelId, seconds: +(bytes * 8 / 128000).toFixed(1), match: Math.round(v.match * 100), heard: v.heard });
+      console.log(`${label}: ${(bytes * 8 / 128000).toFixed(1)} ש' · תמלול ${Math.round(v.match * 100)}% · ${v.heard}`);
+    } catch (e) { console.error(`${label}: ${e.message}`); report.push({ label, error: e.message }); }
+  }
+  fs.writeFileSync(path.join(OUT, 'samples.json'), JSON.stringify({ sentence: SENTENCE, settings: config.tts.voice_settings, report }, null, 2));
+}

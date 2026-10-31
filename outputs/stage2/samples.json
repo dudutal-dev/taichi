@@ -1,0 +1,60 @@
+{
+  "sentence": "שלום, וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות, והנשימה איטית. כיסא או קיר בהישג יד.",
+  "settings": {
+    "stability": 0.6,
+    "similarity_boost": 0.75,
+    "style": 0.1,
+    "use_speaker_boost": true,
+    "speed": 0.85
+  },
+  "report": [
+    {
+      "label": "matilda_eleven_v4",
+      "voiceId": "XrExE9yKIg1WjnnlVkGX",
+      "modelId": "eleven_v4",
+      "seconds": 13.7,
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "matilda_eleven_v3",
+      "voiceId": "XrExE9yKIg1WjnnlVkGX",
+      "modelId": "eleven_v3",
+      "seconds": 12.9,
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "rachel_eleven_v4",
+      "voiceId": "21m00Tcm4TlvDq8ikWAM",
+      "modelId": "eleven_v4",
+      "seconds": 13.4,
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד."
+    },
+    {
+      "label": "rachel_eleven_v3",
+      "voiceId": "21m00Tcm4TlvDq8ikWAM",
+      "modelId": "eleven_v3",
+      "seconds": 12.8,
+      "match": 95,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "lily_eleven_v4",
+      "voiceId": "pFZP5JQG7iQjIQuC4Bku",
+      "modelId": "eleven_v4",
+      "seconds": 13.6,
+      "match": 95,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "lily_eleven_v3",
+      "voiceId": "pFZP5JQG7iQjIQuC4Bku",
+      "modelId": "eleven_v3",
+      "seconds": 13.3,
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    }
+  ]
+}

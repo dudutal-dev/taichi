@@ -94,5 +94,83 @@
     "seconds": 32,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:17:05.325Z",
+    "stage": 1,
+    "kind": "image",
+    "label": "character 2 side",
+    "generation_id": "YcXahl3qpSlrCirtv9bE",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4429337,
+    "seconds": 34,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:17:35.212Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "matilda_eleven_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:17:43.643Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "matilda_eleven_v3",
+    "model_id": "eleven_v3",
+    "voice_id": "XrExE9yKIg1WjnnlVkGX",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:17:49.478Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "rachel_eleven_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:17:56.756Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "rachel_eleven_v3",
+    "model_id": "eleven_v3",
+    "voice_id": "21m00Tcm4TlvDq8ikWAM",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:18:03.083Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "lily_eleven_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:18:11.248Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "lily_eleven_v3",
+    "model_id": "eleven_v3",
+    "voice_id": "pFZP5JQG7iQjIQuC4Bku",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
   }
 ]
