@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { db, blankProfile, DEFAULT_SETTINGS, type Track } from '../db';
 import { SCREENING_QUESTIONS, adaptFromScreening, type Screening } from '../lib/adapt';
+import TopBar from '../components/TopBar';
 
 const TRACKS: { id: Track; name: string; text: string }[] = [
   { id: 'main', name: 'ראשי', text: 'צורת 8 ואז צורת 24. עמידה גבוהה.' },
@@ -10,7 +11,15 @@ const TRACKS: { id: Track; name: string; text: string }[] = [
   { id: 'seated', name: 'ישיבה', text: 'שמונה המקטעים על כיסא. לימים קשים או להתחלה.' },
 ];
 const DAYS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש'];
-const Step = ({ children }: { children: React.ReactNode }) => <section className="flex flex-col gap-5 pt-4 min-h-[70dvh]">{children}</section>;
+const STEP_TITLES = ['ברוכים הבאים', 'לפני שמתחילים', 'שאלות על הבריאות', 'המסלול והשעה'];
+function Step({ children, n, onBack }: { children: React.ReactNode; n: number; onBack?: () => void }) {
+  return (
+    <section className="flex flex-col gap-5 pb-6 min-h-[70dvh]">
+      <TopBar title={STEP_TITLES[n] ?? ''} step={`שלב ${n + 1} מתוך 4`} onBack={onBack} exitTo="/onboarding" exitLabel="מההתחלה" />
+      {children}
+    </section>
+  );
+}
 
 export default function Onboarding() {
   const nav = useNavigate();
@@ -30,7 +39,7 @@ export default function Onboarding() {
   }
 
   if (step === 0) return (
-    <Step>
+    <Step n={0}>
       <h1 className="text-3xl font-extrabold">טאי צ'י 150</h1>
       <p className="text-xl">תרגול טאי צ'י בבית, בעברית, בקצב שלך. היעד: 150 דקות בשבוע, חמישה מפגשים של 20 עד 30 דקות, 12 שבועות.</p>
       <div className="card p-5 flex flex-col gap-2">
@@ -47,7 +56,7 @@ export default function Onboarding() {
   );
 
   if (step === 1) return (
-    <Step>
+    <Step n={1} onBack={() => setStep(0)}>
       <h1 className="text-3xl font-extrabold">לפני שמתחילים</h1>
       <p className="text-xl">האפליקציה אינה תחליף לייעוץ רפואי. היא לא מבטיחה ירידה במשקל, ריפוי, או תחליף לאימון כוח.</p>
       <p className="text-[var(--fg-soft)]">כל הנתונים נשמרים רק במכשיר הזה. אין חשבון, אין שרת, אין פרסומות.</p>
@@ -56,7 +65,7 @@ export default function Onboarding() {
   );
 
   if (step === 2) return (
-    <Step>
+    <Step n={2} onBack={() => setStep(1)}>
       <h1 className="text-3xl font-extrabold">כמה שאלות על הבריאות</h1>
       <p className="text-[var(--fg-soft)]">סמן רק מה שנכון. התשובות נשארות במכשיר ומתאימות את התוכנית.</p>
       {SCREENING_QUESTIONS.map(q => (
@@ -75,7 +84,7 @@ export default function Onboarding() {
   );
 
   return (
-    <Step>
+    <Step n={3} onBack={() => setStep(2)}>
       <h1 className="text-3xl font-extrabold">המסלול והשעה שלך</h1>
       <div className="flex flex-col gap-2">
         {TRACKS.map(t => (

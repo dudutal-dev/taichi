@@ -3409,5 +3409,41 @@
     "chars": 152,
     "usd": 0.0122,
     "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T15:10:31.470Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe measure_tug",
+    "generation_id": "6KpUn1xmXSLoX1ZiKRPL",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4480859,
+    "seconds": 30,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:10:31.706Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe measure_single_leg",
+    "generation_id": "cTeDVZk6tcU1tiZNTxLa",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4506824,
+    "seconds": 31,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:10:32.151Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe measure_sit_to_stand",
+    "generation_id": "9ydZOiybrFhrhDcuYPZu",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4419567,
+    "seconds": 30,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]

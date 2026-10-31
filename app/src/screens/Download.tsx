@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { planDownload, downloadAll, cachedCount, formatMB, type DownloadPlan } from '../lib/offline';
+import TopBar from '../components/TopBar';
 
 export default function Download() {
   const nav = useNavigate();
@@ -24,7 +25,8 @@ export default function Download() {
 
   const pct = prog ? Math.round((prog.done / prog.total) * 100) : plan ? Math.round((have / plan.urls.length) * 100) : 0;
   return (
-    <section className="flex flex-col gap-5 pt-4 min-h-[70dvh]">
+    <section className="flex flex-col gap-5 pb-6 min-h-[70dvh]">
+      <TopBar title="תוכן ללא רשת" exitLabel="אחר כך" />
       <h1 className="text-3xl font-extrabold">תוכן ללא רשת</h1>
       <p className="text-xl">אחרי ההורדה הכול עובד גם בלי אינטרנט: הווידאו, הקריינות והמוזיקה.</p>
       {plan && <p className="text-[var(--fg-soft)]">{plan.urls.length} קבצים, כ-{formatMB(plan.bytes)}. במכשיר כבר {have}.</p>}
