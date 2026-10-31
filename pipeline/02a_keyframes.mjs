@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, config, generate, imageRef, copyTo } from './lib.mjs';
+import { KEYFRAMES_4A } from './keyframes_4a.mjs';
 
 const OUT = path.join(ROOT, 'outputs', 'stage3', 'keyframes'); fs.mkdirSync(OUT, { recursive: true });
 
@@ -20,18 +21,25 @@ export const KEYFRAMES = {
   weight_shift_front_right: { ref: 'front', pose: 'Pose: basic weight shift, seen from the front. THE FEET DO NOT MOVE: both feet stay exactly where they are in the reference image, parallel, shoulder-width apart, both flat on the floor, same stance width as the reference. Only the pelvis has glided clearly sideways to her right, so the hips are visibly over the right foot and the weight is fully on the right leg; the left leg is light, the left foot still flat on the floor. The torso stays upright and centered over the right leg, the arms hang relaxed at the sides. The head is at the same height as in neutral standing: the hips moved horizontally, the body did not sink.' },
 };
 
+Object.assign(KEYFRAMES, KEYFRAMES_4A);
+
 export function keyframePrompt(k) { return [SAME, KEYFRAMES[k].pose, TALL, END].join(' '); }
 
 export async function makeKeyframe(k) {
   const ref = path.join(ROOT, 'content', 'character', `${KEYFRAMES[k].ref}.png`);
-  const request = { model_id: config.image.model_id, prompt: keyframePrompt(k), aspect_ratio: '16:9', resolution: config.image.resolution, images: [imageRef(ref)] };
+  const extra = (KEYFRAMES[k].extraRefs || []).map(f => imageRef(path.join(ROOT, 'outputs', 'stage3', 'keyframes', f)));
+  const request = { model_id: config.image.model_id, prompt: keyframePrompt(k), aspect_ratio: '16:9', resolution: config.image.resolution, images: [imageRef(ref), ...extra] };
   const r = await generate('image', request, { ext: 'png', pollMs: 3000, stage: 3, label: `keyframe ${k}` });
   return copyTo(r.file, path.join(OUT, `${k}.png`));
 }
 
 if (process.argv[1] && import.meta.filename === path.resolve(process.argv[1])) {
-  const keys = process.argv.slice(2).length ? process.argv.slice(2) : Object.keys(KEYFRAMES);
-  const res = await Promise.allSettled(keys.map(makeKeyframe));
-  res.forEach((r, i) => console.log(`${keys[i]}: ${r.status === 'fulfilled' ? r.value : 'FAILED ' + r.reason.message}`));
+  const arg = process.argv.slice(2);
+  const keys = arg[0] === '4a' ? Object.keys(KEYFRAMES_4A) : arg.length ? arg : Object.keys(KEYFRAMES);
+  for (let i = 0; i < keys.length; i += 7) {
+    const batch = keys.slice(i, i + 7);
+    const res = await Promise.allSettled(batch.map(makeKeyframe));
+    res.forEach((r, j) => console.log(`${batch[j]}: ${r.status === 'fulfilled' ? 'ok' : 'FAILED ' + r.reason.message}`));
+  }
   fs.writeFileSync(path.join(OUT, 'prompts.json'), JSON.stringify(Object.fromEntries(keys.map(k => [k, keyframePrompt(k)])), null, 2));
 }

@@ -1,0 +1,63 @@
+  [submit] keyframe grasp_bird_tail_rollback_side → wSoUSwoKtuKElNYKvsnk
+  [submit] keyframe cloud_hands_left_side → 0oNILm1LDRZAlUZTOOVs
+  [submit] keyframe grasp_bird_tail_press_front → nv8uHDTS5hsh553BHPhQ
+  [submit] keyframe grasp_bird_tail_rollback_front → JttRQWOiuubjyUWujEuh
+  [submit] keyframe weight_shift_front_left → IL2Sq7so3j0yWZ88jHYc
+  [submit] keyframe grasp_bird_tail_press_side → aq2tMbF0zcLjgF6bKLR2
+...  [submit] keyframe cloud_hands_left_front → yelsNhMGrUTla8frauIJ
+................................................................  [done] keyframe grasp_bird_tail_rollback_side 4.4MB ב-33 ש'
+  [done] keyframe weight_shift_front_left 4.4MB ב-33 ש'
+..  [done] keyframe cloud_hands_left_side 4.4MB ב-36 ש'
+  [done] keyframe grasp_bird_tail_rollback_front 4.5MB ב-37 ש'
+  [done] keyframe grasp_bird_tail_press_side 4.4MB ב-37 ש'
+  [done] keyframe grasp_bird_tail_press_front 4.5MB ב-40 ש'
+  [done] keyframe cloud_hands_left_front 4.5MB ב-37 ש'
+weight_shift_front_left: ok
+cloud_hands_left_front: ok
+cloud_hands_left_side: ok
+grasp_bird_tail_rollback_front: ok
+grasp_bird_tail_rollback_side: ok
+grasp_bird_tail_press_front: ok
+grasp_bird_tail_press_side: ok
+  [submit] keyframe grasp_bird_tail_push_front → FefB6EHJsCIV6k2OvvoD
+  [submit] keyframe brush_knee_left_side → loKpTUdlTWyMy5cf1vHV
+  [submit] keyframe cross_hands_side → Mwi99xplPyevyjuVm6ci
+  [submit] keyframe cross_hands_front → mkbVov1hN1ZUtIJWsyxU
+  [submit] keyframe brush_knee_left_front → 6qVLhJ5igp8ZZ2ZVry53
+  [submit] keyframe brush_knee_right_front → i2GsmFZVsHtZqYBtaw5m
+  [submit] keyframe grasp_bird_tail_push_side → VbOJjlgHWrNm6Em2I8VG
+.....................................................................  [done] keyframe cross_hands_side 4.4MB ב-35 ש'
+...  [done] keyframe grasp_bird_tail_push_front 4.5MB ב-37 ש'
+  [done] keyframe brush_knee_right_front 4.5MB ב-37 ש'
+  [done] keyframe cross_hands_front 4.5MB ב-38 ש'
+  [done] keyframe brush_knee_left_side 4.4MB ב-40 ש'
+  [done] keyframe brush_knee_left_front 4.5MB ב-40 ש'
+  [done] keyframe grasp_bird_tail_push_side 4.4MB ב-40 ש'
+grasp_bird_tail_push_front: ok
+grasp_bird_tail_push_side: ok
+cross_hands_front: ok
+cross_hands_side: ok
+brush_knee_left_front: ok
+brush_knee_left_side: ok
+brush_knee_right_front: ok
+  [submit] keyframe closing_front → Jkn8kBsmHFe4eAHmUfL6
+  [submit] keyframe brush_knee_right_side → dErggJZFgEgMEqtA8RRn
+  [submit] keyframe closing_side → Jx9li7nI5OKknvBVKldL
+  [submit] keyframe warm_ankle_front → ojLeE9LqjzkS2T1lZAIF
+  [submit] keyframe warm_knee_side → ghggDsFv9yjdU8CVJmkO
+  [submit] keyframe warm_waist_front → DK9TeE9eWQYhllsYE4Zx
+  [submit] keyframe warm_shoulder_front → yMv60y6jxmCIBmZ0HLRa
+..............................................................................  [done] keyframe closing_side 4.3MB ב-39 ש'
+...  [done] keyframe warm_knee_side 4.4MB ב-40 ש'
+  [done] keyframe closing_front 4.5MB ב-42 ש'
+  [done] keyframe brush_knee_right_side 4.5MB ב-42 ש'
+.  [done] keyframe warm_ankle_front 4.5MB ב-42 ש'
+..  [done] keyframe warm_waist_front 4.5MB ב-46 ש'
+  [done] keyframe warm_shoulder_front 4.5MB ב-49 ש'
+brush_knee_right_side: ok
+closing_front: ok
+closing_side: ok
+warm_ankle_front: ok
+warm_knee_side: ok
+warm_waist_front: ok
+warm_shoulder_front: ok

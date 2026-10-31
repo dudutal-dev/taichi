@@ -1,0 +1,43 @@
+// שלב 4א — תמונות-מפתח לשבועות 1–4 (מה שלא קיים מהפיילוט). נטען על ידי 02a_keyframes.mjs.
+const FRONT = 'seen from the front';
+const SIDE = 'seen in exact side profile from her right side, facing the left edge of the frame';
+const FEET = 'Feet parallel, shoulder-width apart, both flat on the floor, exactly where they are in the reference image.';
+const STEP = (foot) => `The ${foot} foot is ONE SMALL STEP forward, about half a foot length, so the stance is short and narrow; the front knee is only slightly bent and directly above the front foot; the back leg nearly straight with the heel flat on the floor; hips high.`;
+const CHAIR = 'A plain light-wood chair without armrests stands beside her; she rests one hand lightly on its backrest for balance.';
+
+export const KEYFRAMES_4A = {
+  // --- 0 פתיחה / העברת משקל: שמאל (ימין קיים מהפיילוט) ---
+  weight_shift_front_left: { ref: 'front', pose: `Pose: basic weight shift, ${FRONT}. THE FEET DO NOT MOVE: ${FEET} Only the pelvis has glided clearly sideways to her LEFT, so the hips are visibly over the left foot and the weight is fully on the left leg; the right leg is light, the right foot still flat on the floor. Torso upright over the left leg, arms relaxed at the sides, head at the same height as neutral standing.` },
+
+  // --- 1 ידיים כעננים: שיא שמאל ---
+  cloud_hands_left_front: { ref: 'front', pose: `Pose: the peak of Cloud Hands (Yun Shou), stationary version, ${FRONT}. ${FEET} Her weight is fully on the LEFT leg, the waist turned slightly to the left. The LEFT hand floats at face height in front of her, palm facing her face, elbow soft. The RIGHT hand floats at hip height in front of the lower belly, palm facing her body.` },
+  cloud_hands_left_side: { ref: 'side', pose: `Pose: the peak of Cloud Hands (Yun Shou), stationary version, ${SIDE}. Feet parallel, both flat on the floor. The far hand floats at face height in front of her, palm toward her face, elbow soft and close to the ribs; the near hand floats at hip height in front of the lower belly. Spine vertical, head directly above the pelvis.` },
+
+  // --- 2 אחיזת זנב הציפור: משיכה, לחיצה, דחיפה (הדיפה קיימת) ---
+  grasp_bird_tail_rollback_front: { ref: 'front', pose: `Pose: Rollback (Lu), the second part of Grasp the Bird's Tail, ${FRONT}. ${STEP('right')} But now she has sat back softly so the weight is on the BACK (left) leg, the front foot still flat. The waist is turned slightly to the left and both hands are drawn back diagonally toward the left hip at belly height: the right palm faces up, the left palm faces down above it, elbows soft.` },
+  grasp_bird_tail_rollback_side: { ref: 'side', pose: `Pose: Rollback (Lu), the second part of Grasp the Bird's Tail, ${SIDE}. ${STEP('front')} She has sat back softly so the weight is on the back leg, the front foot still flat, spine vertical. Both hands are drawn back toward the rear hip at belly height, one palm up and the other palm down above it, elbows soft.` },
+  grasp_bird_tail_press_front: { ref: 'front', extraRefs: ['grasp_bird_tail_front.png'], pose: `Pose: Press (Ji) of Grasp the Bird's Tail, seen from the front. Start from EXACTLY the pose in the second reference image (ward-off: the right forearm rounded horizontally in front of the chest, palm toward the chest, short tall stance with the right foot slightly forward) and change ONLY this: the left hand comes forward and its palm rests flat on the inside of the right wrist, and both hands move a little forward away from the chest. The right forearm stays horizontal, the fingers of the right hand point to her left. The palms are NOT together, NOT a prayer or namaste gesture.` },
+  grasp_bird_tail_press_side: { ref: 'side', extraRefs: ['grasp_bird_tail_side.png'], pose: `Pose: Press (Ji) of Grasp the Bird's Tail, ${SIDE}. Start from EXACTLY the pose in the second reference image (ward-off: short tall stance, the front forearm rounded in front of the chest) and change ONLY this: the rear hand comes forward and its palm rests flat on the inside of the front wrist, and both hands move about ten centimetres further forward from the chest. The front forearm stays horizontal, parallel to the floor, at chest height. NOT a prayer gesture, NOT two open palms pushing.` },
+  grasp_bird_tail_push_front: { ref: 'front', pose: `Pose: Push (An), the fourth part of Grasp the Bird's Tail, ${FRONT}. ${STEP('right')} Weight on the front (right) leg. Both palms face forward at chest height, shoulder-width apart, fingers pointing up, elbows soft and slightly bent, as if gently pushing a large ball away from her.` },
+  grasp_bird_tail_push_side: { ref: 'side', pose: `Pose: Push (An), the fourth part of Grasp the Bird's Tail, ${SIDE}. ${STEP('front')} Weight on the front leg, spine vertical, not leaning. Both palms face forward at chest height, elbows soft and slightly bent, as if gently pushing a large ball away from her.` },
+
+  // --- 3 ידיים צולבות ---
+  cross_hands_front: { ref: 'front', pose: `Pose: Cross Hands (Shi Zi Shou), ${FRONT}. ${FEET} Both arms are rounded in front of the chest with the wrists crossed at the height of the collarbones, palms facing her body, the right hand on the outside; elbows soft and slightly lower than the wrists, shoulders relaxed.` },
+  cross_hands_side: { ref: 'side', pose: `Pose: Cross Hands (Shi Zi Shou), ${SIDE}. Feet parallel, both flat on the floor. Both arms are rounded in front of the chest with the wrists crossed at collarbone height, palms toward her body, elbows soft and slightly below the wrists; spine vertical.` },
+
+  // --- 4 ליטוף הברך וצעד: שמאל, ימין ---
+  brush_knee_left_front: { ref: 'front', pose: `Pose: Brush Knee and Step (Lou Xi Ao Bu), left side, seen from the front: her chest, hips and face all face the camera squarely. ${STEP('left')} The LEFT hand has just brushed past the left knee and rests beside the left hip, palm facing down, fingers forward. The RIGHT hand pushes gently forward toward the camera at shoulder height, palm facing the camera, fingers up, elbow soft.` },
+  brush_knee_left_side: { ref: 'side', pose: `Pose: Brush Knee and Step (Lou Xi Ao Bu), ${SIDE}. ${STEP('front')} The near hand rests beside the hip of the front leg, palm down, having just brushed past the knee. The far hand pushes gently forward at shoulder height, palm facing forward, elbow soft. Spine vertical, not leaning forward.` },
+  brush_knee_right_front: { ref: 'front', pose: `Pose: Brush Knee and Step (Lou Xi Ao Bu), right side, ${FRONT}. ${STEP('right')} The RIGHT hand has just brushed past the right knee and rests beside the right hip, palm facing down, fingers forward. The LEFT hand pushes gently forward at shoulder height, palm facing forward, fingers up, elbow soft.` },
+  brush_knee_right_side: { ref: 'side', pose: `Pose: Brush Knee and Step (Lou Xi Ao Bu), other side, ${SIDE}. ${STEP('front')} The far hand rests beside the hip of the front leg, palm down, having just brushed past the knee. The near hand pushes gently forward at shoulder height, palm facing forward, elbow soft. Spine vertical.` },
+
+  // --- 9 סיום ---
+  closing_front: { ref: 'front', pose: `Pose: Closing form (Shou Shi), ${FRONT}. ${FEET} Both hands are in front of the lower belly at hip height, palms facing down, fingers pointing forward, elbows soft, as if gently pressing the air down; shoulders relaxed, calm face, eyes soft.` },
+  closing_side: { ref: 'side', pose: `Pose: Closing form (Shou Shi), ${SIDE}. Feet parallel, both flat on the floor. Both hands are in front of the lower belly at hip height, palms facing down, elbows soft; spine vertical, shoulders relaxed.` },
+
+  // --- חימום ---
+  warm_ankle_front: { ref: 'front', pose: `Pose: ankle warm-up, ${FRONT}. ${CHAIR} She stands tall on the left leg; the right foot is slightly lifted with only the toes touching the floor, heel raised, as the ankle makes a slow circle. The other hand hangs relaxed.` },
+  warm_knee_side: { ref: 'side', pose: `Pose: gentle knee warm-up, ${SIDE}. Feet parallel, both flat on the floor. Both hands rest on the thighs just above the knees. The knees are bent only gently (a small, comfortable bend of about 20 degrees, never a squat), the back stays straight and long, the head above the pelvis.` },
+  warm_waist_front: { ref: 'front', pose: `Pose: waist warm-up, ${FRONT}. ${FEET} Both hands rest on the hips. The torso and shoulders are rotated gently to her right while the hips and feet stay facing the camera; the head turns with the shoulders; the spine stays tall.` },
+  warm_shoulder_front: { ref: 'front', pose: `Pose: shoulder warm-up, ${FRONT}. ${FEET} Both shoulders are lifted up toward the ears in a slow shrug, arms hanging relaxed at the sides, hands soft, neck long, calm face.` },
+};
