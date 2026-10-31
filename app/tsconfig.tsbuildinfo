@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/db.ts","./src/main.tsx","./src/test-setup.ts","./src/components/ring.tsx","./src/content/manifest.ts","./src/content/plan.ts","./src/lib/week.test.ts","./src/lib/week.ts","./src/screens/finish.tsx","./src/screens/placeholder.tsx","./src/screens/player.tsx","./src/screens/today.tsx","./vite.config.ts"],"version":"5.9.3"}

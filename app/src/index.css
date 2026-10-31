@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/* טוקנים: ירוק-במבוק עמוק, קרם, חום-עץ, מבטא ברונזה. גופן Heebo יחיד. בסיס 18px. */
+@theme {
+  --font-sans: "Heebo", system-ui, sans-serif;
+  --color-bamboo: #2f5d3a;
+  --color-bamboo-deep: #1f4128;
+  --color-bamboo-soft: #8fb28a;
+  --color-cream: #f6f1e4;
+  --color-cream-deep: #ebe3d0;
+  --color-wood: #6b4b2a;
+  --color-bronze: #b07a3c;
+  --color-ink: #22291f;
+  --color-stop: #b23a2f;
+  --radius-card: 22px;
+}
+
+:root {
+  --bg: var(--color-cream);
+  --bg-elev: #fffdf7;
+  --fg: var(--color-ink);
+  --fg-soft: #5b5f55;
+  --line: #d9d0b8;
+  --ring-track: #e3dbc6;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1a221c;
+    --bg-elev: #232d26;
+    --fg: #efe8d6;
+    --fg-soft: #b9b4a2;
+    --line: #35423a;
+    --ring-track: #2e3a32;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1a221c; --bg-elev: #232d26; --fg: #efe8d6; --fg-soft: #b9b4a2; --line: #35423a; --ring-track: #2e3a32;
+}
+
+html { font-size: 18px; }
+html[data-font="large"] { font-size: 21px; }
+html[data-font="xl"] { font-size: 24px; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+button { font: inherit; color: inherit; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--color-bronze); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* כפתור ראשי: אחד בכל מסך, גובה ≥56px */
+.btn-primary {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 64px; width: 100%; border-radius: 999px; border: 0;
+  background: var(--color-bamboo); color: #fff; font-weight: 800; font-size: 1.35rem;
+  box-shadow: 0 8px 24px -12px rgba(47, 93, 58, .7);
+  transition: transform 300ms ease, background 300ms ease;
+}
+.btn-primary:active { transform: scale(.985); background: var(--color-bamboo-deep); }
+.btn-secondary {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  min-height: 56px; width: 100%; border-radius: 999px;
+  border: 2px solid var(--line); background: transparent; color: var(--fg); font-weight: 600; font-size: 1.05rem;
+}
+.btn-stop {
+  min-height: 56px; padding: 0 1.4rem; border-radius: 999px; border: 0;
+  background: var(--color-stop); color: #fff; font-weight: 800; font-size: 1.1rem;
+}
+.chip {
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; padding: 0 1rem;
+  border-radius: 999px; border: 2px solid var(--line); background: var(--bg-elev); color: var(--fg); font-weight: 600;
+}
+.chip[aria-pressed="true"] { border-color: var(--color-bamboo); background: color-mix(in srgb, var(--color-bamboo) 14%, var(--bg-elev)); }
+.card { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius-card); }
