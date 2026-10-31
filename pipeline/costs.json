@@ -3637,5 +3637,89 @@
     "seconds": 146,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:04.429Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf play_pipa_front",
+    "generation_id": "v451z4lJG7ajFyWOKNpT",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1548762,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:08.396Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf strike_ears_side",
+    "generation_id": "ni1BCVz9yRdBF6kIVYeC",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1413233,
+    "seconds": 93,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:09.721Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf high_pat_horse_front",
+    "generation_id": "9ZNfQI4Yr3FTbLTF01D6",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1543548,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:10.005Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf single_whip_front",
+    "generation_id": "7hslsJr12haecAehe0b9",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1684779,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:10.271Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf high_pat_horse_side",
+    "generation_id": "DR7OglqcOsSWsgB0jEqo",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1587180,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:10.302Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf strike_ears_front",
+    "generation_id": "4OWo7qGmaVKs06ksa0mL",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1521174,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:12.158Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf play_pipa_side",
+    "generation_id": "LHDZrDeyxijT2KvSMc00",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1553257,
+    "seconds": 93,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]

@@ -92,7 +92,8 @@ export default function Player() {
   // תחילת קטע: איפוס + קריינות הפתיחה
   useEffect(() => {
     if (!started || !item || !m) return;
-    setLoopsDone(0); setNarDone(false); setEndPhase('idle'); setView('front'); doneRef.current = false;
+    setLoopsDone(0); setNarDone(false); setEndPhase('idle'); doneRef.current = false;
+    setView(item.mode === 'side' && item.sideUrl ? 'side' : 'front'); // פריט "מבט צד" נפתח במבט צד (באג: תמיד נפתח בחזית)
     return playQueue(item.narration, () => setNarDone(true));
   }, [started, item, m, playQueue]);
 

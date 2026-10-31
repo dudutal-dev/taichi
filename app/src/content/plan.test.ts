@@ -55,3 +55,12 @@ describe('בונה המפגש', () => {
     expect(new Set(s.items.filter(i => i.phase === 'core').map(i => i.movementId)).size).toBe(8);
   });
 });
+
+describe('מבט צד', () => {
+  it('לפריט "מבט צד" יש קליף צד, והקריינות שלו היא הנחיית הצד', () => {
+    const { items } = buildSession(manifest, 1);
+    const side = items.filter(i => i.mode === 'side');
+    expect(side.length).toBeGreaterThan(0);
+    for (const s of side) { expect(s.sideUrl).toBeTruthy(); expect(s.sideAvailable).toBe(true); }
+  });
+});
