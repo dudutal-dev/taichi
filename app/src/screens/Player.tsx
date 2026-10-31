@@ -1,5 +1,5 @@
 // נגן מסך מלא: וידאו (מבט-מראה), כתובית, מד "גובה עמידה", פס התקדמות, קריינות מסונכרנת עם ducking למוזיקה.
-// מחוות: הקשה = השהיה; לחיצה ארוכה = הילוך איטי + לולאה; כפתורים חלופיים לכל פעולה. כפתור עצור תמיד נראה.
+// טלפון: הווידאו ממלא את כל השטח הפנוי (min-h-0 + object-contain), שורת פקודות אחת גדולה + מתגים קטנים.
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { buildSession, type PlaylistItem } from '../content/plan';
@@ -26,17 +26,19 @@ export default function Player() {
   const [narDone, setNarDone] = useState(false);
   const [elapsedMs, setElapsedMs] = useState(0);
   const [musicOn, setMusicOn] = useState(true);
+  const [more, setMore] = useState(false);
+  const [musicUrl, setMusicUrl] = useState(MUSIC_URL);
   const [portrait, setPortrait] = useState(() => window.matchMedia('(orientation: portrait)').matches);
-  useEffect(() => { const mq = window.matchMedia('(orientation: portrait)'); const h = (e: MediaQueryListEvent) => setPortrait(e.matches); mq.addEventListener('change', h); return () => mq.removeEventListener('change', h); }, []);
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const musicRef = useRef<HTMLAudioElement>(null);
   const narRef = useRef<HTMLAudioElement | null>(null);
   const pressTimer = useRef<number | null>(null);
+  const longPressed = useRef(false);
   const wakeLock = useRef<WakeLockSentinel | null>(null);
 
-  const [musicUrl, setMusicUrl] = useState(MUSIC_URL);
   useEffect(() => { loadManifest().then(setM); getSettings().then(s => { setMirror(s.mirror); setMusicOn(s.music !== 'off'); if (s.music === 'nature') setMusicUrl(`audio/ambience/amb_${s.natureSound}_30s.mp3`); }); }, []);
+  useEffect(() => { const mq = window.matchMedia('(orientation: portrait)'); const h = (e: MediaQueryListEvent) => setPortrait(e.matches); mq.addEventListener('change', h); return () => mq.removeEventListener('change', h); }, []);
   const session = useMemo(() => (m ? buildSession(m, week, { short }) : null), [m, week, short]);
   const items = session?.items ?? [];
   const item: PlaylistItem | undefined = items[idx];
@@ -44,7 +46,9 @@ export default function Player() {
   // מסך לא כבה
   useEffect(() => {
     navigator.wakeLock?.request('screen').then(l => { wakeLock.current = l; }).catch(() => {});
-    return () => { wakeLock.current?.release().catch(() => {}); };
+    const re = () => { if (document.visibilityState === 'visible') navigator.wakeLock?.request('screen').then(l => { wakeLock.current = l; }).catch(() => {}); };
+    document.addEventListener('visibilitychange', re);
+    return () => { document.removeEventListener('visibilitychange', re); wakeLock.current?.release().catch(() => {}); };
   }, []);
 
   // מונה דקות בפועל
@@ -106,50 +110,60 @@ export default function Player() {
   const castable = typeof videoRef.current?.remote?.prompt === 'function';
   const progress = items.length ? (idx / items.length) * 100 : 0;
   const go = (d: number) => setIdx(i => Math.max(0, Math.min(items.length - 1, i + d)));
+  const canSkip = item.skippable || item.phase !== 'warmup';
 
-  const onPressStart = () => { pressTimer.current = window.setTimeout(() => setSlow(true), 600); };
-  const onPressEnd = (tap: boolean) => {
-    if (pressTimer.current) { window.clearTimeout(pressTimer.current); pressTimer.current = null; }
-    if (tap && !slow) setPaused(p => !p);
-  };
+  // מחוות על הווידאו: הקשה = השהיה, לחיצה ארוכה = הילוך איטי. (כפתורים חלופיים לכל פעולה למטה)
+  const onPointerDown = () => { longPressed.current = false; pressTimer.current = window.setTimeout(() => { longPressed.current = true; setSlow(true); }, 600); };
+  const onPointerUp = () => { if (pressTimer.current) { window.clearTimeout(pressTimer.current); pressTimer.current = null; } };
+  const onClick = () => { if (!longPressed.current) setPaused(p => !p); };
 
+  const tog = 'chip !min-h-11 !px-3 !text-[0.95rem] !bg-white/10 !border-white/25 !text-white';
   return (
-    <div className="fixed inset-0 bg-black text-white flex flex-col select-none" dir="rtl">
-      <div className="h-1.5 bg-white/15"><div className="h-full bg-[var(--color-bamboo-soft)] transition-[width] duration-700" style={{ width: `${progress}%` }} /></div>
+    <div className="fixed inset-0 bg-black text-white flex flex-col select-none" dir="rtl" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
+      <div className="h-1.5 shrink-0 bg-white/15"><div className="h-full bg-[var(--color-bamboo-soft)] transition-[width] duration-700" style={{ width: `${progress}%` }} /></div>
 
-      <div className="relative flex-1 grid place-items-center overflow-hidden"
-        onPointerDown={onPressStart} onPointerUp={() => onPressEnd(true)} onPointerLeave={() => onPressEnd(false)} onPointerCancel={() => onPressEnd(false)}>
+      <div className="relative flex-1 min-h-0 overflow-hidden" onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onClick={onClick}>
         {src ? (
-          <video key={src + idx} ref={videoRef} src={contentUrl(src)} playsInline autoPlay muted={false} preload="auto"
-            className="max-h-full max-w-full" style={{ transform: mirror ? 'scaleX(-1)' : undefined }}
+          <video key={src + idx} ref={videoRef} src={contentUrl(src)} playsInline autoPlay preload="auto"
+            className="w-full h-full object-contain" style={{ transform: mirror ? 'scaleX(-1)' : undefined }}
             onEnded={e => { if (slow || loopsDone + 1 < item.loops) { e.currentTarget.currentTime = 0; e.currentTarget.play(); } setLoopsDone(n => n + 1); }}
             x-webkit-airplay="allow" />
         ) : (
-          <img src={contentUrl(item.stillUrl)} alt="" className="max-h-full max-w-full" style={{ transform: mirror ? 'scaleX(-1)' : undefined }} />
+          <img src={contentUrl(item.stillUrl)} alt="" className="w-full h-full object-contain" style={{ transform: mirror ? 'scaleX(-1)' : undefined }} />
         )}
-        <div className="absolute top-3 right-3 left-3 flex items-start justify-between gap-3 pointer-events-none">
-          <div className="bg-black/55 rounded-2xl px-4 py-2">
-            <div className="text-2xl font-extrabold">{item.title}</div>
-            <div className="text-white/80">{item.caption}{slow ? ' · הילוך איטי' : ''}{paused ? ' · מושהה' : ''}</div>
+        <div className="absolute top-2 right-2 left-2 flex items-start justify-between gap-2 pointer-events-none">
+          <div className="bg-black/55 rounded-xl px-3 py-1.5 max-w-[60%]">
+            <div className="text-lg font-extrabold leading-tight">{item.title}</div>
+            <div className="text-white/80 text-sm leading-tight">{item.caption}{slow ? ' · איטי' : ''}{paused ? ' · מושהה' : ''}</div>
           </div>
-          <div className="bg-[var(--color-bamboo)]/85 rounded-2xl px-3 py-2 text-sm leading-tight max-w-[46%]" aria-label="מד גובה עמידה">
+          <div className="bg-[var(--color-bamboo)]/85 rounded-xl px-2.5 py-1.5 text-xs leading-tight text-end" aria-label="מד גובה עמידה">
             ברך מעל כף הרגל<br />כיפוף קל בלבד<br />כואב? להזדקף
           </div>
         </div>
         {paused && <div className="absolute inset-0 grid place-items-center pointer-events-none"><div className="bg-black/60 rounded-full px-8 py-4 text-2xl font-extrabold">מושהה</div></div>}
       </div>
 
-      <div className="flex flex-wrap items-center gap-2 p-3 bg-black/90" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + .75rem)' }}>
-        <button className="btn-stop" onClick={() => finish('stopped')}>עצור</button>
-        <button className="chip !bg-white/10 !border-white/25 !text-white" onClick={() => setPaused(p => !p)}>{paused ? 'המשך' : 'השהה'}</button>
-        <button className="chip !bg-white/10 !border-white/25 !text-white" onClick={() => go(-1)} disabled={idx === 0}>הקודם</button>
-        <button className="chip !bg-white/10 !border-white/25 !text-white" onClick={() => go(1)} disabled={!item.skippable && item.phase === 'warmup'} title={!item.skippable ? 'חימום לא ניתן לדילוג בשבועות 1–4' : ''}>הבא</button>
-        <button className="chip !bg-white/10 !border-white/25 !text-white" aria-pressed={slow} onClick={() => setSlow(s => !s)}>הילוך איטי</button>
-        <button className="chip !bg-white/10 !border-white/25 !text-white" aria-pressed={mirror} onClick={() => setMirror(v => !v)}>מראה</button>
-        {item.sideAvailable && <button className="chip !bg-white/10 !border-white/25 !text-white" aria-pressed={view === 'side'} onClick={() => setView(v => (v === 'side' ? 'front' : 'side'))}>מבט צד</button>}
-        <button className="chip !bg-white/10 !border-white/25 !text-white" aria-pressed={musicOn} onClick={() => setMusicOn(v => !v)}>מוזיקה</button>
-        {castable && <button className="chip !bg-white/10 !border-white/25 !text-white" onClick={() => videoRef.current?.remote?.prompt().catch(() => {})}>שדר למסך</button>}
-        <span className="mr-auto text-white/70 tabular-nums">{Math.floor(elapsedMs / 60000)}:{String(Math.floor(elapsedMs / 1000) % 60).padStart(2, '0')}</span>
+      <div className="shrink-0 bg-black/90 px-3 pt-2 flex flex-col gap-2" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + .5rem)' }}>
+        <div className="flex items-stretch gap-2">
+          <button className="btn-stop flex-[1.2]" onClick={() => finish('stopped')}>עצור</button>
+          <button className="chip flex-1 justify-center !min-h-14 !bg-white/10 !border-white/25 !text-white !text-lg" onClick={() => setPaused(p => !p)}>{paused ? 'המשך' : 'השהה'}</button>
+          <button className="chip flex-1 justify-center !min-h-14 !bg-white/10 !border-white/25 !text-white !text-lg" onClick={() => go(1)} disabled={!canSkip} title={!canSkip ? 'חימום לא ניתן לדילוג בשבועות 1–4' : ''}>הבא</button>
+          <button className={tog + ' !min-h-14'} aria-expanded={more} onClick={() => setMore(v => !v)}>עוד</button>
+        </div>
+        {more && (
+          <div className="flex flex-wrap items-center gap-2">
+            <button className={tog} onClick={() => go(-1)} disabled={idx === 0}>הקודם</button>
+            <button className={tog} aria-pressed={slow} onClick={() => setSlow(s => !s)}>הילוך איטי</button>
+            <button className={tog} aria-pressed={mirror} onClick={() => setMirror(v => !v)}>מראה</button>
+            {item.sideAvailable && <button className={tog} aria-pressed={view === 'side'} onClick={() => setView(v => (v === 'side' ? 'front' : 'side'))}>מבט צד</button>}
+            <button className={tog} aria-pressed={musicOn} onClick={() => setMusicOn(v => !v)}>מוזיקה</button>
+            {castable && <button className={tog} onClick={() => videoRef.current?.remote?.prompt().catch(() => {})}>שדר למסך</button>}
+          </div>
+        )}
+        <div className="flex justify-between text-white/60 text-sm tabular-nums">
+          <span>{idx + 1}/{items.length}</span>
+          <span>{Math.floor(elapsedMs / 60000)}:{String(Math.floor(elapsedMs / 1000) % 60).padStart(2, '0')}</span>
+        </div>
       </div>
 
       {musicOn && <audio ref={musicRef} src={contentUrl(musicUrl)} loop autoPlay onCanPlay={e => { e.currentTarget.volume = MUSIC_VOL; }} />}

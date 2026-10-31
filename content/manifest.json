@@ -478,8 +478,8 @@
         {
           "id": "grasp_bird_tail_cue2",
           "url": "audio/narration/grasp_bird_tail_cue2.mp3",
-          "durationMs": 7265,
-          "text": "האמה הימנית עולה מעוגלת מול החזה. זאת ההדיפה. היד השנייה מאחוריה.",
+          "durationMs": 7578,
+          "text": "האמה הימנית עולה מעוגלת מול החזה. זאת הַהֲדִיפָה. היד השנייה מאחוריה.",
           "qa": "approved"
         },
         {
@@ -815,8 +815,8 @@
     },
     "grasp_bird_tail_cue2": {
       "url": "audio/narration/grasp_bird_tail_cue2.mp3",
-      "durationMs": 7265,
-      "text": "האמה הימנית עולה מעוגלת מול החזה. זאת ההדיפה. היד השנייה מאחוריה.",
+      "durationMs": 7578,
+      "text": "האמה הימנית עולה מעוגלת מול החזה. זאת הַהֲדִיפָה. היד השנייה מאחוריה.",
       "qa": "approved"
     },
     "grasp_bird_tail_cue3": {
@@ -1141,6 +1141,324 @@
       "url": "audio/narration/nudge_short.mp3",
       "durationMs": 4705,
       "text": "אין זמן? יש גרסה של עשר דקות. גם היא נספרת.",
+      "qa": "approved"
+    },
+    "session_open_w5": {
+      "url": "audio/narration/session_open_w5.mp3",
+      "durationMs": 9746,
+      "text": "שבוע חמישי. היום מוסיפים את רעמת הסוס והֲדִיפַת הקוף, ומחברים את כל צורת שמונה לרצף אחד.",
+      "qa": "approved"
+    },
+    "session_open_w6": {
+      "url": "audio/narration/session_open_w6.mp3",
+      "durationMs": 8623,
+      "text": "שבוע שישי. שבוע המדידה. כאן הניסויים ראו שינוי ראשון. היום מתרגלים את הרצף המלא.",
+      "qa": "approved"
+    },
+    "session_open_w7": {
+      "url": "audio/narration/session_open_w7.mp3",
+      "durationMs": 9511,
+      "text": "שבוע שביעי. היום מוסיפים את בעיטת העקב, ליד כיסא. ומתחילים לשים לב לנשימה בכל תנועה.",
+      "qa": "approved"
+    },
+    "session_open_w8": {
+      "url": "audio/narration/session_open_w8.mp3",
+      "durationMs": 7186,
+      "text": "שבוע שמיני. הרצף פעמיים. סיבובי גו עדינים. הנשימה מובילה.",
+      "qa": "pending"
+    },
+    "session_open_w9": {
+      "url": "audio/narration/session_open_w9.mp3",
+      "durationMs": 7996,
+      "text": "שבוע תשיעי. צורת שמונה שלמה וחלקה. היום מתרגלים אותה פעמיים, בלי מילים באמצע.",
+      "qa": "approved"
+    },
+    "session_open_w10": {
+      "url": "audio/narration/session_open_w10.mp3",
+      "durationMs": 9668,
+      "text": "שבוע עשירי. מתחילים את צורת עשרים וארבע. היום: העגור הלבן, נגינה בפיפה, ושוט יחיד.",
+      "qa": "pending"
+    },
+    "session_open_w11": {
+      "url": "audio/narration/session_open_w11.mp3",
+      "durationMs": 9433,
+      "text": "שבוע אחד עשר. היום: טפיחה גבוהה על הסוס, מחט בקרקעית הים, ומניפה דרך הגב.",
+      "qa": "approved"
+    },
+    "session_open_w12": {
+      "url": "audio/narration/session_open_w12.mp3",
+      "durationMs": 13430,
+      "text": "שבוע שנים עשר. השבוע האחרון של התוכנית. היום: העלמה אורגת, הסטה חסימה ואגרוף, וסגירה לכאורה. ובסוף השבוע, מדידה.",
+      "qa": "approved"
+    },
+    "session_open_seated": {
+      "url": "audio/narration/session_open_seated.mp3",
+      "durationMs": 9355,
+      "text": "מפגש בישיבה. שמונה המקטעים על כיסא. כיסא יציב, בלי משענות יד, הרגליים על הרצפה.",
+      "qa": "approved"
+    },
+    "golden_rooster_left": {
+      "url": "audio/narration/golden_rooster_left.mp3",
+      "durationMs": 11758,
+      "text": "רגל שמאל. יד ימין על הכיסא. מרימים את ברך שמאל, נמוך. יד שמאל עולה, המרפק מעל הברך. ויורדים לאט.",
+      "qa": "approved"
+    },
+    "golden_rooster_right": {
+      "url": "audio/narration/golden_rooster_right.mp3",
+      "durationMs": 9746,
+      "text": "ועכשיו רגל ימין. מרימים את ברך ימין, נמוך. היד הפנויה עולה. הכיסא כאן בשביל הביטחון.",
+      "qa": "approved"
+    },
+    "golden_rooster_side": {
+      "url": "audio/narration/golden_rooster_side.mp3",
+      "durationMs": 9746,
+      "text": "מבט מהצד. הברך עולה קדימה, לא אחורה. השוק תלויה למטה. הגב ישר, הראש מעל האגן.",
+      "qa": "approved"
+    },
+    "wild_horse_intro": {
+      "url": "audio/narration/wild_horse_intro.mp3",
+      "durationMs": 10399,
+      "text": "פיצול רעמת הסוס הפראי. צעד קטן, והידיים נפרדות: אחת עולה, אחת יורדת. עמידה גבוהה בלבד.",
+      "qa": "approved"
+    },
+    "wild_horse_left": {
+      "url": "audio/narration/wild_horse_left.mp3",
+      "durationMs": 10399,
+      "text": "רגל שמאל קדימה, צעד קטן. יד שמאל עולה באלכסון לגובה הכתף, כף היד למעלה. יד ימין יורדת ליד הירך.",
+      "qa": "approved"
+    },
+    "wild_horse_right": {
+      "url": "audio/narration/wild_horse_right.mp3",
+      "durationMs": 8153,
+      "text": "ועכשיו רגל ימין קדימה. יד ימין עולה באלכסון. יד שמאל יורדת ליד הירך.",
+      "qa": "approved"
+    },
+    "wild_horse_side": {
+      "url": "audio/narration/wild_horse_side.mp3",
+      "durationMs": 8153,
+      "text": "מבט מהצד. הברך הקדמית מעל כף הרגל. הגב אנכי. לא נשענים אל היד העולה.",
+      "qa": "approved"
+    },
+    "repulse_monkey_intro": {
+      "url": "audio/narration/repulse_monkey_intro.mp3",
+      "durationMs": 8701,
+      "text": "הֲדִיפַת הקוף. התנועה היחידה עם צעד אחורה. צעד קטן, והמשקל עובר לאט לרגל האחורית.",
+      "qa": "approved"
+    },
+    "repulse_monkey_left": {
+      "url": "audio/narration/repulse_monkey_left.mp3",
+      "durationMs": 9198,
+      "text": "רגל שמאל צעד קטן אחורה. יד ימין דוחפת קדימה, בגובה הכתף. יד שמאל נמשכת ליד האוזן.",
+      "qa": "approved"
+    },
+    "repulse_monkey_right": {
+      "url": "audio/narration/repulse_monkey_right.mp3",
+      "durationMs": 7343,
+      "text": "ועכשיו רגל ימין אחורה. יד שמאל דוחפת קדימה. יד ימין ליד האוזן.",
+      "qa": "approved"
+    },
+    "repulse_monkey_side": {
+      "url": "audio/narration/repulse_monkey_side.mp3",
+      "durationMs": 9511,
+      "text": "מבט מהצד. לפני הצעד אחורה, מרגישים את הרצפה בבהונות. העקב יורד אחרון. הגב ישר.",
+      "qa": "approved"
+    },
+    "heel_kick_intro": {
+      "url": "audio/narration/heel_kick_intro.mp3",
+      "durationMs": 10217,
+      "text": "בעיטת עקב. נמוכה. ליד כיסא. העקב מוביל, הבהונות אל השוק. עשרים סנטימטר מהרצפה זה מספיק.",
+      "qa": "approved"
+    },
+    "heel_kick_right": {
+      "url": "audio/narration/heel_kick_right.mp3",
+      "durationMs": 10948,
+      "text": "יד שמאל על הכיסא. עומדים על שמאל. רגל ימין נמתחת לאט קדימה, העקב קודם. הברך רכה. ומורידים.",
+      "qa": "approved"
+    },
+    "heel_kick_left": {
+      "url": "audio/narration/heel_kick_left.mp3",
+      "durationMs": 7657,
+      "text": "ועכשיו יד ימין על הכיסא. רגל שמאל נמתחת קדימה, נמוך. ומורידים לאט.",
+      "qa": "approved"
+    },
+    "heel_kick_side": {
+      "url": "audio/narration/heel_kick_side.mp3",
+      "durationMs": 8623,
+      "text": "מבט מהצד. הגוף לא נשען אחורה. הגב אנכי, הרגל נמוכה. הכיסא בהישג יד.",
+      "qa": "approved"
+    },
+    "form8_intro": {
+      "url": "audio/narration/form8_intro.mp3",
+      "durationMs": 19986,
+      "text": "צורת שמונה, מהפתיחה ועד הסיום. פתיחה. ידיים כעננים. אחיזת זנב הציפור. ידיים צולבות. ליטוף הברך. תרנגול הזהב. רעמת הסוס. הֲדִיפַת הקוף. בעיטת עקב. וסיום.",
+      "qa": "approved"
+    },
+    "form8_breath": {
+      "url": "audio/narration/form8_breath.mp3",
+      "durationMs": 8153,
+      "text": "הפעם בלי מילים. רק הנשימה. שואפים כשהידיים עולות, נושפים כשהן יורדות.",
+      "qa": "approved"
+    },
+    "form8_again": {
+      "url": "audio/narration/form8_again.mp3",
+      "durationMs": 5671,
+      "text": "ועוד פעם. קצת יותר חלק. אותו קצב מההתחלה עד הסוף.",
+      "qa": "approved"
+    },
+    "white_crane": {
+      "url": "audio/narration/white_crane.mp3",
+      "durationMs": 12959,
+      "text": "העגור הלבן פורש כנפיים. המשקל על רגל ימין, רגל שמאל נוגעת בבהונות. יד ימין עולה לגובה הגבות. יד שמאל יורדת ליד הירך.",
+      "qa": "approved"
+    },
+    "play_pipa": {
+      "url": "audio/narration/play_pipa.mp3",
+      "durationMs": 11418,
+      "text": "נגינה בפיפה. רגל שמאל קדימה על העקב. יד שמאל קדימה בגובה הכתף, יד ימין ליד המרפק. כמו מחזיקים כלי מיתר.",
+      "qa": "approved"
+    },
+    "single_whip": {
+      "url": "audio/narration/single_whip.mp3",
+      "durationMs": 12959,
+      "text": "שוט יחיד. צעד קטן שמאלה. יד שמאל דוחפת קדימה. יד ימין נמתחת הצידה, האצבעות מתכנסות למטה. העיניים אחרי יד שמאל.",
+      "qa": "approved"
+    },
+    "high_pat_horse": {
+      "url": "audio/narration/high_pat_horse.mp3",
+      "durationMs": 12385,
+      "text": "טפיחה גבוהה על הסוס. המשקל אחורה. רגל שמאל נוגעת בבהונות. כף יד ימין פונה קדימה בגובה הפנים. יד שמאל מתחת, כף למעלה.",
+      "qa": "approved"
+    },
+    "strike_ears": {
+      "url": "audio/narration/strike_ears.mp3",
+      "durationMs": 11418,
+      "text": "מכה לאוזניים בשני אגרופים. צעד קטן. שני אגרופים רפויים עולים בקשת לגובה האוזניים. המרפקים רכים. בלי כוח.",
+      "qa": "approved"
+    },
+    "shuttle": {
+      "url": "audio/narration/shuttle.mp3",
+      "durationMs": 11679,
+      "text": "העלמה אורגת במנול. יד אחת מעל המצח, כף היד החוצה. היד השנייה דוחפת קדימה בגובה החזה. ואז הצד השני.",
+      "qa": "approved"
+    },
+    "needle_sea_bottom": {
+      "url": "audio/narration/needle_sea_bottom.mp3",
+      "durationMs": 13743,
+      "text": "מחט בקרקעית הים. הגרסה העדינה. המשקל אחורה. הגב נשאר ארוך, מתכופפים רק מעט מהירכיים. יד ימין יורדת לפני הברך. לא לעומק.",
+      "qa": "approved"
+    },
+    "fan_through_back": {
+      "url": "audio/narration/fan_through_back.mp3",
+      "durationMs": 11915,
+      "text": "מניפה דרך הגב. צעד קטן. יד שמאל דוחפת קדימה. יד ימין ליד הרקה, כף היד החוצה. כמו מניפה שנפתחת.",
+      "qa": "approved"
+    },
+    "parry_punch": {
+      "url": "audio/narration/parry_punch.mp3",
+      "durationMs": 13508,
+      "text": "הסטה, חסימה, ואגרוף. קודם כף יד שמאל קדימה, האגרוף הימני ליד המותן. ואז האגרוף יוצא לאט, בגובה החזה. בלי לנעול את המרפק.",
+      "qa": "approved"
+    },
+    "apparent_close": {
+      "url": "audio/narration/apparent_close.mp3",
+      "durationMs": 9903,
+      "text": "סגירה לכאורה. שתי הכפות קדימה, בגובה החזה. המשקל עובר לרגל הקדמית. כמו סוגרים דלת בעדינות.",
+      "qa": "approved"
+    },
+    "form24_note": {
+      "url": "audio/narration/form24_note.mp3",
+      "durationMs": 8780,
+      "text": "צורת עשרים וארבע לוקחת שנים. אנחנו לומדים עשר תנועות ממנה, בעמידה גבוהה. זה מספיק לכל החיים.",
+      "qa": "approved"
+    },
+    "bdj_intro": {
+      "url": "audio/narration/bdj_intro.mp3",
+      "durationMs": 11183,
+      "text": "שמונה המקטעים, בישיבה. יושבים באמצע הכיסא, לא נשענים. הרגליים ברוחב הירכיים, כפות הרגליים על הרצפה.",
+      "qa": "approved"
+    },
+    "bdj_heaven": {
+      "url": "audio/narration/bdj_heaven.mp3",
+      "durationMs": 12071,
+      "text": "שתי ידיים תומכות בשמיים. משלבים אצבעות. הידיים עולות מעל הראש, כפות הידיים למעלה. מותחים בעדינות. ויורדים.",
+      "qa": "approved"
+    },
+    "bdj_bow": {
+      "url": "audio/narration/bdj_bow.mp3",
+      "durationMs": 14057,
+      "text": "משיכת הקשת. יד אחת נמתחת הצידה, האצבע מורה למעלה. היד השנייה מושכת מיתר אל הכתף. מביטים לאורך היד. ואז הצד השני.",
+      "qa": "approved"
+    },
+    "bdj_separate": {
+      "url": "audio/narration/bdj_separate.mp3",
+      "durationMs": 10060,
+      "text": "הפרדת שמיים וארץ. יד אחת עולה, כף למעלה. היד השנייה לוחצת למטה, כף למטה. מחליפים.",
+      "qa": "approved"
+    },
+    "bdj_lookback": {
+      "url": "audio/narration/bdj_lookback.mp3",
+      "durationMs": 11418,
+      "text": "הינשוף מביט לאחור. הידיים על הירכיים. מסובבים לאט את הראש והגו, מביטים מעבר לכתף. וחזרה. ולצד השני.",
+      "qa": "pending"
+    },
+    "bdj_sway": {
+      "url": "audio/narration/bdj_sway.mp3",
+      "durationMs": 11836,
+      "text": "נענוע הראש והזנב. הידיים על הירכיים, המרפקים החוצה. מטים את הגו הצידה, הראש הולך אחריו. וחזרה. ולצד השני.",
+      "qa": "approved"
+    },
+    "bdj_feet": {
+      "url": "audio/narration/bdj_feet.mp3",
+      "durationMs": 12698,
+      "text": "אחיזת כפות הרגליים. מתכופפים קדימה מהירכיים, הגב ארוך. הידיים מחליקות לאורך השוקיים. עד איפה שנוח. ועולים לאט.",
+      "qa": "approved"
+    },
+    "bdj_fists": {
+      "url": "audio/narration/bdj_fists.mp3",
+      "durationMs": 10870,
+      "text": "אגרופים ומבט. אגרוף נמתח לאט קדימה, בגובה הכתף. העיניים מביטות קדימה. וחוזר. ואז השני.",
+      "qa": "approved"
+    },
+    "bdj_heels": {
+      "url": "audio/narration/bdj_heels.mp3",
+      "durationMs": 10138,
+      "text": "עליות על העקבים. בישיבה: מרימים את שני העקבים, רק הבהונות על הרצפה. ומורידים ברכות. שבע פעמים.",
+      "qa": "approved"
+    },
+    "bdj_close": {
+      "url": "audio/narration/bdj_close.mp3",
+      "durationMs": 6063,
+      "text": "סיימנו את שמונה המקטעים. שתי נשימות. גם בישיבה, זה נספר.",
+      "qa": "approved"
+    },
+    "teacher_w6": {
+      "url": "audio/narration/teacher_w6.mp3",
+      "durationMs": 16695,
+      "text": "שבוע שישי. זה השבוע שבו הניסויים ראו שינוי ראשון בשיווי המשקל ובכוח הרגליים. לא תמיד מרגישים את זה מבפנים, ולכן מודדים. חמש דקות, אותן מדידות כמו בשבוע אפס. המספרים ידברו.",
+      "qa": "approved"
+    },
+    "teacher_w8": {
+      "url": "audio/narration/teacher_w8.mp3",
+      "durationMs": 16225,
+      "text": "שבוע שמיני. מכאן ועד שבוע שתים עשרה הניסויים ראו שינוי בשינה ובמצב הרוח. אם זה קורה לך, זה לא במקרה. אם עוד לא, ממשיכים באותו קצב. חמישה ימים, עשרים דקות.",
+      "qa": "approved"
+    },
+    "teacher_w12": {
+      "url": "audio/narration/teacher_w12.mp3",
+      "durationMs": 25263,
+      "text": "שבוע שנים עשר. סיימת את התוכנית. שתים עשרה שבועות, זה יותר ממה שרוב האנשים עושים אי פעם. מהשבוע הבא: תחזוקה. ערבוב בין צורת עשרים וארבע, שמונה המקטעים בבוקר, וישיבה בימים קשים. דבר אחד חשוב לדעת: ההגנה מפני נפילות דועכת כשמפסיקים. אז לא מפסיקים.",
+      "qa": "approved"
+    },
+    "celebrate_w6": {
+      "url": "audio/narration/celebrate_w6.mp3",
+      "durationMs": 5358,
+      "text": "שבוע שישי הושלם. המדידה הבאה מחכה במסך ההתקדמות.",
+      "qa": "approved"
+    },
+    "celebrate_w12": {
+      "url": "audio/narration/celebrate_w12.mp3",
+      "durationMs": 5175,
+      "text": "שתים עשרה שבועות. מההתחלה ועד הסוף. זה שלך.",
       "qa": "approved"
     }
   },

@@ -5,6 +5,14 @@ import { requestReminderPermission, scheduleReminderCheck } from '../lib/reminde
 
 const DAYS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש'];
 
+// ברמת המודול, לא בתוך הרינדור (אחרת הכפתורים נבנים מחדש בכל עדכון)
+function Opt<T extends string>({ label, value, options, onChange }: { label: string; value: T; options: [T, string][]; onChange: (v: T) => void }) {
+  return (
+    <div><div className="font-extrabold mb-2">{label}</div>
+      <div className="flex flex-wrap gap-2">{options.map(([v, l]) => <button key={v} className="chip" aria-pressed={value === v} onClick={() => onChange(v)}>{l}</button>)}</div></div>
+  );
+}
+
 export default function Settings() {
   const [p, setP] = useState<Profile | null>(null);
   const [s, setS] = useState<S>(DEFAULT_SETTINGS);
@@ -14,11 +22,6 @@ export default function Settings() {
 
   async function saveS(patch: Partial<S>) { const n = { ...s, ...patch }; setS(n); await db.settings.put(n); applyDisplaySettings(n); }
   async function saveP(patch: Partial<Profile>) { if (!p) return; const n = { ...p, ...patch }; setP(n); await db.profile.put(n); }
-
-  const Opt = <T extends string>({ label, value, options, onChange }: { label: string; value: T; options: [T, string][]; onChange: (v: T) => void }) => (
-    <div><div className="font-extrabold mb-2">{label}</div>
-      <div className="flex flex-wrap gap-2">{options.map(([v, l]) => <button key={v} className="chip" aria-pressed={value === v} onClick={() => onChange(v)}>{l}</button>)}</div></div>
-  );
 
   if (!p) return null;
   return (

@@ -1,4 +1,5 @@
 // מדידה עצמית מודרכת (שבוע 0/6/12/24): עמידה על רגל אחת (ש', כל רגל, ליד קיר), קימה מכיסא ב-30 ש', TUG ביתי 3 מ', לחץ דם, שינה, מצב רוח.
+// כל רכיבי-המשנה ברמת המודול: הטיימר מעדכן מצב 10 פעמים בשנייה, ורכיב פנימי היה נבנה מחדש וגוזל נגיעות בטלפון.
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { db, todayISO, type Measurement } from '../db';
@@ -6,11 +7,35 @@ import { contentUrl } from '../content/manifest';
 
 type Step = 'intro' | 'legL' | 'legR' | 'sts' | 'tug' | 'bp' | 'sleep' | 'done';
 const ORDER: Step[] = ['intro', 'legL', 'legR', 'sts', 'tug', 'bp', 'sleep', 'done'];
+const TITLES: Record<Step, string> = { intro: 'מדידת בסיס', legL: 'עמידה על רגל שמאל', legR: 'עמידה על רגל ימין', sts: 'קימה מכיסא, 30 שניות', tug: 'קום ולך, 3 מטר', bp: 'לחץ דם (אם יש מד)', sleep: 'שינה ומצב רוח', done: 'נשמר' };
 
-function useStopwatch() {
+interface Stopwatch { ms: number; on: boolean; start: () => void; stop: () => void; reset: () => void }
+function useStopwatch(): Stopwatch {
   const [ms, setMs] = useState(0); const [on, setOn] = useState(false); const t0 = useRef(0);
   useEffect(() => { if (!on) return; const id = window.setInterval(() => setMs(Date.now() - t0.current), 100); return () => window.clearInterval(id); }, [on]);
   return { ms, on, start: () => { t0.current = Date.now(); setMs(0); setOn(true); }, stop: () => setOn(false), reset: () => { setOn(false); setMs(0); } };
+}
+
+function Timer({ sw, max, onDone }: { sw: Stopwatch; max: number; onDone: (sec: number) => void }) {
+  return (
+    <div className="card p-5 flex flex-col items-center gap-4">
+      <div className="text-6xl font-extrabold tabular-nums">{(sw.ms / 1000).toFixed(1)}<span className="text-xl"> ש'</span></div>
+      {!sw.on ? <button className="btn-primary" onClick={sw.start}>התחל</button>
+        : <button className="btn-stop w-full" onClick={() => { sw.stop(); onDone(Math.min(max, Math.round(sw.ms / 100) / 10)); }}>עצור</button>}
+      {sw.ms >= max * 1000 && sw.on && <p>הגעת ל-{max} שניות. אפשר לעצור.</p>}
+    </div>
+  );
+}
+function Row({ k, v, u }: { k: string; v: number | string | undefined; u: string }) {
+  return <div className="flex justify-between"><span>{k}</span><span className="font-extrabold tabular-nums">{v ?? '—'} {v !== undefined ? u : ''}</span></div>;
+}
+function Scale({ label, value, onChange }: { label: string; value?: number; onChange: (v: number) => void }) {
+  return (
+    <div><div className="font-extrabold mb-2">{label}</div>
+      <div className="flex gap-2">{[1, 2, 3, 4, 5].map(v => <button key={v} className="chip flex-1 justify-center" aria-pressed={value === v} onClick={() => onChange(v)}>{v}</button>)}</div>
+      <div className="flex justify-between text-[var(--fg-soft)] text-sm mt-1"><span>גרוע</span><span>מצוין</span></div>
+    </div>
+  );
 }
 
 export default function Measure() {
@@ -28,20 +53,9 @@ export default function Measure() {
     nav(week === 0 ? '/download' : '/', { replace: true }); // אחרי מדידת הבסיס: הצעה להוריד את התוכן למכשיר
   }
 
-  const Timer = ({ onDone, max }: { onDone: (sec: number) => void; max: number }) => (
-    <div className="card p-5 flex flex-col items-center gap-4">
-      <div className="text-6xl font-extrabold tabular-nums">{(sw.ms / 1000).toFixed(1)}<span className="text-xl"> ש'</span></div>
-      {!sw.on ? <button className="btn-primary" onClick={sw.start}>התחל</button>
-        : <button className="btn-stop w-full" onClick={() => { sw.stop(); onDone(Math.min(max, Math.round(sw.ms / 100) / 10)); }}>עצור</button>}
-      {sw.ms >= max * 1000 && sw.on && <p>הגעת ל-{max} שניות. אפשר לעצור.</p>}
-    </div>
-  );
-
-  const titles: Record<Step, string> = { intro: `מדידת בסיס${week ? ` — שבוע ${week}` : ''}`, legL: 'עמידה על רגל שמאל', legR: 'עמידה על רגל ימין', sts: 'קימה מכיסא, 30 שניות', tug: 'קום ולך, 3 מטר', bp: 'לחץ דם (אם יש מד)', sleep: 'שינה ומצב רוח', done: 'נשמר' };
-
   return (
     <section className="flex flex-col gap-5 pt-4 min-h-[70dvh]">
-      <h1 className="text-3xl font-extrabold">{titles[step]}</h1>
+      <h1 className="text-3xl font-extrabold">{step === 'intro' && week ? `מדידה — שבוע ${week}` : TITLES[step]}</h1>
       {step === 'intro' && <>
         <p className="text-xl">חמש דקות, ליד קיר או כיסא. המספרים האלה הם הבסיס שאליו נשווה בשבוע 6, 12 ו-24. זה הרגע שבו רואים שזה עובד.</p>
         <p className="text-[var(--fg-soft)]">אין ציון. יש רק "לפני" ו"אחרי".</p>
@@ -49,7 +63,7 @@ export default function Measure() {
       </>}
       {(step === 'legL' || step === 'legR') && <>
         <p>יד קרובה לקיר. מרימים את הרגל השנייה כמה סנטימטרים. עוצרים כשהרגל נוגעת ברצפה או כשנוגעים בקיר. עד 60 שניות.</p>
-        <Timer max={60} onDone={s => { setM(x => ({ ...x, [step === 'legL' ? 'singleLegL' : 'singleLegR']: s })); next(); }} />
+        <Timer sw={sw} max={60} onDone={s => { setM(x => ({ ...x, [step === 'legL' ? 'singleLegL' : 'singleLegR']: s })); next(); }} />
       </>}
       {step === 'sts' && <>
         <p>כיסא ללא משענות יד, ידיים על החזה. קמים ויושבים כמה פעמים שאפשר ב-30 שניות. לוחצים ＋ בכל קימה.</p>
@@ -63,7 +77,7 @@ export default function Measure() {
       </>}
       {step === 'tug' && <>
         <p>יושבים בכיסא. בסימן: קמים, הולכים 3 מטר, מסתובבים, חוזרים ויושבים. מודדים את הזמן.</p>
-        <Timer max={120} onDone={s => { setM(x => ({ ...x, tug: s })); next(); }} />
+        <Timer sw={sw} max={120} onDone={s => { setM(x => ({ ...x, tug: s })); next(); }} />
       </>}
       {step === 'bp' && <>
         <p className="text-[var(--fg-soft)]">אם אין מד, מדלגים.</p>
@@ -87,16 +101,5 @@ export default function Measure() {
         <button className="btn-primary mt-auto" onClick={save}>שמור והמשך</button>
       </>}
     </section>
-  );
-}
-function Row({ k, v, u }: { k: string; v: number | string | undefined; u: string }) {
-  return <div className="flex justify-between"><span>{k}</span><span className="font-extrabold tabular-nums">{v ?? '—'} {v !== undefined ? u : ''}</span></div>;
-}
-function Scale({ label, value, onChange }: { label: string; value?: number; onChange: (v: number) => void }) {
-  return (
-    <div><div className="font-extrabold mb-2">{label}</div>
-      <div className="flex gap-2">{[1, 2, 3, 4, 5].map(v => <button key={v} className="chip flex-1 justify-center" aria-pressed={value === v} onClick={() => onChange(v)}>{v}</button>)}</div>
-      <div className="flex justify-between text-[var(--fg-soft)] text-sm mt-1"><span>גרוע</span><span>מצוין</span></div>
-    </div>
   );
 }

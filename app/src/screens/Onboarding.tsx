@@ -10,6 +10,7 @@ const TRACKS: { id: Track; name: string; text: string }[] = [
   { id: 'seated', name: 'ישיבה', text: 'שמונה המקטעים על כיסא. לימים קשים או להתחלה.' },
 ];
 const DAYS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש'];
+const Step = ({ children }: { children: React.ReactNode }) => <section className="flex flex-col gap-5 pt-4 min-h-[70dvh]">{children}</section>;
 
 export default function Onboarding() {
   const nav = useNavigate();
@@ -27,8 +28,6 @@ export default function Onboarding() {
     if (!(await db.settings.get(1))) await db.settings.put(DEFAULT_SETTINGS);
     nav('/measure/0', { replace: true });
   }
-
-  const Step = ({ children }: { children: React.ReactNode }) => <section className="flex flex-col gap-5 pt-4 min-h-[70dvh]">{children}</section>;
 
   if (step === 0) return (
     <Step>

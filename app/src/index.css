@@ -52,7 +52,9 @@ body {
   overscroll-behavior: none;
 }
 
-button { font: inherit; color: inherit; }
+button, a, input, label { touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:disabled { opacity: .45; cursor: default; }
 button:focus-visible, a:focus-visible { outline: 3px solid var(--color-bronze); outline-offset: 3px; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -78,7 +80,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--color-bronze); 
   background: var(--color-stop); color: #fff; font-weight: 800; font-size: 1.1rem;
 }
 .chip {
-  display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; padding: 0 1rem;
+  display: inline-flex; align-items: center; gap: .4rem; min-height: 52px; padding: 0 1rem;
   border-radius: 999px; border: 2px solid var(--line); background: var(--bg-elev); color: var(--fg); font-weight: 600;
 }
 .chip[aria-pressed="true"] { border-color: var(--color-bamboo); background: color-mix(in srgb, var(--color-bamboo) 14%, var(--bg-elev)); }

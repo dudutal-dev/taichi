@@ -9,6 +9,15 @@ import { contentUrl } from '../content/manifest';
 
 interface FinishState { week: number; actualMin: number; status: 'done' | 'partial' | 'stopped'; plannedMin: number; movements: string[] }
 
+// רכיב ברמת המודול (לא בתוך הרינדור) — אחרת הכפתור נבנה מחדש בכל עדכון והנגיעה בטלפון "נופלת"
+function YesNo({ label, value, onToggle }: { label: string; value: boolean; onToggle: () => void }) {
+  return (
+    <button className="chip w-full justify-between" aria-pressed={value} aria-label={label} onClick={onToggle}>
+      <span>{label}</span><span>{value ? 'כן' : 'לא'}</span>
+    </button>
+  );
+}
+
 export default function Finish() {
   const nav = useNavigate();
   const st = (useLocation().state ?? null) as FinishState | null;
@@ -41,17 +50,15 @@ export default function Finish() {
     setStep('summary');
   }
 
-  const Toggle = ({ k, label }: { k: keyof typeof pain; label: string }) => (
-    <button className="chip w-full justify-between" aria-pressed={pain[k]} aria-label={label} onClick={() => setPain(p => ({ ...p, [k]: !p[k] }))}>
-      <span>{label}</span><span>{pain[k] ? 'כן' : 'לא'}</span>
-    </button>
-  );
+  const toggle = (k: keyof typeof pain) => setPain(p => ({ ...p, [k]: !p[k] }));
 
   if (step === 'safety') return (
     <section className="flex flex-col gap-5 pt-4">
       <h1 className="text-3xl font-extrabold">רגע לפני שמסיימים</h1>
       <p className="text-[var(--fg-soft)]">הרגשת היום משהו מאלה? סמן רק אם כן.</p>
-      <Toggle k="knee" label="כאב ברך" /><Toggle k="back" label="כאב גב" /><Toggle k="dizzy" label="סחרחורת" />
+      <YesNo label="כאב ברך" value={pain.knee} onToggle={() => toggle('knee')} />
+      <YesNo label="כאב גב" value={pain.back} onToggle={() => toggle('back')} />
+      <YesNo label="סחרחורת" value={pain.dizzy} onToggle={() => toggle('dizzy')} />
       <button className="btn-primary" onClick={() => setStep('mood')}>המשך</button>
     </section>
   );
