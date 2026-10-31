@@ -54,4 +54,31 @@ white_crane_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\white
   [submit] kf single_whip_front → 7hslsJr12haecAehe0b9
   [submit] kf strike_ears_front → 4OWo7qGmaVKs06ksa0mL
   [submit] kf play_pipa_side → LHDZrDeyxijT2KvSMc00
-........................................................
+................................................................  [done] kf play_pipa_front 1.5MB ב-94 ש'
+  [done] kf strike_ears_side 1.4MB ב-93 ש'
+.  [done] kf high_pat_horse_front 1.5MB ב-94 ש'
+  [done] kf single_whip_front 1.7MB ב-94 ש'
+  [done] kf high_pat_horse_side 1.6MB ב-94 ש'
+  [done] kf strike_ears_front 1.5MB ב-94 ש'
+  [done] kf play_pipa_side 1.6MB ב-93 ש'
+  [done] kf single_whip_side 1.4MB ב-105 ש'
+play_pipa_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\play_pipa_front_kf.mp4
+play_pipa_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\play_pipa_side_kf.mp4
+single_whip_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\single_whip_front_kf.mp4
+single_whip_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\single_whip_side_kf.mp4
+high_pat_horse_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\high_pat_horse_front_kf.mp4
+high_pat_horse_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\high_pat_horse_side_kf.mp4
+strike_ears_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\strike_ears_front_kf.mp4
+strike_ears_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\strike_ears_side_kf.mp4
+  [submit] kf needle_sea_bottom_side → Bd1fxSum8d5WLW2XI9Cn
+  [submit] kf shuttle_left_front → AoheOqt31IekW8YRTmog
+................  [done] kf needle_sea_bottom_side 1.6MB ב-94 ש'
+  [done] kf shuttle_left_front 1.6MB ב-93 ש'
+shuttle_left_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\shuttle_left_front_kf.mp4
+shuttle_right_front: FAILED video create 401: {"detail":{"type":"invalid_request","code":"quota_exceeded","message":"This request exceeds your quota of 603757. You have 3112 credits remaining, while 4848 credits are required for this request.","status":"quota_exceeded","request_id":"9f3d7c88df2553ba784db13bcda1efa8"}}
+shuttle_side: FAILED video create 401: {"detail":{"type":"invalid_request","code":"quota_exceeded","message":"This request exceeds your quota of 603757. You have 3112 credits remaining, while 4848 credits are required for this request.","status":"quota_exceeded","request_id":"86baad311822f812c2e6ed5615e77771"}}
+needle_sea_bottom_front: FAILED video create 401: {"detail":{"type":"invalid_request","code":"quota_exceeded","message":"This request exceeds your quota of 603757. You have 3112 credits remaining, while 4848 credits are required for this request.","status":"quota_exceeded","request_id":"1f48f778489c2368f6461dc1bbe5d4c2"}}
+needle_sea_bottom_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\needle_sea_bottom_side_kf.mp4
+fan_through_back_front: FAILED video create 401: {"detail":{"type":"invalid_request","code":"quota_exceeded","message":"This request exceeds your quota of 603757. You have 3112 credits remaining, while 4848 credits are required for this request.","status":"quota_exceeded","request_id":"d91ac54f9e9634de310b095ca5940c5b"}}
+fan_through_back_side: FAILED video create 401: {"detail":{"type":"invalid_request","code":"quota_exceeded","message":"This request exceeds your quota of 603757. You have 3112 credits remaining, while 4848 credits are required for this request.","status":"quota_exceeded","request_id":"c57f8c7b5a1954cdc5b58681b5ef5376"}}
+parry_front: FAILED video create 401: {"detail":{"type":"invalid_request","code":"quota_exceeded","message":"This request exceeds your quota of 603757. You have 3112 credits remaining, while 4848 credits are required for this request.","status":"quota_exceeded","request_id":"bff6732534b7869a84c82ef0c7cbe372"}}

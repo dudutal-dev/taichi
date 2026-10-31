@@ -9,7 +9,7 @@ import { contentUrl, loadManifest, type Manifest } from '../content/manifest';
 import { getSettings } from '../db';
 
 const MUSIC_URL = 'audio/music/music_preview.mp3';
-const DUCK = 0.25, MUSIC_VOL = 0.35;
+const MUSIC_GAIN = 0.7, DUCK_GAIN = 0.28; // מוזיקה ברקע; בזמן קריינות יורדת (−8dB בערך) — דרך Web Audio, כי iOS מתעלם מ-element.volume
 
 export default function Player() {
   const { week: weekParam } = useParams();
@@ -45,6 +45,7 @@ export default function Player() {
   const pressTimer = useRef<number | null>(null);
   const longPressed = useRef(false);
   const wakeLock = useRef<WakeLockSentinel | null>(null);
+  const audio = useRef<{ ctx: AudioContext; music: GainNode; nar: GainNode } | null>(null);
 
   useEffect(() => { loadManifest().then(setM); getSettings().then(s => { setMirror(s.mirror); setMusicOn(s.music !== 'off'); if (s.music === 'nature') setMusicUrl(`audio/ambience/amb_${s.natureSound}_30s.mp3`); }); }, []);
   useEffect(() => { const mq = window.matchMedia('(orientation: portrait)'); const h = (e: MediaQueryListEvent) => setPortrait(e.matches); mq.addEventListener('change', h); return () => mq.removeEventListener('change', h); }, []);
@@ -75,7 +76,7 @@ export default function Player() {
     const a = narRef.current; if (!a || !m) { onDone(); return () => {}; }
     const list = ids.filter(id => m.narration[id]?.url);
     let i = 0, cancelled = false;
-    const duck = (on: boolean) => { const mu = musicRef.current; if (mu) mu.volume = on ? MUSIC_VOL * DUCK : MUSIC_VOL; };
+    const duck = (on: boolean) => { const g = audio.current; if (!g) return; g.music.gain.cancelScheduledValues(g.ctx.currentTime); g.music.gain.linearRampToValueAtTime(on ? DUCK_GAIN : MUSIC_GAIN, g.ctx.currentTime + (on ? 0.3 : 1.5)); };
     const playNext = () => {
       if (cancelled) return;
       const id = list[i++];
@@ -118,7 +119,7 @@ export default function Player() {
     if (!started) return;
     const v = videoRef.current, mu = musicRef.current, n = narRef.current;
     if (paused) { v?.pause(); mu?.pause(); n?.pause(); }
-    else { v?.play().catch(() => {}); if (n?.src && !n.ended) n.play().catch(() => {}); if (mu) { mu.muted = !musicOn; if (musicOn) mu.play().catch(() => {}); } }
+    else { v?.play().catch(() => {}); if (n?.src && !n.ended) n.play().catch(() => {}); if (mu) { mu.muted = !musicOn; if (musicOn) mu.play().catch(() => {}); } audio.current?.ctx.resume().catch(() => {}); }
   }, [started, paused, musicOn, idx]);
 
   useEffect(() => { const v = videoRef.current; if (v) v.playbackRate = slow ? 0.5 : 1; }, [slow, idx, view]);
@@ -130,11 +131,23 @@ export default function Player() {
     nav('/finish', { replace: true, state: { week, actualMin, status: st, plannedMin: planned, movements: [...new Set(items.map(i => i.movementId))] } });
   }, [elapsedMs, session, short, nav, week, items]);
 
-  /** נגיעה אחת שמשחררת את כל המדיה (iOS/Android). */
+  /** נגיעה אחת שמשחררת את כל המדיה (iOS/Android) ובונה את המיקסר: מוזיקה וקריינות דרך GainNodes. */
   function start() {
     const mu = musicRef.current, n = narRef.current, v = videoRef.current;
-    if (mu) { mu.volume = MUSIC_VOL; mu.muted = !musicOn; mu.play().catch(() => {}); }
-    if (n) { n.muted = false; n.play().then(() => n.pause()).catch(() => {}); }
+    try {
+      if (!audio.current && mu && n) {
+        const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+        const ctx = new Ctx();
+        const music = ctx.createGain(); music.gain.value = MUSIC_GAIN;
+        const nar = ctx.createGain(); nar.gain.value = 1;
+        ctx.createMediaElementSource(mu).connect(music).connect(ctx.destination);
+        ctx.createMediaElementSource(n).connect(nar).connect(ctx.destination);
+        audio.current = { ctx, music, nar };
+      }
+      audio.current?.ctx.resume().catch(() => {});
+    } catch { /* בלי Web Audio: נופלים חזרה לעוצמת האלמנט */ }
+    if (mu) { mu.volume = 1; mu.muted = !musicOn; mu.play().catch(() => {}); }
+    if (n) { n.muted = false; n.volume = 1; n.play().then(() => n.pause()).catch(() => {}); }
     v?.play().catch(() => {});
     setStarted(true);
   }

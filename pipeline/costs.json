@@ -3721,5 +3721,41 @@
     "seconds": 93,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:43:20.776Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf single_whip_side",
+    "generation_id": "wQAjGjDrwHlyKRFMkE3B",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1441354,
+    "seconds": 105,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:45:05.309Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf needle_sea_bottom_side",
+    "generation_id": "Bd1fxSum8d5WLW2XI9Cn",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1554808,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T15:45:06.566Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf shuttle_left_front",
+    "generation_id": "AoheOqt31IekW8YRTmog",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1647382,
+    "seconds": 93,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]
