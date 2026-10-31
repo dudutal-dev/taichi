@@ -36,7 +36,7 @@ export default function Splash({ onDone }: { onDone: () => void }) {
         </div>
       </div>
       <style>{`
-        .splash { animation: splash-in 400ms ease-out both; }
+        .splash { opacity: 1; } /* בלי fade-in על המיכל: אם אנימציות לא רצות, המסך עדיין נראה */
         .splash-leave { animation: splash-out 500ms ease-in both; pointer-events: none; }
         .splash-leaves { position: absolute; inset: 0; opacity: .9; }
         .splash-arc { animation: splash-draw 1400ms cubic-bezier(.4,0,.2,1) 250ms forwards; }
@@ -44,7 +44,6 @@ export default function Splash({ onDone }: { onDone: () => void }) {
         .splash-title { animation: splash-rise 700ms ease-out 900ms both; }
         @keyframes splash-draw { to { stroke-dashoffset: ${c * 0.28}; } }
         @keyframes splash-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
-        @keyframes splash-in { from { opacity: 0; } to { opacity: 1; } }
         @keyframes splash-out { to { opacity: 0; } }
         @media (prefers-reduced-motion: reduce) { .splash-arc { animation-duration: 1ms; } .splash-num, .splash-title { animation: none; } }
       `}</style>
