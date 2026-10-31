@@ -84,4 +84,7 @@ button:focus-visible, a:focus-visible { outline: 3px solid var(--color-bronze); 
   border-radius: 999px; border: 2px solid var(--line); background: var(--bg-elev); color: var(--fg); font-weight: 600;
 }
 .chip[aria-pressed="true"] { border-color: var(--color-bamboo); background: color-mix(in srgb, var(--color-bamboo) 14%, var(--bg-elev)); }
+/* משוב מיידי ללחיצה — רואים שהנגיעה נקלטה */
+.chip:active, .btn-stop:active, .btn-secondary:active { transform: scale(.96); filter: brightness(.92); }
+.chip, .btn-stop, .btn-secondary { transition: transform 120ms ease, filter 120ms ease; }
 .card { background: var(--bg-elev); border: 1px solid var(--line); border-radius: var(--radius-card); }

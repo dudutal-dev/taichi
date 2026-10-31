@@ -122,6 +122,13 @@ export default function Player() {
     <div className="fixed inset-0 bg-black text-white flex flex-col select-none" dir="rtl" style={{ paddingTop: 'env(safe-area-inset-top)' }}>
       <div className="h-1.5 shrink-0 bg-white/15"><div className="h-full bg-[var(--color-bamboo-soft)] transition-[width] duration-700" style={{ width: `${progress}%` }} /></div>
 
+      {/* הפקודות הראשיות למעלה: רחוק מסרגל הדפדפן התחתון בטלפון, שבולע נגיעות */}
+      <div className="shrink-0 flex items-stretch gap-2 px-3 py-2 bg-black/90">
+        <button className="btn-stop flex-[1.2] !min-h-14" onClick={() => finish('stopped')}>עצור</button>
+        <button className="chip flex-1 justify-center !min-h-14 !bg-white/15 !border-white/30 !text-white !text-lg" onClick={() => setPaused(p => !p)}>{paused ? 'המשך' : 'השהה'}</button>
+        <button className="chip flex-1 justify-center !min-h-14 !bg-white/15 !border-white/30 !text-white !text-lg" onClick={() => go(1)} disabled={!canSkip} title={!canSkip ? 'חימום לא ניתן לדילוג בשבועות 1–4' : ''}>הבא</button>
+      </div>
+
       <div className="relative flex-1 min-h-0 overflow-hidden" onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={onPointerUp} onClick={onClick}>
         {src ? (
           <video key={src + idx} ref={videoRef} src={contentUrl(src)} playsInline autoPlay preload="auto"
@@ -143,12 +150,10 @@ export default function Player() {
         {paused && <div className="absolute inset-0 grid place-items-center pointer-events-none"><div className="bg-black/60 rounded-full px-8 py-4 text-2xl font-extrabold">מושהה</div></div>}
       </div>
 
-      <div className="shrink-0 bg-black/90 px-3 pt-2 flex flex-col gap-2" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + .5rem)' }}>
-        <div className="flex items-stretch gap-2">
-          <button className="btn-stop flex-[1.2]" onClick={() => finish('stopped')}>עצור</button>
-          <button className="chip flex-1 justify-center !min-h-14 !bg-white/10 !border-white/25 !text-white !text-lg" onClick={() => setPaused(p => !p)}>{paused ? 'המשך' : 'השהה'}</button>
-          <button className="chip flex-1 justify-center !min-h-14 !bg-white/10 !border-white/25 !text-white !text-lg" onClick={() => go(1)} disabled={!canSkip} title={!canSkip ? 'חימום לא ניתן לדילוג בשבועות 1–4' : ''}>הבא</button>
-          <button className={tog + ' !min-h-14'} aria-expanded={more} onClick={() => setMore(v => !v)}>עוד</button>
+      <div className="shrink-0 bg-black/90 px-3 pt-2 flex flex-col gap-2" style={{ paddingBottom: 'calc(env(safe-area-inset-bottom) + 1rem)' }}>
+        <div className="flex items-center justify-between gap-2">
+          <span className="text-white/60 tabular-nums">{idx + 1}/{items.length} · {Math.floor(elapsedMs / 60000)}:{String(Math.floor(elapsedMs / 1000) % 60).padStart(2, '0')}</span>
+          <button className={tog + ' !min-h-12'} aria-expanded={more} onClick={() => setMore(v => !v)}>{more ? 'פחות' : 'עוד אפשרויות'}</button>
         </div>
         {more && (
           <div className="flex flex-wrap items-center gap-2">
@@ -160,10 +165,6 @@ export default function Player() {
             {castable && <button className={tog} onClick={() => videoRef.current?.remote?.prompt().catch(() => {})}>שדר למסך</button>}
           </div>
         )}
-        <div className="flex justify-between text-white/60 text-sm tabular-nums">
-          <span>{idx + 1}/{items.length}</span>
-          <span>{Math.floor(elapsedMs / 60000)}:{String(Math.floor(elapsedMs / 1000) % 60).padStart(2, '0')}</span>
-        </div>
       </div>
 
       {musicOn && <audio ref={musicRef} src={contentUrl(musicUrl)} loop autoPlay onCanPlay={e => { e.currentTarget.volume = MUSIC_VOL; }} />}
