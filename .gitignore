@@ -1,0 +1,23 @@
+# סודות
+.env
+.env.*
+!.env.example
+*.key
+
+# וידאו ומוזיקה — לא נכנסים ל-git (גודל). הקריינות והמניפסט כן.
+content/video/
+content/audio/music/
+content/audio/ambience/
+reference/*.mp4
+reference/*.webm
+
+# תלויות ובנייה
+node_modules/
+app/dist/
+pipeline/.cache/
+outputs/*.mp4
+outputs/*.webm
+
+# מערכת
+.DS_Store
+Thumbs.db

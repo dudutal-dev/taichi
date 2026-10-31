@@ -1,0 +1,8 @@
+בדיקת שלב 0 — 31.10.2026 (node pipeline/00_check.mjs)
+subscription: 401 missing user_read
+models:       401 missing models_read
+voices:       401 missing voices_read
+GET /v1/flows/image: 200 (רשימת יצירות — הגישה ל-Image/Video API פתוחה למפתח)
+TTS eleven_v3 (Matilda, speed 0.85): 200, 118743 bytes ≈ 7.4s, תמלול 14/14 = 100%
+TTS eleven_v4 (Matilda, speed 0.85): 200, 134207 bytes ≈ 8.4s, תמלול 14/14 = 100%
+משפט: עכשיו, ידיים כעננים. העבר את המשקל לאט לרגל ימין. הברך נשארת מעל כף הרגל.
