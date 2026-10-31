@@ -33,7 +33,8 @@ export default function Player() {
   const pressTimer = useRef<number | null>(null);
   const wakeLock = useRef<WakeLockSentinel | null>(null);
 
-  useEffect(() => { loadManifest().then(setM); getSettings().then(s => { setMirror(s.mirror); setMusicOn(s.music !== 'off'); }); }, []);
+  const [musicUrl, setMusicUrl] = useState(MUSIC_URL);
+  useEffect(() => { loadManifest().then(setM); getSettings().then(s => { setMirror(s.mirror); setMusicOn(s.music !== 'off'); if (s.music === 'nature') setMusicUrl(`audio/ambience/amb_${s.natureSound}_30s.mp3`); }); }, []);
   const session = useMemo(() => (m ? buildSession(m, week, { short }) : null), [m, week, short]);
   const items = session?.items ?? [];
   const item: PlaylistItem | undefined = items[idx];
@@ -146,7 +147,7 @@ export default function Player() {
         <span className="mr-auto text-white/70 tabular-nums">{Math.floor(elapsedMs / 60000)}:{String(Math.floor(elapsedMs / 1000) % 60).padStart(2, '0')}</span>
       </div>
 
-      {musicOn && <audio ref={musicRef} src={contentUrl(MUSIC_URL)} loop autoPlay onCanPlay={e => { e.currentTarget.volume = MUSIC_VOL; }} />}
+      {musicOn && <audio ref={musicRef} src={contentUrl(musicUrl)} loop autoPlay onCanPlay={e => { e.currentTarget.volume = MUSIC_VOL; }} />}
     </div>
   );
 }
