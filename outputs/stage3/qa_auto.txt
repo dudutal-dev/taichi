@@ -1,0 +1,6 @@
+cloud_hands_front | 8.000000s | 1920,1080,24/1 | loop_ssim=0.973710
+cloud_hands_side | 8.000000s | 1920,1080,24/1 | loop_ssim=0.968220
+grasp_bird_tail_front | 8.000000s | 1920,1080,24/1 | loop_ssim=0.970447
+grasp_bird_tail_side | 8.000000s | 1920,1080,24/1 | loop_ssim=0.959381
+weight_shift_front | 8.000000s | 1920,1080,24/1 | loop_ssim=0.968884
+weight_shift_side | 8.000000s | 1920,1080,24/1 | loop_ssim=0.969989

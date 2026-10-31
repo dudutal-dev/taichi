@@ -6,3 +6,11 @@
 .................................................  [done] grasp_bird_tail front 3.1MB ב-105 ש'
 .......  [done] grasp_bird_tail side 3.1MB ב-124 ש'
 ..  [done] weight_shift front 3.0MB ב-135 ש'
+...  [done] cloud_hands side 3.1MB ב-155 ש'
+  [done] weight_shift side 2.7MB ב-166 ש'
+cloud_hands side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\cloud_hands_side.mp4
+grasp_bird_tail front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_front.mp4
+grasp_bird_tail side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\grasp_bird_tail_side.mp4
+weight_shift front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_front.mp4
+weight_shift side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_side.mp4
+exit 0

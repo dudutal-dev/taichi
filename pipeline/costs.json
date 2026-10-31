@@ -523,5 +523,29 @@
     "seconds": 135,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:38:54.004Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "cloud_hands side",
+    "generation_id": "PecpE4PebcgEURVzJUd9",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 3070190,
+    "seconds": 155,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:39:04.340Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "weight_shift side",
+    "generation_id": "qMUC2WXfcfXYr4UDloC8",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 2729914,
+    "seconds": 166,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]

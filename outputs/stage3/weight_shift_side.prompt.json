@@ -1,0 +1,14 @@
+{
+  "model_id": "veo-3.1-generate-001",
+  "prompt": "The same woman from the reference image, in the same plain studio with the same clothes and lighting, demonstrates a Tai Chi movement for beginners aged 50+. Movement: basic Tai Chi weight shifting with the opening posture, seen in exact side profile from her right side. The arms float slowly up in front of the body to shoulder height, palms down, then sink back to the hips while the knees soften a few degrees. Then the weight shifts slowly forward and back between the two feet with the spine vertical: no leaning, the head stays above the pelvis, the knees stay above the feet. High stance only: knees bent only slightly (no more than about 30 degrees), each knee stays above its own foot and never collapses inward, back upright and tall, shoulders relaxed and down, chin level, calm gentle face, natural breathing. Very slow, smooth, continuous motion at a relaxed teaching pace with no pauses and no sudden changes. She begins and ends in exactly the neutral standing posture of the reference image (feet shoulder-width apart, arms relaxed at the sides) so the clip loops seamlessly. Static locked camera, no camera movement, no zoom, no cuts, full body always in frame from head to feet, feet visible on the floor, background unchanged.",
+  "negative_prompt": "deep squat, low stance, lunging, knees past toes, knees caving inward, leaning forward, jumping, fast or jerky motion, camera movement, zoom, cuts, scene change, extra people, text, captions, logos, watermark, distorted hands, extra fingers, blurry face, mirror, music",
+  "duration_secs": 8,
+  "aspect_ratio": "16:9",
+  "resolution": "1080p",
+  "generate_audio": false,
+  "enhance_prompt": true,
+  "start_frame": "<C:\\Users\\dudut\\OneDrive\\Desktop\\taichi150\\content\\character\\side.png>",
+  "end_frame": "<C:\\Users\\dudut\\OneDrive\\Desktop\\taichi150\\content\\character\\side.png>",
+  "generation_id": "qMUC2WXfcfXYr4UDloC8",
+  "cache_key": "ac3d49ffd4087601"
+}
