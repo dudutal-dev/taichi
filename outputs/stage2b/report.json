@@ -1,0 +1,88 @@
+{
+  "sentence": "שלום, וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות, והנשימה איטית. כיסא או קיר בהישג יד.",
+  "settings": {
+    "stability": 0.45,
+    "similarity_boost": 0.75,
+    "style": 0.2,
+    "use_speaker_boost": true,
+    "speed": 0.85
+  },
+  "designs": {
+    "design_a": "A warm, gentle woman in her early fifties speaking Israeli Hebrew. Soft, slightly low-pitched, velvety voice with a smile in it. Calm, reassuring and unhurried, like a kind yoga or tai chi teacher guiding beginners at home. Clear articulation, natural breathing, no breathiness, no theatrical drama.",
+    "design_b": "A serene, maternal Hebrew-speaking woman around forty-five, soft mid-range voice, very warm and pleasant, slow and patient delivery, like a meditation guide. Rounded, soothing tone, gentle confidence, never rushed, never sharp."
+  },
+  "report": [
+    {
+      "label": "lib_emily_v4",
+      "voiceId": "LcfcDJNUP1GQjkzn1xUU",
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "lib_sarah_v4",
+      "voiceId": "EXAVITQu4vr4xnSDxMaL",
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד."
+    },
+    {
+      "label": "lib_serena_v4",
+      "voiceId": "pMsXgVXv3BLzUgSXRplE",
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "lib_grace_v4",
+      "voiceId": "oWAxZDx7w5VEj9dCyTzz",
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "lib_dorothy_v4",
+      "voiceId": "ThT5KcBeYPX3keUQqHPh",
+      "match": 100,
+      "heard": "שלום וברוכים הבאים לטאי צ'י 150. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "design_a_1",
+      "generated_voice_id": "Q66nSxzHD17K0D45sjyG",
+      "duration": 20.352125,
+      "match": 95,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "design_a_2",
+      "generated_voice_id": "kDWgFXPVqInwUqlBxZ6Q",
+      "duration": 20.117,
+      "match": 95,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "design_a_3",
+      "generated_voice_id": "UxfAMknoNcWUDPGUeQ9V",
+      "duration": 21.397,
+      "match": 95,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "design_b_1",
+      "generated_voice_id": "pOiQtYKWK8MWvmdu3nkU",
+      "duration": 18.758625,
+      "match": 95,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "design_b_2",
+      "generated_voice_id": "i5sYB33CctoUZnKu0dIO",
+      "duration": 17.1651875,
+      "match": 91,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רככות והנשימה איטית. כיסא או קיר בהישג יד"
+    },
+    {
+      "label": "design_b_3",
+      "generated_voice_id": "3i8AEHdRIbmSE7VcoKkk",
+      "duration": 22.2851875,
+      "match": 95,
+      "heard": "שלום וברוכים הבאים לטאי צ'י מאה חמישים. היום נתרגל ידיים כעננים. עומדים זקוף, הברכיים רכות והנשימה איטית. כיסא או קיר בהישג יד"
+    }
+  ]
+}

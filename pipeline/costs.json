@@ -172,5 +172,80 @@
     "chars": 122,
     "usd": 0.0098,
     "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:22:02.181Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "lib_emily_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "LcfcDJNUP1GQjkzn1xUU",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:22:07.434Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "lib_sarah_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "EXAVITQu4vr4xnSDxMaL",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:22:12.996Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "lib_serena_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "pMsXgVXv3BLzUgSXRplE",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:22:18.895Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "lib_grace_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "oWAxZDx7w5VEj9dCyTzz",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:22:25.159Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "lib_dorothy_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "ThT5KcBeYPX3keUQqHPh",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:22:38.923Z",
+    "stage": "narration",
+    "kind": "voice-design",
+    "label": "design_a",
+    "chars": 122,
+    "previews": 3,
+    "usd": null,
+    "note": "מחויב לפי תווי טקסט התצוגה; מחיר מדויק לא מפורסם"
+  },
+  {
+    "at": "2026-10-31T10:22:59.066Z",
+    "stage": "narration",
+    "kind": "voice-design",
+    "label": "design_b",
+    "chars": 122,
+    "previews": 3,
+    "usd": null,
+    "note": "מחויב לפי תווי טקסט התצוגה; מחיר מדויק לא מפורסם"
   }
 ]
