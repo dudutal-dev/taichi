@@ -15,8 +15,8 @@ reference/*.webm
 node_modules/
 app/dist/
 pipeline/.cache/
-outputs/*.mp4
-outputs/*.webm
+outputs/**/*.mp4
+outputs/**/*.webm
 
 # מערכת
 .DS_Store

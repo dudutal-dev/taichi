@@ -2038,5 +2038,29 @@
     "seconds": 34,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:48:11.552Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf warm_knee_side",
+    "generation_id": "oJEwscZLySB2xGPlUPg1",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1477346,
+    "seconds": 84,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:48:12.853Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf weight_shift_front_arms",
+    "generation_id": "IJQpXESAOrEWGxMATFzl",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1320590,
+    "seconds": 82,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]
