@@ -278,5 +278,27 @@
     "chars": 122,
     "usd": 0.0098,
     "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:31:09.010Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "cloud_hands front",
+    "generation_id": "QS7FZ5o5ZiZ6BhHT1uP8",
+    "model_id": "veo-3.1-generate-001",
+    "failed": "model_error",
+    "usd": 0
+  },
+  {
+    "at": "2026-10-31T10:33:07.804Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "cloud_hands front",
+    "generation_id": "eTQn7vTfzMVJXa21Wbto",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 2788647,
+    "seconds": 105,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]

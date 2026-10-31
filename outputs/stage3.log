@@ -1,0 +1,15 @@
+  [submit] cloud_hands front → QS7FZ5o5ZiZ6BhHT1uP8
+file:///C:/Users/dudut/OneDrive/Desktop/taichi150/pipeline/lib.mjs:79
+    if (j.status === 'failed') { logCost({ stage, kind, label, generation_id: id, model_id: request.model_id, failed: j.failure_reason, usd: 0 }); throw new Error(`${label} נכשל: ${j.failure_reason} — ${j.error_message || ''}`); }
+                                                                                                                                                         ^
+
+Error: cloud_hands front נכשל: model_error — Encountered a model error: Veo 3 prompt enhancement cannot be disabled. You were not charged for this generation.
+    at generate (file:///C:/Users/dudut/OneDrive/Desktop/taichi150/pipeline/lib.mjs:79:154)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async makeClip (file:///C:/Users/dudut/OneDrive/Desktop/taichi150/pipeline/02_clips.mjs:51:13)
+    at async file:///C:/Users/dudut/OneDrive/Desktop/taichi150/pipeline/02_clips.mjs:60:15
+
+Node.js v24.19.0
+  [submit] cloud_hands front → eTQn7vTfzMVJXa21Wbto
+.........  [done] cloud_hands front 2.8MB ב-105 ש'
+C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\cloud_hands_front.mp4
