@@ -1,0 +1,21 @@
+  [submit] keyframe weight_shift_front_arms → UOGRvx9YQeqzVDbY0iOX
+  [submit] keyframe cloud_hands_side → CrgMQBPtJASnU0bv9Jd6
+  [submit] keyframe grasp_bird_tail_side → FcEYhCahSS16Xbez4dVZ
+  [submit] keyframe cloud_hands_front → aU50ntL6uDs08bL3gboc
+  [submit] keyframe weight_shift_front_right → JTIMbHYKsFAs0GLaNWiT
+  [submit] keyframe grasp_bird_tail_front → PxTuvVFjT5I7XXf7Nl8y
+  [submit] keyframe weight_shift_side_arms → db9fsTpoKuKuT0DmyePt
+.......................................................  [done] keyframe cloud_hands_side 4.4MB ב-29 ש'
+  [done] keyframe weight_shift_front_arms 4.5MB ב-30 ש'
+  [done] keyframe grasp_bird_tail_side 4.4MB ב-30 ש'
+.  [done] keyframe weight_shift_front_right 4.4MB ב-30 ש'
+  [done] keyframe grasp_bird_tail_front 4.4MB ב-30 ש'
+  [done] keyframe weight_shift_side_arms 4.4MB ב-31 ש'
+  [done] keyframe cloud_hands_front 4.5MB ב-35 ש'
+cloud_hands_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\keyframes\cloud_hands_front.png
+cloud_hands_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\keyframes\cloud_hands_side.png
+grasp_bird_tail_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\keyframes\grasp_bird_tail_front.png
+grasp_bird_tail_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\keyframes\grasp_bird_tail_side.png
+weight_shift_front_arms: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\keyframes\weight_shift_front_arms.png
+weight_shift_side_arms: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\keyframes\weight_shift_side_arms.png
+weight_shift_front_right: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\keyframes\weight_shift_front_right.png

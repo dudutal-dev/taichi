@@ -607,5 +607,89 @@
     "seconds": 103,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:54:00.035Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe cloud_hands_side",
+    "generation_id": "CrgMQBPtJASnU0bv9Jd6",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4368667,
+    "seconds": 29,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:54:01.605Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe weight_shift_front_arms",
+    "generation_id": "UOGRvx9YQeqzVDbY0iOX",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4477535,
+    "seconds": 30,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:54:01.885Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe grasp_bird_tail_side",
+    "generation_id": "FcEYhCahSS16Xbez4dVZ",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4435208,
+    "seconds": 30,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:54:02.856Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe weight_shift_front_right",
+    "generation_id": "JTIMbHYKsFAs0GLaNWiT",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4428825,
+    "seconds": 30,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:54:03.123Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe grasp_bird_tail_front",
+    "generation_id": "PxTuvVFjT5I7XXf7Nl8y",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4428080,
+    "seconds": 30,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:54:03.860Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe weight_shift_side_arms",
+    "generation_id": "db9fsTpoKuKuT0DmyePt",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4401672,
+    "seconds": 31,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T10:54:06.727Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe cloud_hands_front",
+    "generation_id": "aU50ntL6uDs08bL3gboc",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4488992,
+    "seconds": 35,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]
