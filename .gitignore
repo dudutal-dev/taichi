@@ -21,3 +21,4 @@ outputs/*.webm
 # מערכת
 .DS_Store
 Thumbs.db
+outputs/stage1/age60_rejected/
