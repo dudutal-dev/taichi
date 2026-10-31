@@ -38,7 +38,7 @@ outputs/    עותקי ביניים לדודו, לפי שלב
 | 5 | אפליקציה — שלד: ניווט, מסך היום, נגן, Dexie | הושלם 31.10: מפגש שבוע 1 רץ מקצה לקצה בדפדפן |
 | 6 | פתיחה מודרכת + סינון, מדידות 0/6/12/24, התוכנית, ההתקדמות, הספרייה, הגדרות, תזכורות, ייצוא | הושלם 31.10; 15 בדיקות יחידה |
 | 7 | מוטיבציה + בטיחות: טבעת, שבועות ירוקים, הודעות מורה, ניטור כאב, התאמות | ממומש בתוך 5–6 (adapt.ts, Finish, Today); הודעות מורה לשבועות 2/4 בנגן — פתוח |
-| 8 | PWA + הורדת תוכן לאופליין + 9:16 + Cast + GitHub Actions→Pages | קוד מוכן 31.10; ממתין ל-push לריפו taichi ולהתקנה בטלפון |
+| 8 | PWA + הורדת תוכן לאופליין + 9:16 + Cast + GitHub Actions→Pages | באוויר 31.10: https://dudutal-dev.github.io/taichi/ — ממתין להתקנה בטלפון |
 | 4ב, 9 | שאר התוכן (שבועות 5–12, TCA, Baduanjin), בדיקות קבלה | |
 
 ## הרצה
@@ -76,6 +76,6 @@ node pipeline/00_check.mjs  # בדיקת מפתח + TTS עברי עם תמלול
 - התקנה בטלפון: לפתוח את כתובת ה-Pages בדפדפן → "הוסף למסך הבית".
 
 ```
-git remote add origin https://github.com/<user>/taichi.git
-git push -u origin main
+git remote -v   # origin = https://github.com/dudutal-dev/taichi.git
+git push        # כל push ל-main פורס מחדש
 ```
