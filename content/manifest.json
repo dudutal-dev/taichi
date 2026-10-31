@@ -736,8 +736,8 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "rejected",
+          "qaNote": "באמצע הקליף כף הרגל נשענת על הירך (תנוחת \"עץ\") והיד עולה מעל הראש — לא טאי צ'י ומסוכן לשיווי משקל. הסיום נכון. חלופה באפליקציה: מבט הצד הוא הזווית הראשית; לייצר מחדש כשיש קרדיטים",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/golden_rooster_left_front.png",
           "still": "stills/golden_rooster_left_front.jpg",
@@ -750,8 +750,8 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "rejected",
+          "qaNote": "כמו שמאל: כף רגל על הירך באמצע. באפליקציה: סטיל של תמונת-המפתח (נכונה: יד על הכיסא, ברך נמוכה) + קריינות",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/golden_rooster_right_front.png",
           "still": "stills/golden_rooster_right_front.jpg",
@@ -764,13 +764,16 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "הרגל עוברת רגע אחורה לפני שהברך עולה קדימה; הסיום נכון, יד על הכיסא כל הזמן",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/golden_rooster_side.png",
           "still": "stills/golden_rooster_side.jpg",
           "startKeyframe": "outputs/stage3/keyframes/neutral_chair_side.png",
-          "source": "outputs/stage3/golden_rooster_side_kf.mp4"
+          "url": "video/golden_rooster_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "49b584e005ea890a",
+          "bytes": 3131138
         }
       ],
       "narration": [
@@ -817,7 +820,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 1
     },
     {
       "id": "wild_horse",
@@ -838,12 +841,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/wild_horse_left_front.png",
           "still": "stills/wild_horse_left_front.jpg",
-          "source": "outputs/stage3/wild_horse_left_front_kf.mp4"
+          "url": "video/wild_horse_left_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "f083dbad1bb55dd1",
+          "bytes": 3294349
         },
         {
           "id": "wild_horse_left_side",
@@ -851,12 +857,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "היד השנייה על המותן במקום יורדת ליד הירך",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/wild_horse_left_side.png",
           "still": "stills/wild_horse_left_side.jpg",
-          "source": "outputs/stage3/wild_horse_left_side_kf.mp4"
+          "url": "video/wild_horse_left_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "06a9562021a2c964",
+          "bytes": 3176596
         },
         {
           "id": "wild_horse_right_front",
@@ -864,12 +873,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "היד עולה גבוה מגובה הכתף באמצע; בסיום בגובה הפנים",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/wild_horse_right_front.png",
           "still": "stills/wild_horse_right_front.jpg",
-          "source": "outputs/stage3/wild_horse_right_front_kf.mp4"
+          "url": "video/wild_horse_right_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "1e14c4b9c2079e77",
+          "bytes": 3108296
         },
         {
           "id": "wild_horse_right_side",
@@ -877,12 +889,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/wild_horse_right_side.png",
           "still": "stills/wild_horse_right_side.jpg",
-          "source": "outputs/stage3/wild_horse_right_side_kf.mp4"
+          "url": "video/wild_horse_right_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "6e58ea7a027c3fa9",
+          "bytes": 2874416
         }
       ],
       "narration": [
@@ -915,7 +930,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 4
     },
     {
       "id": "repulse_monkey",
@@ -936,12 +951,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "בסיום שתי הכפות קדימה (במקום אחת דוחפת ואחת ליד הירך) — דחיפה כפולה, מקובל לגרסה פשוטה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/repulse_monkey_left_front.png",
           "still": "stills/repulse_monkey_left_front.jpg",
-          "source": "outputs/stage3/repulse_monkey_left_front_kf.mp4"
+          "url": "video/repulse_monkey_left_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "8b2440ba6133b849",
+          "bytes": 3261503
         },
         {
           "id": "repulse_monkey_left_side",
@@ -949,11 +967,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "צעד אחורה + דחיפה, נכון",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/repulse_monkey_left_side.png",
-          "still": "stills/repulse_monkey_left_side.jpg"
+          "still": "stills/repulse_monkey_left_side.jpg",
+          "url": "video/repulse_monkey_left_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "fc7d1bfae6bcf737",
+          "bytes": 2758171
         },
         {
           "id": "repulse_monkey_right_front",
@@ -961,11 +983,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "כמו שמאל: שתי כפות קדימה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/repulse_monkey_right_front.png",
-          "still": "stills/repulse_monkey_right_front.jpg"
+          "still": "stills/repulse_monkey_right_front.jpg",
+          "url": "video/repulse_monkey_right_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "1661e5d4afe4c60f",
+          "bytes": 3153354
         },
         {
           "id": "repulse_monkey_right_side",
@@ -973,11 +999,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/repulse_monkey_right_side.png",
-          "still": "stills/repulse_monkey_right_side.jpg"
+          "still": "stills/repulse_monkey_right_side.jpg",
+          "url": "video/repulse_monkey_right_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "3a265bbe28e5d100",
+          "bytes": 2816835
         }
       ],
       "narration": [
@@ -1010,7 +1040,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 4
     },
     {
       "id": "heel_kick",
@@ -1031,12 +1061,13 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "rejected",
+          "qaNote": "הידיים פרושות לצדדים ואין יד על הכיסא — סותר את הקריינות (\"יד על הכיסא\") ומסוכן. הרגל יוצאת הצידה ולא קדימה. באפליקציה: מבט הצד הוא הזווית הראשית לרגל ימין",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/heel_kick_right_front.png",
           "still": "stills/heel_kick_right_front.jpg",
-          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png"
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png",
+          "source": "outputs/stage3/heel_kick_right_front_kf.mp4"
         },
         {
           "id": "heel_kick_left_front",
@@ -1044,12 +1075,16 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "יד על הכיסא, הרגל עולה נמוך הצידה (לא בדיוק קדימה) — מקובל",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/heel_kick_left_front.png",
           "still": "stills/heel_kick_left_front.jpg",
-          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png"
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png",
+          "url": "video/heel_kick_left_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "e941cd667b097957",
+          "bytes": 3089210
         },
         {
           "id": "heel_kick_side",
@@ -1057,12 +1092,16 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "הרגל עוברת רגע אחורה (צעד) לפני הבעיטה קדימה; הסיום נכון: עקב מוביל, נמוך, יד על הכיסא",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/heel_kick_side.png",
           "still": "stills/heel_kick_side.jpg",
-          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_side.png"
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_side.png",
+          "url": "video/heel_kick_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "7a2311f5d25caa8d",
+          "bytes": 3361678
         }
       ],
       "narration": [
@@ -1095,7 +1134,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 2
     },
     {
       "id": "closing",
@@ -1180,11 +1219,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "באמצע היד מגיעה למצח כמו הצדעה; הסיום נכון (יד מעל הראש כף החוצה, השנייה למטה, בהונות קדמיות)",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/white_crane_front.png",
-          "still": "stills/white_crane_front.jpg"
+          "still": "stills/white_crane_front.jpg",
+          "url": "video/white_crane_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "cfb639d63b2b7938",
+          "bytes": 2898651
         },
         {
           "id": "white_crane_side",
@@ -1192,11 +1235,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/white_crane_side.png",
-          "still": "stills/white_crane_side.jpg"
+          "still": "stills/white_crane_side.jpg",
+          "url": "video/white_crane_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "8f7877a98eadd0ea",
+          "bytes": 2952630
         }
       ],
       "narration": [
@@ -1208,7 +1255,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 2
     },
     {
       "id": "play_pipa",
@@ -1229,11 +1276,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "מעבר ביניים מוזר (יד לסנטר); הסיום נכון",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/play_pipa_front.png",
-          "still": "stills/play_pipa_front.jpg"
+          "still": "stills/play_pipa_front.jpg",
+          "url": "video/play_pipa_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "8d56a189b50c562b",
+          "bytes": 2995801
         },
         {
           "id": "play_pipa_side",
@@ -1241,11 +1292,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "עקב קדמי על הרצפה, שתי הידיים קדימה — נכון",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/play_pipa_side.png",
-          "still": "stills/play_pipa_side.jpg"
+          "still": "stills/play_pipa_side.jpg",
+          "url": "video/play_pipa_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "54facd375d437caf",
+          "bytes": 3064829
         }
       ],
       "narration": [
@@ -1257,7 +1312,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 2
     },
     {
       "id": "single_whip",
@@ -1278,11 +1333,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "כף דוחפת + וו מאחור, עמידה רחבה אך גבוהה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/single_whip_front.png",
-          "still": "stills/single_whip_front.jpg"
+          "still": "stills/single_whip_front.jpg",
+          "url": "video/single_whip_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "cb53eec331e4a1a1",
+          "bytes": 3340663
         },
         {
           "id": "single_whip_side",
@@ -1290,11 +1349,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/single_whip_side.png",
-          "still": "stills/single_whip_side.jpg"
+          "still": "stills/single_whip_side.jpg",
+          "url": "video/single_whip_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "202b33054d2c7930",
+          "bytes": 2865289
         }
       ],
       "narration": [
@@ -1306,7 +1369,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 2
     },
     {
       "id": "high_pat_horse",
@@ -1327,11 +1390,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "היד עולה גבוה באמצע; סיום: כף בגובה הפנים, השנייה כף למעלה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/high_pat_horse_front.png",
-          "still": "stills/high_pat_horse_front.jpg"
+          "still": "stills/high_pat_horse_front.jpg",
+          "url": "video/high_pat_horse_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "9eb7bbc4fed7a25a",
+          "bytes": 2965762
         },
         {
           "id": "high_pat_horse_side",
@@ -1339,11 +1406,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/high_pat_horse_side.png",
-          "still": "stills/high_pat_horse_side.jpg"
+          "still": "stills/high_pat_horse_side.jpg",
+          "url": "video/high_pat_horse_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "23efcc92b511aa85",
+          "bytes": 3171791
         }
       ],
       "narration": [
@@ -1355,7 +1426,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 2
     },
     {
       "id": "strike_ears",
@@ -1376,11 +1447,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "הסיום נראה כמו \"הצגת שרירים\" (אגרופים ליד הרקות, מרפקים החוצה) — קרוב לתנועה המקורית",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/strike_ears_front.png",
-          "still": "stills/strike_ears_front.jpg"
+          "still": "stills/strike_ears_front.jpg",
+          "url": "video/strike_ears_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "71f5225496535e1a",
+          "bytes": 3037804
         },
         {
           "id": "strike_ears_side",
@@ -1388,11 +1463,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/strike_ears_side.png",
-          "still": "stills/strike_ears_side.jpg"
+          "still": "stills/strike_ears_side.jpg",
+          "url": "video/strike_ears_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "cd1834f4bff24080",
+          "bytes": 2841807
         }
       ],
       "narration": [
@@ -1404,7 +1483,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 2
     },
     {
       "id": "shuttle",
@@ -1425,11 +1504,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "יד מעל המצח כף החוצה, השנייה דוחפת — נכון",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/shuttle_left_front.png",
-          "still": "stills/shuttle_left_front.jpg"
+          "still": "stills/shuttle_left_front.jpg",
+          "url": "video/shuttle_left_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "f4ef5dad375dba58",
+          "bytes": 3252589
         },
         {
           "id": "shuttle_right_front",
@@ -1465,7 +1548,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 1
     },
     {
       "id": "needle_sea_bottom",
@@ -1498,11 +1581,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "אין רשומת QA",
+          "qa": "approved",
+          "qaNote": "כיפוף מתון מהירכיים, הגב ארוך, ברכיים מעט כפופות — מתאים ל-50+",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/needle_sea_bottom_side.png",
-          "still": "stills/needle_sea_bottom_side.jpg"
+          "still": "stills/needle_sea_bottom_side.jpg",
+          "url": "video/needle_sea_bottom_side.mp4",
+          "loopDurationMs": 8000,
+          "hash": "3555db99a48c17cd",
+          "bytes": 3096813
         }
       ],
       "narration": [
@@ -1514,7 +1601,7 @@
           "qa": "approved"
         }
       ],
-      "approvedClips": 0
+      "approvedClips": 1
     },
     {
       "id": "fan_through_back",

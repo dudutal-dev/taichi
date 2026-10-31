@@ -49,6 +49,16 @@ describe('בונה המפגש', () => {
     const nobal = buildSession(manifest, 7, { skipBalance: true });
     expect(nobal.items.some(i => i.movementId === 'heel_kick' || i.movementId === 'golden_rooster')).toBe(false);
   });
+  it('קליף חזיתי שנדחה ב-QA: הצד הופך לזווית הראשית, ובלי שום קליף — סטיל + קריינות (4ב)', () => {
+    const w7 = buildSession(manifest, 7, {});
+    const roosterL = w7.items.find(i => i.key === 'golden_rooster-0-demo')!;
+    expect(roosterL.frontUrl).toContain('golden_rooster_side');
+    expect(roosterL.sideAvailable).toBe(false);
+    expect(w7.items.find(i => i.key === 'golden_rooster-1-still')?.stillUrl).toContain('golden_rooster_right_front');
+    expect(w7.items.find(i => i.key === 'heel_kick-0-demo')?.frontUrl).toContain('heel_kick_side');
+    const seated = buildSession(manifest, 3, { track: 'seated' });
+    expect(seated.items.filter(i => i.phase === 'core').every(i => i.loops === 0 && i.stillUrl.startsWith('stills/'))).toBe(true);
+  });
   it('מסלול ישיבה: שמונה המקטעים, בלי חימום עמידה', () => {
     const s = buildSession(manifest, 3, { track: 'seated' });
     expect(s.items.filter(i => i.phase === 'warmup')).toHaveLength(0);

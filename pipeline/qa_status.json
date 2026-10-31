@@ -144,5 +144,135 @@
     "qa": "rejected",
     "note": "3 ניסיונות (כולל פיצול עם תמונת ביניים): Veo מייצר הרמה צידית בכל מבט חזיתי. מסומן לדודו: המלצה להשתמש במבט הצד (approved) כזווית ראשית לתנועה זו",
     "attempt": 3
+  },
+  "golden_rooster_left_front": {
+    "qa": "rejected",
+    "note": "באמצע הקליף כף הרגל נשענת על הירך (תנוחת \"עץ\") והיד עולה מעל הראש — לא טאי צ'י ומסוכן לשיווי משקל. הסיום נכון. חלופה באפליקציה: מבט הצד הוא הזווית הראשית; לייצר מחדש כשיש קרדיטים",
+    "attempt": 1
+  },
+  "golden_rooster_right_front": {
+    "qa": "rejected",
+    "note": "כמו שמאל: כף רגל על הירך באמצע. באפליקציה: סטיל של תמונת-המפתח (נכונה: יד על הכיסא, ברך נמוכה) + קריינות",
+    "attempt": 1
+  },
+  "golden_rooster_side": {
+    "qa": "approved",
+    "note": "הרגל עוברת רגע אחורה לפני שהברך עולה קדימה; הסיום נכון, יד על הכיסא כל הזמן",
+    "attempt": 1
+  },
+  "wild_horse_left_front": {
+    "qa": "approved",
+    "note": "",
+    "attempt": 1
+  },
+  "wild_horse_left_side": {
+    "qa": "approved",
+    "note": "היד השנייה על המותן במקום יורדת ליד הירך",
+    "attempt": 1
+  },
+  "wild_horse_right_front": {
+    "qa": "approved",
+    "note": "היד עולה גבוה מגובה הכתף באמצע; בסיום בגובה הפנים",
+    "attempt": 1
+  },
+  "wild_horse_right_side": {
+    "qa": "approved",
+    "note": "",
+    "attempt": 1
+  },
+  "repulse_monkey_left_front": {
+    "qa": "approved",
+    "note": "בסיום שתי הכפות קדימה (במקום אחת דוחפת ואחת ליד הירך) — דחיפה כפולה, מקובל לגרסה פשוטה",
+    "attempt": 1
+  },
+  "repulse_monkey_left_side": {
+    "qa": "approved",
+    "note": "צעד אחורה + דחיפה, נכון",
+    "attempt": 1
+  },
+  "repulse_monkey_right_front": {
+    "qa": "approved",
+    "note": "כמו שמאל: שתי כפות קדימה",
+    "attempt": 1
+  },
+  "repulse_monkey_right_side": {
+    "qa": "approved",
+    "note": "",
+    "attempt": 1
+  },
+  "heel_kick_right_front": {
+    "qa": "rejected",
+    "note": "הידיים פרושות לצדדים ואין יד על הכיסא — סותר את הקריינות (\"יד על הכיסא\") ומסוכן. הרגל יוצאת הצידה ולא קדימה. באפליקציה: מבט הצד הוא הזווית הראשית לרגל ימין",
+    "attempt": 1
+  },
+  "heel_kick_left_front": {
+    "qa": "approved",
+    "note": "יד על הכיסא, הרגל עולה נמוך הצידה (לא בדיוק קדימה) — מקובל",
+    "attempt": 1
+  },
+  "heel_kick_side": {
+    "qa": "approved",
+    "note": "הרגל עוברת רגע אחורה (צעד) לפני הבעיטה קדימה; הסיום נכון: עקב מוביל, נמוך, יד על הכיסא",
+    "attempt": 1
+  },
+  "single_whip_front": {
+    "qa": "approved",
+    "note": "כף דוחפת + וו מאחור, עמידה רחבה אך גבוהה",
+    "attempt": 1
+  },
+  "single_whip_side": {
+    "qa": "approved",
+    "note": "",
+    "attempt": 1
+  },
+  "white_crane_front": {
+    "qa": "approved",
+    "note": "באמצע היד מגיעה למצח כמו הצדעה; הסיום נכון (יד מעל הראש כף החוצה, השנייה למטה, בהונות קדמיות)",
+    "attempt": 1
+  },
+  "white_crane_side": {
+    "qa": "approved",
+    "note": "",
+    "attempt": 1
+  },
+  "play_pipa_front": {
+    "qa": "approved",
+    "note": "מעבר ביניים מוזר (יד לסנטר); הסיום נכון",
+    "attempt": 1
+  },
+  "play_pipa_side": {
+    "qa": "approved",
+    "note": "עקב קדמי על הרצפה, שתי הידיים קדימה — נכון",
+    "attempt": 1
+  },
+  "high_pat_horse_front": {
+    "qa": "approved",
+    "note": "היד עולה גבוה באמצע; סיום: כף בגובה הפנים, השנייה כף למעלה",
+    "attempt": 1
+  },
+  "high_pat_horse_side": {
+    "qa": "approved",
+    "note": "",
+    "attempt": 1
+  },
+  "strike_ears_front": {
+    "qa": "approved",
+    "note": "הסיום נראה כמו \"הצגת שרירים\" (אגרופים ליד הרקות, מרפקים החוצה) — קרוב לתנועה המקורית",
+    "attempt": 1
+  },
+  "strike_ears_side": {
+    "qa": "approved",
+    "note": "",
+    "attempt": 1
+  },
+  "needle_sea_bottom_side": {
+    "qa": "approved",
+    "note": "כיפוף מתון מהירכיים, הגב ארוך, ברכיים מעט כפופות — מתאים ל-50+",
+    "attempt": 1
+  },
+  "shuttle_left_front": {
+    "qa": "approved",
+    "note": "יד מעל המצח כף החוצה, השנייה דוחפת — נכון",
+    "attempt": 1
   }
 }
