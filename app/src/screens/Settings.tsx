@@ -40,6 +40,12 @@ export default function Settings() {
       </div>
 
       <div className="card p-4 flex flex-col gap-3">
+        <h2 className="font-extrabold">תוכן ללא רשת</h2>
+        <p className="text-[var(--fg-soft)]">להוריד את כל הווידאו והקריינות למכשיר, כדי שהכול יעבוד גם בלי אינטרנט.</p>
+        <a href="#/download" className="btn-secondary">הורדת תוכן</a>
+      </div>
+
+      <div className="card p-4 flex flex-col gap-3">
         <h2 className="font-extrabold">הנתונים שלך</h2>
         <p className="text-[var(--fg-soft)]">הכול במכשיר הזה בלבד. גיבוי ידני לקובץ JSON.</p>
         <button className="btn-secondary" onClick={async () => { const blob = new Blob([await exportAll()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `taichi150-${new Date().toISOString().slice(0, 10)}.json`; a.click(); }}>ייצוא לקובץ</button>

@@ -25,7 +25,7 @@ export default function Measure() {
   async function save() {
     await db.measurements.add({ ...m, date: todayISO(), week } as Measurement);
     if (week === 0) { try { new Audio(contentUrl('audio/narration/teacher_w1.mp3')).play(); } catch { /* ללא רשת */ } }
-    nav('/', { replace: true });
+    nav(week === 0 ? '/download' : '/', { replace: true }); // אחרי מדידת הבסיס: הצעה להוריד את התוכן למכשיר
   }
 
   const Timer = ({ onDone, max }: { onDone: (sec: number) => void; max: number }) => (

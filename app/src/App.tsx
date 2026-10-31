@@ -9,6 +9,7 @@ import Plan from './screens/Plan';
 import Progress from './screens/Progress';
 import Library from './screens/Library';
 import Settings from './screens/Settings';
+import Download from './screens/Download';
 import { getProfile, getSettings, applyDisplaySettings } from './db';
 import { scheduleReminderCheck } from './lib/reminders';
 
@@ -48,6 +49,7 @@ export default function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/library/:id" element={<Library />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/download" element={<Download />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

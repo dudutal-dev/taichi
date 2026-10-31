@@ -26,6 +26,8 @@ export default function Player() {
   const [narDone, setNarDone] = useState(false);
   const [elapsedMs, setElapsedMs] = useState(0);
   const [musicOn, setMusicOn] = useState(true);
+  const [portrait, setPortrait] = useState(() => window.matchMedia('(orientation: portrait)').matches);
+  useEffect(() => { const mq = window.matchMedia('(orientation: portrait)'); const h = (e: MediaQueryListEvent) => setPortrait(e.matches); mq.addEventListener('change', h); return () => mq.removeEventListener('change', h); }, []);
 
   const videoRef = useRef<HTMLVideoElement>(null);
   const musicRef = useRef<HTMLAudioElement>(null);
@@ -99,7 +101,9 @@ export default function Player() {
 
   if (!m || !item) return <div className="min-h-dvh grid place-items-center text-xl">טוען את המפגש…</div>;
 
-  const src = view === 'side' && item.sideUrl ? item.sideUrl : item.frontUrl;
+  const base = view === 'side' && item.sideUrl ? item.sideUrl : item.frontUrl;
+  const src = base && portrait ? base.replace(/\.mp4$/, '_916.mp4') : base; // 9:16 בפורטרט, 16:9 ברוחב/TV
+  const castable = typeof videoRef.current?.remote?.prompt === 'function';
   const progress = items.length ? (idx / items.length) * 100 : 0;
   const go = (d: number) => setIdx(i => Math.max(0, Math.min(items.length - 1, i + d)));
 
@@ -144,6 +148,7 @@ export default function Player() {
         <button className="chip !bg-white/10 !border-white/25 !text-white" aria-pressed={mirror} onClick={() => setMirror(v => !v)}>מראה</button>
         {item.sideAvailable && <button className="chip !bg-white/10 !border-white/25 !text-white" aria-pressed={view === 'side'} onClick={() => setView(v => (v === 'side' ? 'front' : 'side'))}>מבט צד</button>}
         <button className="chip !bg-white/10 !border-white/25 !text-white" aria-pressed={musicOn} onClick={() => setMusicOn(v => !v)}>מוזיקה</button>
+        {castable && <button className="chip !bg-white/10 !border-white/25 !text-white" onClick={() => videoRef.current?.remote?.prompt().catch(() => {})}>שדר למסך</button>}
         <span className="mr-auto text-white/70 tabular-nums">{Math.floor(elapsedMs / 60000)}:{String(Math.floor(elapsedMs / 1000) % 60).padStart(2, '0')}</span>
       </div>
 
