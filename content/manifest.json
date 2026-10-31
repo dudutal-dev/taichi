@@ -30,11 +30,15 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "ניסיון 1 נדחה: הכיסא הופיע באמצע הקליף. ניסיון 2 מתחיל מנייטרלי-עם-כיסא",
-          "attempt": 2,
+          "qa": "approved",
+          "qaNote": "ניסיון 3: הכיסא קבוע; הרגל נמתחת הצידה עם הבהונות על הרצפה (יותר \"טפיחת בהונות\" מסיבוב קרסול) — לצפייה",
+          "attempt": 3,
           "keyframe": "outputs/stage3/keyframes/warm_ankle_front.png",
-          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png"
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png",
+          "url": "video/warm_ankle_front.mp4",
+          "loopDurationMs": 8000,
+          "hash": "7b788b32ad344b72",
+          "bytes": 3005719
         },
         {
           "id": "warm_knee_side",
@@ -42,8 +46,8 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "ניסיון 1 נדחה: כיפוף ~45° באמצע. ניסיון 2 עם 'כמה סנטימטרים'",
+          "qa": "rejected",
+          "qaNote": "2 ניסיונות: הברכיים מתכופפות ~45° באמצע הקליף למרות \"כמה סנטימטרים\". מסומן לדודו: חלופה = סטיל + קריינות, או ניסיון 3",
           "attempt": 2,
           "keyframe": "outputs/stage3/keyframes/warm_knee_side.png"
         },
@@ -79,7 +83,7 @@
         }
       ],
       "narration": [],
-      "approvedClips": 2
+      "approvedClips": 3
     },
     {
       "id": "opening",
@@ -107,8 +111,8 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "ניסיונות 1–2 נדחו: הידיים דרך הצדדים. ניסיון 3: טבור → כתפיים (מתמונת ביניים)",
+          "qa": "rejected",
+          "qaNote": "3 ניסיונות (כולל פיצול עם תמונת ביניים): Veo מייצר הרמה צידית בכל מבט חזיתי. מסומן לדודו: המלצה להשתמש במבט הצד (approved) כזווית ראשית לתנועה זו",
           "attempt": 3,
           "keyframe": "outputs/stage3/keyframes/weight_shift_front_arms.png",
           "startKeyframe": "outputs/stage3/keyframes/weight_shift_front_arms_mid.png"
@@ -164,8 +168,8 @@
           "method": "keyframe",
           "durationMs": 4000,
           "loop": "pingpong",
-          "qa": "pending",
-          "qaNote": "חלק א של הידיים הצפות (נייטרלי → טבור)",
+          "qa": "rejected",
+          "qaNote": "הידיים עולות דרך הצדדים (T) גם לגובה הטבור",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/weight_shift_front_arms_mid.png"
         }

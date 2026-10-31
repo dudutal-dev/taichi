@@ -4,3 +4,10 @@
   [submit] kf weight_shift_front_arms → IJQpXESAOrEWGxMATFzl
 .............................  [done] kf warm_knee_side 1.5MB ב-84 ש'
 .  [done] kf weight_shift_front_arms 1.3MB ב-82 ש'
+  [done] kf weight_shift_front_arms_mid 1.2MB ב-94 ש'
+  [done] kf warm_ankle_front 1.6MB ב-93 ש'
+warm_ankle_front: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\warm_ankle_front_kf.mp4
+warm_knee_side: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\warm_knee_side_kf.mp4
+weight_shift_front_arms_mid: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_front_arms_mid_kf.mp4
+weight_shift_front_arms: C:\Users\dudut\OneDrive\Desktop\taichi150\outputs\stage3\weight_shift_front_arms_kf.mp4
+exit 0

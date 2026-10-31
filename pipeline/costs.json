@@ -2062,5 +2062,53 @@
     "seconds": 82,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:48:23.009Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf weight_shift_front_arms_mid",
+    "generation_id": "Osyk1YFnpZ95dtOguhLy",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1186763,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:48:23.323Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf warm_ankle_front",
+    "generation_id": "RTfpvjO87mvsMupBfOwj",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1618081,
+    "seconds": 93,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:50:33.407Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe neutral_chair_front",
+    "generation_id": "7VBF03YtcscV1QeKzrYu",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4461608,
+    "seconds": 33,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:52:33.976Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf warm_ankle_front",
+    "generation_id": "8ZpkBdouf3Xp8ve0JCOH",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1536172,
+    "seconds": 94,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]
