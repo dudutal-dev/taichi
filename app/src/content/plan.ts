@@ -80,7 +80,8 @@ export interface PlaylistItem {
   mode: 'demo' | 'together' | 'side';
   frontUrl?: string; sideUrl?: string; stillUrl: string;
   loops: number;           // כמה פעמים הלולאה בת 8 ש' מתנגנת
-  narration: string[];     // מזהי קריינות
+  narration: string[];     // מזהי קריינות — מתנגנת בתחילת הקטע
+  narrationEnd: string[];  // מתנגנת אחרי שהלולאות הסתיימו, ורק אז עוברים הלאה (סיומים: 'החימום הסתיים', נשימה)
   sideAvailable: boolean;
   skippable: boolean;
 }
@@ -93,13 +94,13 @@ export function buildSession(m: Manifest, week: number, opts: { short?: boolean 
   const nameOf = (id: string) => movementOf(m, id)?.nameHe ?? id;
   const reps = opts.short ? 2 : plan.reps;
 
-  items.push({ key: 'open', movementId: 'opening', title: 'פתיח', caption: `שבוע ${week}`, phase: 'open', mode: 'demo', stillUrl: still, loops: 0, narration: ['session_open', `session_open_w${Math.min(4, week)}`, 'safety_reminder'], sideAvailable: false, skippable: false });
+  items.push({ key: 'open', movementId: 'opening', title: 'פתיח', caption: `שבוע ${week}`, phase: 'open', mode: 'demo', stillUrl: still, loops: 0, narration: ['session_open', `session_open_w${Math.min(4, week)}`, 'safety_reminder'], narrationEnd: [], sideAvailable: false, skippable: false });
 
   const pushMovement = (def: MovementDef, phase: PlaylistItem['phase'], repsHere: number) => {
     def.units.forEach((u, i) => {
       const f = url(u.front), s = url(u.side);
       const primaryIsSide = !f && !!s;
-      const base = { movementId: def.id, title: nameOf(def.id), stillUrl: still, phase, sideAvailable: !!s && !!f, skippable: phase !== 'warmup' || plan.warmupSkippable };
+      const base = { movementId: def.id, title: nameOf(def.id), stillUrl: still, phase, sideAvailable: !!s && !!f, skippable: phase !== 'warmup' || plan.warmupSkippable, narrationEnd: [] as string[] };
       const cues = [...(i === 0 && def.intro ? [def.intro] : []), ...u.cues];
       if (!f && !s) { // אין קליף מאושר — סטיל + קריינות
         items.push({ ...base, key: `${def.id}-${i}-still`, caption: u.label, mode: 'demo', loops: 0, narration: cues });
@@ -114,14 +115,14 @@ export function buildSession(m: Manifest, week: number, opts: { short?: boolean 
         items.push({ ...base, ...common, key: `${def.id}-${i}-together`, caption: `${u.label} · ביחד`, mode: 'together', loops: repsHere, narration: [] });
       }
     });
-    if (def.outro) { const last = items[items.length - 1]; if (last) last.narration = [...last.narration, def.outro]; }
+    if (def.outro) { const last = items[items.length - 1]; if (last) last.narrationEnd = [...last.narrationEnd, def.outro]; } // סיום — אחרי הלולאות
   };
 
   pushMovement(WARMUP, 'warmup', opts.short ? 1 : 2);
   for (const def of plan.core) pushMovement(def, 'core', reps);
-  if (week >= 3 && !opts.short) { const last = items[items.length - 1]; if (last) last.narration.push('sequence_intro'); }
+  if (week >= 3 && !opts.short) { const last = items[items.length - 1]; if (last) last.narrationEnd.push('sequence_intro'); }
   pushMovement(CLOSING, 'close', 1);
-  items.push({ key: 'close-words', movementId: 'closing', title: 'סיום', caption: 'שלוש נשימות', phase: 'close', mode: 'demo', stillUrl: still, loops: 0, narration: ['session_close'], sideAvailable: false, skippable: false });
+  items.push({ key: 'close-words', movementId: 'closing', title: 'סיום', caption: 'שלוש נשימות', phase: 'close', mode: 'demo', stillUrl: still, loops: 0, narration: ['session_close'], narrationEnd: [], sideAvailable: false, skippable: false });
 
   return { items, plannedMin: opts.short ? 10 : plan.plannedMin, plan };
 }
@@ -131,7 +132,8 @@ export function estimateMinutes(m: Manifest, items: PlaylistItem[]): number {
   let ms = 0;
   for (const it of items) {
     const nar = it.narration.reduce((a, id) => a + (m.narration[id]?.durationMs ?? 0), 0);
-    ms += Math.max(it.loops * 8000, nar) + 600;
+    const narEnd = it.narrationEnd.reduce((a, id) => a + (m.narration[id]?.durationMs ?? 0), 0);
+    ms += Math.max(it.loops * 8000, nar) + narEnd + 600;
   }
   return Math.round(ms / 60000);
 }
