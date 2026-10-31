@@ -8,12 +8,14 @@ import path from 'node:path';
 // בבנייה הוא מועתק ל-dist (ההכרעה: וידאו בתוך האפליקציה עצמה).
 export default defineConfig({
   base: process.env.VITE_BASE ?? '/',
+  define: { __BUILD_TIME__: JSON.stringify(new Date().toISOString().slice(0, 16).replace('T', ' ')) },
   publicDir: path.resolve(__dirname, '../content'),
   plugins: [
     react(),
     tailwindcss(),
     VitePWA({
-      registerType: 'autoUpdate',
+      registerType: 'prompt', // הרענון מנוהל ב-src/pwa.ts: אוטומטי מחוץ למפגש, באנר בתוכו
+      injectRegister: false,
       includeAssets: ['icons/*.png'],
       manifest: {
         name: 'טאי צ\'י 150',
@@ -23,7 +25,7 @@ export default defineConfig({
         dir: 'rtl',
         display: 'standalone',
         orientation: 'any',
-        background_color: '#F6F1E4',
+        background_color: '#2F5D3A',
         theme_color: '#2F5D3A',
         icons: [
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { db, getProfile, getSettings, applyDisplaySettings, exportAll, importAll, resetAll, DEFAULT_SETTINGS, type Profile, type Settings as S, type Track } from '../db';
 import { requestReminderPermission, scheduleReminderCheck } from '../lib/reminders';
+import { BUILD } from '../pwa';
 
 const DAYS = ['א', 'ב', 'ג', 'ד', 'ה', 'ו', 'ש'];
 
@@ -58,6 +59,7 @@ export default function Settings() {
       </div>
       {note && <p className="card p-3">{note}</p>}
       <p className="text-[var(--fg-soft)] text-sm">קול הקריינות נבחר בייצור התוכן ואינו ניתן לשינוי במכשיר.</p>
+      <p className="text-[var(--fg-soft)] text-sm">גרסה {BUILD}. האפליקציה בודקת עדכונים בכל פתיחה ובכל שעה ומתרעננת לבד.</p>
     </section>
   );
 }
