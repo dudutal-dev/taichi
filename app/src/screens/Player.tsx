@@ -31,6 +31,7 @@ export default function Player() {
   const [loopsDone, setLoopsDone] = useState(0);
   const [narDone, setNarDone] = useState(false);     // קריינות הפתיחה של הקטע הסתיימה
   const [endPhase, setEndPhase] = useState<'idle' | 'playing' | 'done'>('idle'); // קריינות הסיום של הקטע
+  const [stateFor, setStateFor] = useState('');          // מפתח הקטע שהמצב למעלה שייך לו (באג: קטע חדש נשפט לפי המצב של הקודם ודולג ב-16ms)
   const doneRef = useRef(false); // האם הקטע הושלם (לשימוש בתוך onEnded של הווידאו)
   const [elapsedMs, setElapsedMs] = useState(0);
   const [musicOn, setMusicOn] = useState(true);
@@ -81,10 +82,14 @@ export default function Player() {
       if (cancelled) return;
       const id = list[i++];
       if (!id) { window.setTimeout(() => duck(false), 1500); onDone(); return; }
-      a.src = contentUrl(m.narration[id]!.url); duck(true);
+      const nar = m.narration[id]!;
+      a.src = contentUrl(nar.url); duck(true);
       a.onended = () => window.setTimeout(playNext, 500);
-      a.onerror = () => playNext();
-      a.play().catch(() => playNext());
+      // קובץ שלא נטען או ניגון שנחסם: מחזיקים את הקטע למשך הקריינות המתוכנן במקום לדלג מיד (אחרת פריטי "סטיל + קריינות" חולפים בהבזק)
+      let held = false;
+      const hold = () => { if (held || cancelled) return; held = true; window.setTimeout(playNext, Math.max(1500, nar.durationMs || 4000)); };
+      a.onerror = hold;
+      a.play().catch(hold);
     };
     playNext();
     return () => { cancelled = true; a.onended = null; a.pause(); };
@@ -93,14 +98,19 @@ export default function Player() {
   // תחילת קטע: איפוס + קריינות הפתיחה
   useEffect(() => {
     if (!started || !item || !m) return;
-    setLoopsDone(0); setNarDone(false); setEndPhase('idle'); doneRef.current = false;
+    setLoopsDone(0); setNarDone(false); setEndPhase('idle'); setStateFor(item.key); doneRef.current = false;
     setView(item.mode === 'side' && item.sideUrl ? 'side' : 'front'); // פריט "מבט צד" נפתח במבט צד (באג: תמיד נפתח בחזית)
-    return playQueue(item.narration, () => setNarDone(true));
+    // פריט סטיל (בלי לולאות וידאו) נשאר על המסך לפחות 8 שניות, גם כשאין לו קריינות (למשל "צד ימין" בישיבה בלי קליף) — אחרת הוא חולף בהבזק
+    let narFinished = false, held = item.loops > 0;
+    const check = () => { if (narFinished && held) setNarDone(true); };
+    const timer = held ? 0 : window.setTimeout(() => { held = true; check(); }, 8000);
+    const cancel = playQueue(item.narration, () => { narFinished = true; check(); });
+    return () => { cancel(); if (timer) window.clearTimeout(timer); };
   }, [started, item, m, playQueue]);
 
   // סוף קטע: כשהלולאות והקריינות הסתיימו → קריינות הסיום (למשל "החימום הסתיים") → ורק אז הלאה
   useEffect(() => {
-    if (!started || !item || slow) return;
+    if (!started || !item || slow || stateFor !== item.key) return; // המצב עוד לא אופס לקטע הזה
     const loopsOk = item.loops === 0 || loopsDone >= item.loops;
     if (!(loopsOk && narDone)) return;
     if (endPhase === 'idle') {
@@ -112,7 +122,7 @@ export default function Player() {
       doneRef.current = true;
       if (idx + 1 < items.length) setIdx(idx + 1); else finish('done');
     }
-  }, [started, loopsDone, narDone, endPhase, item, idx, items.length, slow, playQueue]);
+  }, [started, loopsDone, narDone, endPhase, stateFor, item, idx, items.length, slow, playQueue]);
 
   // השהיה/המשך + מוזיקה
   useEffect(() => {

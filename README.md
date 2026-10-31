@@ -37,9 +37,10 @@ outputs/    עותקי ביניים לדודו, לפי שלב
 | 4א | תוכן שבועות 1–4: 28 סטילס, 26 לולאות, 64 קריינות, סאונד | הושלם 31.10 (2 קליפים נדחו, יש חלופות) |
 | 5 | אפליקציה — שלד: ניווט, מסך היום, נגן, Dexie | הושלם 31.10: מפגש שבוע 1 רץ מקצה לקצה בדפדפן |
 | 6 | פתיחה מודרכת + סינון, מדידות 0/6/12/24, התוכנית, ההתקדמות, הספרייה, הגדרות, תזכורות, ייצוא | הושלם 31.10; 15 בדיקות יחידה |
-| 7 | מוטיבציה + בטיחות: טבעת, שבועות ירוקים, הודעות מורה, ניטור כאב, התאמות | ממומש בתוך 5–6 (adapt.ts, Finish, Today); הודעות מורה לשבועות 2/4 בנגן — פתוח |
-| 8 | PWA + הורדת תוכן לאופליין + 9:16 + Cast + GitHub Actions→Pages | באוויר 31.10: https://dudutal-dev.github.io/taichi/ — ממתין להתקנה בטלפון |
-| 4ב, 9 | שאר התוכן (שבועות 5–12, TCA, Baduanjin), בדיקות קבלה | |
+| 7 | מוטיבציה + בטיחות: טבעת, שבועות ירוקים, הודעות מורה, ניטור כאב, התאמות | הושלם 31.10 (adapt.ts, Finish, Today; הודעות מורה במפגש הראשון של כל שבוע) |
+| 8 | PWA + הורדת תוכן לאופליין + 9:16 + Cast + GitHub Actions→Pages | באוויר 31.10: https://dudutal-dev.github.io/taichi/ — ממתין לבדיקה בטלפון |
+| 4ב | שאר התוכן: שבועות 5–12 + Baduanjin בישיבה (TCA ממתין לאישור הרשימה) | חלקי 31.10: 26/49 קליפים נוצרו (23 אושרו), ואז נגמרה המכסה. `outputs/stage4/QA_4b.md` |
+| 9 | בדיקות קבלה + תיקונים | בתהליך: `outputs/stage9/ACCEPTANCE.md` |
 
 ## הרצה
 
@@ -79,3 +80,22 @@ node pipeline/00_check.mjs  # בדיקת מפתח + TTS עברי עם תמלול
 git remote -v   # origin = https://github.com/dudutal-dev/taichi.git
 git push        # כל push ל-main פורס מחדש
 ```
+
+## איך מוסיפים תנועה
+
+1. **סטיל של שיא התנועה**: מוסיפים רשומה ל-`pipeline/keyframes_4b.mjs` (id, `ref` חזית/צד או תמונת-מפתח קיימת כבסיס, פרומפט, `extraRefs` אם צריך "לשנות רק X"), ומריצים `node pipeline/02a_keyframes.mjs <id>`. הסטיל נשמר ב-`outputs/stage3/keyframes/<id>.png`. דודו מאשר.
+2. **קליף**: מוסיפים רשומה ל-`pipeline/clips_4b.mjs` (movement, view, פרומפט תנועה, `start` אם לא מתחילים מנייטרלי), ומריצים `node pipeline/03_pilot_kf.mjs <id>` (קליף Veo 4 ש' = 4,848 קרדיטים). QA: `bash pipeline/qa_kf.sh <id>` → גיליון פריימים + SSIM.
+3. **הכרעה**: רשומה ב-`pipeline/qa_status.json` (`approved`/`rejected` + הערה). רק approved נכנס לאפליקציה.
+4. **לולאה**: `bash pipeline/pingpong.sh outputs/stage3/<id>_kf.mp4 outputs/stage3/loops/<id>_loop.mp4`.
+5. **הרכבה**: `node pipeline/06_assemble.mjs` (מעתיק לולאות ל-`content/video`, סטילים ל-`content/stills`, כותב `content/manifest.json`), ואז `bash pipeline/portrait.sh` לגרסאות 9:16. תנועה חדשה צריכה גם שורה ב-`MOVEMENTS` שבאותו קובץ (שם, פין-יין, מסלול, שבוע, עומס ברך, 3 נקודות).
+6. **באפליקציה**: `MovementDef` ב-`app/src/content/plan.ts` (יחידות: front/side/cues/sideCue/label/balance) והוספה ל-`WEEKS`. אם אין קליף חזיתי מאושר, הצד הופך לזווית הראשית; אם אין שום קליף, מוצג סטיל + קריינות.
+
+## איך עורכים קריינות ומייצרים מחדש
+
+התסריטים ב-`content/scripts/he/*.md`, שורה לכל קובץ: `id: <id> | <טקסט>`. ניקוד נקודתי פותר הגייה (`הוֹצֵא`, `הֲדִיפַת`).
+`node pipeline/04_narration.mjs content/scripts/he/<file>.md` מפיק רק מה שהשתנה (cache לפי hash של הטקסט), מתמלל חזרה (scribe) ומסמן אי-התאמות ב-`qa`. אחר כך `node pipeline/06_assemble.mjs`.
+מחיר: 1 קרדיט לתו. הקול: `voice_id` ב-`pipeline/config.json`, מודל `eleven_v4`.
+
+## מוזיקה ואווירה
+
+`node pipeline/05_music.mjs previews` הפיק 3 תצוגות של 60 ש' (`outputs/stage4/audio/music_{a,b,c}_preview60s.mp3`); תצוגה א' משמשת בינתיים בנגן. אחרי בחירה: `node pipeline/05_music.mjs full <a|b|c>` → רצועה של 10 דק' (כ-9,000 קרדיטים).

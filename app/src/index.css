@@ -13,6 +13,11 @@
   --color-ink: #22291f;
   --color-stop: #b23a2f;
   --radius-card: 22px;
+  /* קריטריון קבלה: אין טקסט מתחת ל-16px. בבסיס 18px, text-sm/text-xs של Tailwind היו 15.75/13.5px → 16.2px. */
+  --text-sm: 0.9rem;
+  --text-sm--line-height: 1.45;
+  --text-xs: 0.9rem;
+  --text-xs--line-height: 1.45;
 }
 
 :root {

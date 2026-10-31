@@ -51,7 +51,7 @@ export default function Settings() {
 
       <div className="card p-4 flex flex-col gap-3">
         <h2 className="font-extrabold">הנתונים שלך</h2>
-        <p className="text-[var(--fg-soft)]">הכול במכשיר הזה בלבד. גיבוי ידני לקובץ JSON.</p>
+        <p className="text-[var(--fg-soft)]">הכול במכשיר הזה בלבד. גיבוי ידני לקובץ.</p>
         <button className="btn-secondary" onClick={async () => { const blob = new Blob([await exportAll()], { type: 'application/json' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `taichi150-${new Date().toISOString().slice(0, 10)}.json`; a.click(); }}>ייצוא לקובץ</button>
         <button className="btn-secondary" onClick={() => file.current?.click()}>ייבוא מקובץ</button>
         <input ref={file} type="file" accept="application/json" className="hidden" onChange={async e => { const f = e.target.files?.[0]; if (!f) return; try { await importAll(await f.text()); setNote('הנתונים יובאו.'); location.reload(); } catch { setNote('הקובץ לא נקרא.'); } }} />

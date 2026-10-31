@@ -46,15 +46,15 @@ function MinutesChart({ weeks, current }: { weeks: ReturnType<typeof summarizeWe
       <h2 className="font-extrabold text-lg">דקות בשבוע</h2>
       <svg viewBox={`0 0 ${W} ${H}`} className="w-full mt-2" role="img" aria-label="דקות תרגול בכל אחד מ-12 השבועות, מול יעד של 150">
         <line x1={padL} x2={W - 8} y1={y(WEEKLY_GOAL_MIN)} y2={y(WEEKLY_GOAL_MIN)} stroke="var(--color-bronze)" strokeWidth="2" strokeDasharray="6 6" />
-        <text x={W - 8} y={y(WEEKLY_GOAL_MIN) - 6} textAnchor="end" fontSize="13" fill="var(--fg-soft)">יעד 150</text>
+        <text x={W - 8} y={y(WEEKLY_GOAL_MIN) - 6} textAnchor="end" fontSize="16" fill="var(--fg-soft)">יעד 150</text>
         <line x1={padL} x2={W - 8} y1={y(0)} y2={y(0)} stroke="var(--line)" strokeWidth="1" />
         {weeks.map((w, i) => (
           <g key={w.week} onPointerEnter={() => setHover(i)} onPointerLeave={() => setHover(null)}>
             <rect x={x(i)} y={padT} width={bw + 6} height={H - padT - padB} fill="transparent" />
             <rect x={x(i)} y={y(w.minutes)} width={bw} height={Math.max(0, y(0) - y(w.minutes))} rx="4"
               fill={w.week === current ? 'var(--color-bamboo)' : w.week < current ? 'var(--color-bamboo-soft)' : 'var(--ring-track)'} />
-            {(hover === i || w.week === current) && w.minutes > 0 && <text x={x(i) + bw / 2} y={y(w.minutes) - 6} textAnchor="middle" fontSize="13" fontWeight="700" fill="var(--fg)">{w.minutes}</text>}
-            <text x={x(i) + bw / 2} y={H - 8} textAnchor="middle" fontSize="12" fill="var(--fg-soft)">{w.week}</text>
+            {(hover === i || w.week === current) && w.minutes > 0 && <text x={x(i) + bw / 2} y={y(w.minutes) - 6} textAnchor="middle" fontSize="16" fontWeight="700" fill="var(--fg)">{w.minutes}</text>}
+            <text x={x(i) + bw / 2} y={H - 8} textAnchor="middle" fontSize="16" fill="var(--fg-soft)">{w.week}</text>
           </g>
         ))}
       </svg>

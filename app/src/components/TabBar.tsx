@@ -21,7 +21,7 @@ export default function TabBar() {
       <ul className="flex max-w-[520px] mx-auto">
         {TABS.map(t => (
           <li key={t.to} className="flex-1">
-            <NavLink to={t.to} end={t.to === '/'} className={({ isActive }) => `flex flex-col items-center justify-center gap-1 min-h-[72px] text-[0.8rem] font-semibold transition-colors ${isActive ? 'text-[var(--color-bamboo)]' : 'text-[var(--fg-soft)]'}`}>
+            <NavLink to={t.to} end={t.to === '/'} className={({ isActive }) => `flex flex-col items-center justify-center gap-1 min-h-[72px] text-[0.9rem] font-semibold transition-colors ${isActive ? 'text-[var(--color-bamboo)]' : 'text-[var(--fg-soft)]'}`}>
               {({ isActive }) => (
                 <>
                   <span className={`grid place-items-center w-14 h-8 rounded-full transition-colors ${isActive ? 'bg-[var(--color-bamboo)]/14' : ''}`}>{ICONS[t.id]!(isActive)}</span>
