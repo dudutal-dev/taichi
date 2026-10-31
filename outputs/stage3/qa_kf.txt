@@ -1,0 +1,7 @@
+cloud_hands_front | 4.000000s | first~neutral=0.941559 | last~keyframe=0.931274
+cloud_hands_side | 4.000000s | first~neutral=0.945760 | last~keyframe=0.913921
+grasp_bird_tail_front | 4.000000s | first~neutral=0.940867 | last~keyframe=0.910424
+grasp_bird_tail_side | 4.000000s | first~neutral=0.945930 | last~keyframe=0.919300
+weight_shift_front_arms | 4.000000s | first~neutral=0.941813 | last~keyframe=0.934466
+weight_shift_side_arms | 4.000000s | first~neutral=0.946040 | last~keyframe=0.918179
+weight_shift_front_right | 4.000000s | first~neutral=0.941547 | last~keyframe=0.917588

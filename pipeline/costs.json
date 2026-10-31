@@ -691,5 +691,101 @@
     "seconds": 35,
     "usd": null,
     "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:05:03.225Z",
+    "stage": 3,
+    "kind": "image",
+    "label": "keyframe weight_shift_front_right",
+    "generation_id": "2HSL8QIQzZ8vwSbJtsZ5",
+    "model_id": "gemini-3-pro-image",
+    "bytes": 4424227,
+    "seconds": 30,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:07:26.628Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf weight_shift_front_arms",
+    "generation_id": "NgxdRC1m9n5PDfSAIQuq",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1254363,
+    "seconds": 83,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:07:27.617Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf weight_shift_side_arms",
+    "generation_id": "50lgh7UEhqgUumsJDbwW",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1229358,
+    "seconds": 83,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:07:36.400Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf cloud_hands_side",
+    "generation_id": "0A47Jn9PvT3PTTXoXRnG",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1269157,
+    "seconds": 93,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:07:36.581Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf grasp_bird_tail_front",
+    "generation_id": "cO2Frcwdp0GCGCB48Lt6",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1560321,
+    "seconds": 95,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:07:37.033Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf weight_shift_front_right",
+    "generation_id": "aejeSDode6g22US4xE4c",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1393967,
+    "seconds": 93,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:08:28.003Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf cloud_hands_front",
+    "generation_id": "f12hF2MmmLjFuUar9GX3",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1182875,
+    "seconds": 144,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
+  },
+  {
+    "at": "2026-10-31T11:08:39.156Z",
+    "stage": 3,
+    "kind": "video",
+    "label": "kf grasp_bird_tail_side",
+    "generation_id": "TcAKqeJLRgWn7nO4zRji",
+    "model_id": "veo-3.1-generate-001",
+    "bytes": 1434855,
+    "seconds": 155,
+    "usd": null,
+    "note": "עלות לא מפורסמת ב-API; לקרוא מדוח השימוש בחשבון"
   }
 ]
