@@ -247,5 +247,36 @@
     "previews": 3,
     "usd": null,
     "note": "מחויב לפי תווי טקסט התצוגה; מחיר מדויק לא מפורסם"
+  },
+  {
+    "at": "2026-10-31T10:26:59.361Z",
+    "stage": "narration",
+    "kind": "voice-save",
+    "label": "design_b_3",
+    "voice_id": "3i8AEHdRIbmSE7VcoKkk",
+    "usd": 0,
+    "note": "שמירת קול מעוצב — תופס מקום ברשימת הקולות"
+  },
+  {
+    "at": "2026-10-31T10:27:05.134Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "saved_eleven_v4",
+    "model_id": "eleven_v4",
+    "voice_id": "3i8AEHdRIbmSE7VcoKkk",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
+  },
+  {
+    "at": "2026-10-31T10:27:15.513Z",
+    "stage": "narration",
+    "kind": "tts",
+    "label": "saved_eleven_v3",
+    "model_id": "eleven_v3",
+    "voice_id": "3i8AEHdRIbmSE7VcoKkk",
+    "chars": 122,
+    "usd": 0.0098,
+    "note": "לפי pricing/api: $0.08/1K תווים"
   }
 ]

@@ -2,19 +2,20 @@
   "tts": {
     "model_id": "eleven_v4",
     "fallback_model_id": "eleven_v3",
-    "voice_id": null,
+    "voice_id": "3i8AEHdRIbmSE7VcoKkk",
     "candidate_voices": {
       "Matilda": "XrExE9yKIg1WjnnlVkGX"
     },
     "language_code": "he",
     "output_format": "mp3_44100_128",
     "voice_settings": {
-      "stability": 0.6,
-      "similarity_boost": 0.75,
-      "style": 0.1,
-      "use_speaker_boost": true,
-      "speed": 0.85
-    }
+      "stability": 0.5,
+      "similarity_boost": 0.8,
+      "style": 0,
+      "use_speaker_boost": true
+    },
+    "voice_name": "TaiChi150 — קריינית (design design_b_3)",
+    "chosen_at": "2026-10-31"
   },
   "stt": {
     "model_id": "scribe_v1",
