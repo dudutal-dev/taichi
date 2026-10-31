@@ -34,4 +34,24 @@ describe('בונה המפגש', () => {
     const missing = items.flatMap(i => [...i.narration, ...i.narrationEnd]).filter(id => !manifest.narration[id]);
     expect(missing).toEqual([]);
   });
+  it('בכל 14 השבועות ובמסלול הישיבה — כל הקריינות קיימת', () => {
+    for (let w = 1; w <= 14; w++) {
+      for (const opts of [{ firstOfWeek: true }, { short: true }, { track: 'seated' as const, firstOfWeek: true }]) {
+        const s = buildSession(manifest, w, opts);
+        const missing = s.items.flatMap(i => [...i.narration, ...i.narrationEnd]).filter(id => !manifest.narration[id]);
+        expect(missing, `שבוע ${w} ${JSON.stringify(opts)}`).toEqual([]);
+      }
+    }
+  });
+  it('שבוע 7 מכניס בעיטת עקב; סחרחורת מדלגת על תנועות שיווי משקל', () => {
+    const w7 = buildSession(manifest, 7, {});
+    expect(w7.items.some(i => i.movementId === 'heel_kick')).toBe(true);
+    const nobal = buildSession(manifest, 7, { skipBalance: true });
+    expect(nobal.items.some(i => i.movementId === 'heel_kick' || i.movementId === 'golden_rooster')).toBe(false);
+  });
+  it('מסלול ישיבה: שמונה המקטעים, בלי חימום עמידה', () => {
+    const s = buildSession(manifest, 3, { track: 'seated' });
+    expect(s.items.filter(i => i.phase === 'warmup')).toHaveLength(0);
+    expect(new Set(s.items.filter(i => i.phase === 'core').map(i => i.movementId)).size).toBe(8);
+  });
 });

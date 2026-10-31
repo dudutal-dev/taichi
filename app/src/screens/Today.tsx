@@ -38,6 +38,9 @@ export default function Today() {
   const previewMv = manifest ? [...plan.core].reverse().map(d => movementOf(manifest, d.id)).find(mv => mv?.clips.some(c => c.qa === 'approved' && c.url)) : undefined;
   const preview = previewMv?.clips.find(c => c.qa === 'approved' && c.url && c.view === 'front') ?? previewMv?.clips.find(c => c.qa === 'approved' && c.url);
 
+  const track = profile?.suggestSeatedNext ? 'seated' : (profile?.track ?? 'main');
+  const q = (short: boolean) => `/session/${week}?track=${track}${short ? '&short=1' : ''}${(summary?.sessions ?? 0) === 0 ? '&first=1' : ''}${balanceSuspended ? '&nobal=1' : ''}`;
+
   async function bump(field: 'walks' | 'strength') {
     const row = (await db.weeks.get(week)) ?? { weekNo: week, startDate: profile?.startDate ?? today, walks: 0, strength: 0 };
     await db.weeks.put({ ...row, [field]: Math.min(7, row[field] + 1) });
@@ -83,8 +86,9 @@ export default function Today() {
           )}
         </div>
         <div className="p-4 pt-0 flex flex-col gap-3">
-          <button className="btn-primary" onClick={() => nav(`/session/${week}`)} disabled={!manifest}>{manifest ? 'התחל' : 'טוען תוכן…'}</button>
-          <button className="btn-secondary" onClick={() => nav(`/session/${week}?short=1`)} disabled={!manifest}>אין לי זמן? 10 דקות</button>
+          <button className="btn-primary" onClick={() => nav(q(false))} disabled={!manifest}>{manifest ? 'התחל' : 'טוען תוכן…'}</button>
+          <button className="btn-secondary" onClick={() => nav(q(true))} disabled={!manifest}>אין לי זמן? 10 דקות</button>
+          {track !== 'seated' && <button className="btn-secondary !min-h-12 !border-0 text-[var(--fg-soft)]" onClick={() => nav(`/session/${week}?track=seated`)} disabled={!manifest}>יום קשה? מפגש בישיבה</button>}
         </div>
       </article>
 

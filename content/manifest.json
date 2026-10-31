@@ -1,9 +1,11 @@
 {
-  "version": "4a",
+  "version": "4b",
   "generatedAt": "2026-10-31",
   "character": {
     "front": "content/character/front.png",
-    "side": "content/character/side.png"
+    "side": "content/character/side.png",
+    "seatedFront": "stills/seated_front.jpg",
+    "seatedSide": "stills/seated_side.jpg"
   },
   "voice": {
     "id": "3i8AEHdRIbmSE7VcoKkk",
@@ -34,6 +36,7 @@
           "qaNote": "ניסיון 3: הכיסא קבוע; הרגל נמתחת הצידה עם הבהונות על הרצפה (יותר \"טפיחת בהונות\" מסיבוב קרסול) — לצפייה",
           "attempt": 3,
           "keyframe": "outputs/stage3/keyframes/warm_ankle_front.png",
+          "still": "stills/warm_ankle_front.jpg",
           "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png",
           "url": "video/warm_ankle_front.mp4",
           "loopDurationMs": 8000,
@@ -49,7 +52,8 @@
           "qa": "rejected",
           "qaNote": "2 ניסיונות: הברכיים מתכופפות ~45° באמצע הקליף למרות \"כמה סנטימטרים\". מסומן לדודו: חלופה = סטיל + קריינות, או ניסיון 3",
           "attempt": 2,
-          "keyframe": "outputs/stage3/keyframes/warm_knee_side.png"
+          "keyframe": "outputs/stage3/keyframes/warm_knee_side.png",
+          "still": "stills/warm_knee_side.jpg"
         },
         {
           "id": "warm_waist_front",
@@ -61,6 +65,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/warm_waist_front.png",
+          "still": "stills/warm_waist_front.jpg",
           "url": "video/warm_waist_front.mp4",
           "loopDurationMs": 8000,
           "hash": "1799545495e806cf",
@@ -76,6 +81,7 @@
           "qaNote": "משיכת כתפיים עדינה מאוד",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/warm_shoulder_front.png",
+          "still": "stills/warm_shoulder_front.jpg",
           "url": "video/warm_shoulder_front.mp4",
           "loopDurationMs": 8000,
           "hash": "df84c147420eeebf",
@@ -97,13 +103,6 @@
         "הראש באותו גובה",
         "האגן זז הצידה, לא למטה"
       ],
-      "clipIds": [
-        "weight_shift_front_arms_mid",
-        "weight_shift_front_arms",
-        "weight_shift_side_arms",
-        "weight_shift_front_right",
-        "weight_shift_front_left"
-      ],
       "clips": [
         {
           "id": "weight_shift_front_arms",
@@ -115,6 +114,7 @@
           "qaNote": "3 ניסיונות (כולל פיצול עם תמונת ביניים): Veo מייצר הרמה צידית בכל מבט חזיתי. מסומן לדודו: המלצה להשתמש במבט הצד (approved) כזווית ראשית לתנועה זו",
           "attempt": 3,
           "keyframe": "outputs/stage3/keyframes/weight_shift_front_arms.png",
+          "still": "stills/weight_shift_front_arms.jpg",
           "startKeyframe": "outputs/stage3/keyframes/weight_shift_front_arms_mid.png"
         },
         {
@@ -127,6 +127,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/weight_shift_side_arms.png",
+          "still": "stills/weight_shift_side_arms.jpg",
           "url": "video/weight_shift_side_arms.mp4",
           "loopDurationMs": 8000,
           "hash": "2bcfbfdebd7ab974",
@@ -142,6 +143,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/weight_shift_front_right.png",
+          "still": "stills/weight_shift_front_right.jpg",
           "url": "video/weight_shift_front_right.mp4",
           "loopDurationMs": 8000,
           "hash": "03a2c15c901390b5",
@@ -157,6 +159,7 @@
           "qaNote": "הזזה עדינה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/weight_shift_front_left.png",
+          "still": "stills/weight_shift_front_left.jpg",
           "url": "video/weight_shift_front_left.mp4",
           "loopDurationMs": 8000,
           "hash": "0a55784d606bdc62",
@@ -171,7 +174,8 @@
           "qa": "rejected",
           "qaNote": "הידיים עולות דרך הצדדים (T) גם לגובה הטבור",
           "attempt": 1,
-          "keyframe": "outputs/stage3/keyframes/weight_shift_front_arms_mid.png"
+          "keyframe": "outputs/stage3/keyframes/weight_shift_front_arms_mid.png",
+          "still": "stills/weight_shift_front_arms_mid.jpg"
         }
       ],
       "narration": [
@@ -222,6 +226,7 @@
           "qaNote": "היד יוצאת מעט הצידה לפני שעולה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/cloud_hands_front.png",
+          "still": "stills/cloud_hands_front.jpg",
           "url": "video/cloud_hands_front.mp4",
           "loopDurationMs": 8000,
           "hash": "330d72f540b9038d",
@@ -237,6 +242,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/cloud_hands_side.png",
+          "still": "stills/cloud_hands_side.jpg",
           "url": "video/cloud_hands_side.mp4",
           "loopDurationMs": 8000,
           "hash": "c4aaf151940e96a5",
@@ -252,6 +258,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/cloud_hands_left_front.png",
+          "still": "stills/cloud_hands_left_front.jpg",
           "url": "video/cloud_hands_left_front.mp4",
           "loopDurationMs": 8000,
           "hash": "270979f4db7103b4",
@@ -267,6 +274,7 @@
           "qaNote": "כיפוף ברכיים באמצע (פריים 3) — גבולי, לצפייה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/cloud_hands_left_side.png",
+          "still": "stills/cloud_hands_left_side.jpg",
           "url": "video/cloud_hands_left_side.mp4",
           "loopDurationMs": 8000,
           "hash": "87e4c09241a70631",
@@ -349,6 +357,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_front.png",
+          "still": "stills/grasp_bird_tail_front.jpg",
           "url": "video/grasp_bird_tail_front.mp4",
           "loopDurationMs": 8000,
           "hash": "020d1fa3337ec7a4",
@@ -364,6 +373,7 @@
           "qaNote": "עקב אחורי אולי מתרומם רגע",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_side.png",
+          "still": "stills/grasp_bird_tail_side.jpg",
           "url": "video/grasp_bird_tail_side.mp4",
           "loopDurationMs": 8000,
           "hash": "7e7112e66d5962ab",
@@ -379,6 +389,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_rollback_front.png",
+          "still": "stills/grasp_bird_tail_rollback_front.jpg",
           "url": "video/grasp_bird_tail_rollback_front.mp4",
           "loopDurationMs": 8000,
           "hash": "22dd106f11e7ace5",
@@ -394,6 +405,7 @@
           "qaNote": "הצעד ארוך מחצי כף רגל, עדיין גבוה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_rollback_side.png",
+          "still": "stills/grasp_bird_tail_rollback_side.jpg",
           "url": "video/grasp_bird_tail_rollback_side.mp4",
           "loopDurationMs": 8000,
           "hash": "60cd54856da3281e",
@@ -409,6 +421,7 @@
           "qaNote": "עובר דרך תנוחת תפילה באמצע; הסיום נכון",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_press_front.png",
+          "still": "stills/grasp_bird_tail_press_front.jpg",
           "url": "video/grasp_bird_tail_press_front.mp4",
           "loopDurationMs": 8000,
           "hash": "fe0f3013ad6a1802",
@@ -424,6 +437,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_press_side.png",
+          "still": "stills/grasp_bird_tail_press_side.jpg",
           "url": "video/grasp_bird_tail_press_side.mp4",
           "loopDurationMs": 8000,
           "hash": "1edb7bd8a0b40047",
@@ -439,6 +453,7 @@
           "qaNote": "הידיים נפתחות הצידה לפני הדחיפה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_push_front.png",
+          "still": "stills/grasp_bird_tail_push_front.jpg",
           "url": "video/grasp_bird_tail_push_front.mp4",
           "loopDurationMs": 8000,
           "hash": "1f804d4320db0831",
@@ -454,6 +469,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/grasp_bird_tail_push_side.png",
+          "still": "stills/grasp_bird_tail_push_side.jpg",
           "url": "video/grasp_bird_tail_push_side.mp4",
           "loopDurationMs": 8000,
           "hash": "e4dd971e645f65fb",
@@ -550,6 +566,7 @@
           "qaNote": "הידיים נפתחות רחב ומעל הראש לפני ההצלבה (מסלול קלאסי, מעט גבוה)",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/cross_hands_front.png",
+          "still": "stills/cross_hands_front.jpg",
           "url": "video/cross_hands_front.mp4",
           "loopDurationMs": 8000,
           "hash": "0c12af9e557388dc",
@@ -565,6 +582,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/cross_hands_side.png",
+          "still": "stills/cross_hands_side.jpg",
           "url": "video/cross_hands_side.mp4",
           "loopDurationMs": 8000,
           "hash": "d9a4910b23a9d78b",
@@ -612,6 +630,7 @@
           "qaNote": "הידיים נפתחות הצידה בתחילת המסלול",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/brush_knee_left_front.png",
+          "still": "stills/brush_knee_left_front.jpg",
           "url": "video/brush_knee_left_front.mp4",
           "loopDurationMs": 8000,
           "hash": "7cdfeeb1a1208fe3",
@@ -627,6 +646,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/brush_knee_left_side.png",
+          "still": "stills/brush_knee_left_side.jpg",
           "url": "video/brush_knee_left_side.mp4",
           "loopDurationMs": 8000,
           "hash": "b1a63361116dfbfd",
@@ -642,6 +662,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/brush_knee_right_front.png",
+          "still": "stills/brush_knee_right_front.jpg",
           "url": "video/brush_knee_right_front.mp4",
           "loopDurationMs": 8000,
           "hash": "7e6afc497ae81e6d",
@@ -657,6 +678,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/brush_knee_right_side.png",
+          "still": "stills/brush_knee_right_side.jpg",
           "url": "video/brush_knee_right_side.mp4",
           "loopDurationMs": 8000,
           "hash": "7a1b2ead9fe7bb7e",
@@ -696,6 +718,386 @@
       "approvedClips": 4
     },
     {
+      "id": "golden_rooster",
+      "nameHe": "תרנגול הזהב על רגל אחת",
+      "pinyin": "Jīn Jī Dú Lì 金鸡独立",
+      "track": "main",
+      "minWeek": 4,
+      "kneeLoad": "medium",
+      "tips": [
+        "יד על הכיסא",
+        "הברך עולה נמוך, קדימה",
+        "הגב ישר, הראש מעל האגן"
+      ],
+      "clips": [
+        {
+          "id": "golden_rooster_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/golden_rooster_left_front.png",
+          "still": "stills/golden_rooster_left_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png",
+          "source": "outputs/stage3/golden_rooster_left_front_kf.mp4"
+        },
+        {
+          "id": "golden_rooster_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/golden_rooster_right_front.png",
+          "still": "stills/golden_rooster_right_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png",
+          "source": "outputs/stage3/golden_rooster_right_front_kf.mp4"
+        },
+        {
+          "id": "golden_rooster_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/golden_rooster_side.png",
+          "still": "stills/golden_rooster_side.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_side.png",
+          "source": "outputs/stage3/golden_rooster_side_kf.mp4"
+        }
+      ],
+      "narration": [
+        {
+          "id": "golden_rooster_intro",
+          "url": "audio/narration/golden_rooster_intro.mp3",
+          "durationMs": 7578,
+          "text": "תרנגול הזהב על רגל אחת. תנועת שיווי משקל. הכיסא ליד, יד אחת עליו.",
+          "qa": "approved"
+        },
+        {
+          "id": "golden_rooster_cue",
+          "url": "audio/narration/golden_rooster_cue.mp3",
+          "durationMs": 10791,
+          "text": "מרימים את הברך הימנית. נמוך. רק כמה סנטימטרים. היד הימנית עולה, המרפק מעל הברך. ויורדים לאט.",
+          "qa": "approved"
+        },
+        {
+          "id": "golden_rooster_hold",
+          "url": "audio/narration/golden_rooster_hold.mp3",
+          "durationMs": 6716,
+          "text": "אם זה יציב, אפשר לעזוב את הכיסא לרגע. ואם לא, לא. הכיסא כאן בשביל זה.",
+          "qa": "approved"
+        },
+        {
+          "id": "golden_rooster_left",
+          "url": "audio/narration/golden_rooster_left.mp3",
+          "durationMs": 11758,
+          "text": "רגל שמאל. יד ימין על הכיסא. מרימים את ברך שמאל, נמוך. יד שמאל עולה, המרפק מעל הברך. ויורדים לאט.",
+          "qa": "approved"
+        },
+        {
+          "id": "golden_rooster_right",
+          "url": "audio/narration/golden_rooster_right.mp3",
+          "durationMs": 9746,
+          "text": "ועכשיו רגל ימין. מרימים את ברך ימין, נמוך. היד הפנויה עולה. הכיסא כאן בשביל הביטחון.",
+          "qa": "approved"
+        },
+        {
+          "id": "golden_rooster_side",
+          "url": "audio/narration/golden_rooster_side.mp3",
+          "durationMs": 9746,
+          "text": "מבט מהצד. הברך עולה קדימה, לא אחורה. השוק תלויה למטה. הגב ישר, הראש מעל האגן.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "wild_horse",
+      "nameHe": "פיצול רעמת הסוס הפראי",
+      "pinyin": "Yě Mǎ Fēn Zōng 野马分鬃",
+      "track": "main",
+      "minWeek": 5,
+      "kneeLoad": "high",
+      "tips": [
+        "עמידה גבוהה בלבד",
+        "צעד קטן",
+        "יד אחת עולה, השנייה יורדת"
+      ],
+      "clips": [
+        {
+          "id": "wild_horse_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/wild_horse_left_front.png",
+          "still": "stills/wild_horse_left_front.jpg",
+          "source": "outputs/stage3/wild_horse_left_front_kf.mp4"
+        },
+        {
+          "id": "wild_horse_left_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/wild_horse_left_side.png",
+          "still": "stills/wild_horse_left_side.jpg",
+          "source": "outputs/stage3/wild_horse_left_side_kf.mp4"
+        },
+        {
+          "id": "wild_horse_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/wild_horse_right_front.png",
+          "still": "stills/wild_horse_right_front.jpg",
+          "source": "outputs/stage3/wild_horse_right_front_kf.mp4"
+        },
+        {
+          "id": "wild_horse_right_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/wild_horse_right_side.png",
+          "still": "stills/wild_horse_right_side.jpg",
+          "source": "outputs/stage3/wild_horse_right_side_kf.mp4"
+        }
+      ],
+      "narration": [
+        {
+          "id": "wild_horse_intro",
+          "url": "audio/narration/wild_horse_intro.mp3",
+          "durationMs": 10399,
+          "text": "פיצול רעמת הסוס הפראי. צעד קטן, והידיים נפרדות: אחת עולה, אחת יורדת. עמידה גבוהה בלבד.",
+          "qa": "approved"
+        },
+        {
+          "id": "wild_horse_left",
+          "url": "audio/narration/wild_horse_left.mp3",
+          "durationMs": 10399,
+          "text": "רגל שמאל קדימה, צעד קטן. יד שמאל עולה באלכסון לגובה הכתף, כף היד למעלה. יד ימין יורדת ליד הירך.",
+          "qa": "approved"
+        },
+        {
+          "id": "wild_horse_right",
+          "url": "audio/narration/wild_horse_right.mp3",
+          "durationMs": 8153,
+          "text": "ועכשיו רגל ימין קדימה. יד ימין עולה באלכסון. יד שמאל יורדת ליד הירך.",
+          "qa": "approved"
+        },
+        {
+          "id": "wild_horse_side",
+          "url": "audio/narration/wild_horse_side.mp3",
+          "durationMs": 8153,
+          "text": "מבט מהצד. הברך הקדמית מעל כף הרגל. הגב אנכי. לא נשענים אל היד העולה.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "repulse_monkey",
+      "nameHe": "הדיפת הקוף",
+      "pinyin": "Dào Juǎn Gōng 倒卷肱",
+      "track": "main",
+      "minWeek": 5,
+      "kneeLoad": "high",
+      "tips": [
+        "צעד קטן אחורה, בהונות קודם",
+        "היד דוחפת בגובה הכתף",
+        "הגב ישר"
+      ],
+      "clips": [
+        {
+          "id": "repulse_monkey_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/repulse_monkey_left_front.png",
+          "still": "stills/repulse_monkey_left_front.jpg",
+          "source": "outputs/stage3/repulse_monkey_left_front_kf.mp4"
+        },
+        {
+          "id": "repulse_monkey_left_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/repulse_monkey_left_side.png",
+          "still": "stills/repulse_monkey_left_side.jpg"
+        },
+        {
+          "id": "repulse_monkey_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/repulse_monkey_right_front.png",
+          "still": "stills/repulse_monkey_right_front.jpg"
+        },
+        {
+          "id": "repulse_monkey_right_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/repulse_monkey_right_side.png",
+          "still": "stills/repulse_monkey_right_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "repulse_monkey_intro",
+          "url": "audio/narration/repulse_monkey_intro.mp3",
+          "durationMs": 8701,
+          "text": "הֲדִיפַת הקוף. התנועה היחידה עם צעד אחורה. צעד קטן, והמשקל עובר לאט לרגל האחורית.",
+          "qa": "approved"
+        },
+        {
+          "id": "repulse_monkey_left",
+          "url": "audio/narration/repulse_monkey_left.mp3",
+          "durationMs": 9198,
+          "text": "רגל שמאל צעד קטן אחורה. יד ימין דוחפת קדימה, בגובה הכתף. יד שמאל נמשכת ליד האוזן.",
+          "qa": "approved"
+        },
+        {
+          "id": "repulse_monkey_right",
+          "url": "audio/narration/repulse_monkey_right.mp3",
+          "durationMs": 7343,
+          "text": "ועכשיו רגל ימין אחורה. יד שמאל דוחפת קדימה. יד ימין ליד האוזן.",
+          "qa": "approved"
+        },
+        {
+          "id": "repulse_monkey_side",
+          "url": "audio/narration/repulse_monkey_side.mp3",
+          "durationMs": 9511,
+          "text": "מבט מהצד. לפני הצעד אחורה, מרגישים את הרצפה בבהונות. העקב יורד אחרון. הגב ישר.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "heel_kick",
+      "nameHe": "בעיטת עקב",
+      "pinyin": "Dēng Jiǎo 蹬脚",
+      "track": "main",
+      "minWeek": 7,
+      "kneeLoad": "medium",
+      "tips": [
+        "ליד כיסא",
+        "העקב מוביל, נמוך",
+        "לא נשענים אחורה"
+      ],
+      "clips": [
+        {
+          "id": "heel_kick_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/heel_kick_right_front.png",
+          "still": "stills/heel_kick_right_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png"
+        },
+        {
+          "id": "heel_kick_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/heel_kick_left_front.png",
+          "still": "stills/heel_kick_left_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_front.png"
+        },
+        {
+          "id": "heel_kick_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/heel_kick_side.png",
+          "still": "stills/heel_kick_side.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/neutral_chair_side.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "heel_kick_intro",
+          "url": "audio/narration/heel_kick_intro.mp3",
+          "durationMs": 10217,
+          "text": "בעיטת עקב. נמוכה. ליד כיסא. העקב מוביל, הבהונות אל השוק. עשרים סנטימטר מהרצפה זה מספיק.",
+          "qa": "approved"
+        },
+        {
+          "id": "heel_kick_right",
+          "url": "audio/narration/heel_kick_right.mp3",
+          "durationMs": 10948,
+          "text": "יד שמאל על הכיסא. עומדים על שמאל. רגל ימין נמתחת לאט קדימה, העקב קודם. הברך רכה. ומורידים.",
+          "qa": "approved"
+        },
+        {
+          "id": "heel_kick_left",
+          "url": "audio/narration/heel_kick_left.mp3",
+          "durationMs": 7657,
+          "text": "ועכשיו יד ימין על הכיסא. רגל שמאל נמתחת קדימה, נמוך. ומורידים לאט.",
+          "qa": "approved"
+        },
+        {
+          "id": "heel_kick_side",
+          "url": "audio/narration/heel_kick_side.mp3",
+          "durationMs": 8623,
+          "text": "מבט מהצד. הגוף לא נשען אחורה. הגב אנכי, הרגל נמוכה. הכיסא בהישג יד.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
       "id": "closing",
       "nameHe": "סיום",
       "pinyin": "Shōushì 收势",
@@ -718,6 +1120,7 @@
           "qaNote": "הידיים נפתחות הצידה לפני הירידה",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/closing_front.png",
+          "still": "stills/closing_front.jpg",
           "url": "video/closing_front.mp4",
           "loopDurationMs": 8000,
           "hash": "bb8eee548342fcf7",
@@ -733,6 +1136,7 @@
           "qaNote": "",
           "attempt": 1,
           "keyframe": "outputs/stage3/keyframes/closing_side.png",
+          "still": "stills/closing_side.jpg",
           "url": "video/closing_side.mp4",
           "loopDurationMs": 8000,
           "hash": "34dce17859853622",
@@ -756,6 +1160,898 @@
         }
       ],
       "approvedClips": 2
+    },
+    {
+      "id": "white_crane",
+      "nameHe": "העגור הלבן פורש כנפיים",
+      "pinyin": "Báihè Liàngchì 白鹤亮翅",
+      "track": "main",
+      "minWeek": 10,
+      "kneeLoad": "low",
+      "tips": [
+        "המשקל על הרגל האחורית",
+        "הרגל הקדמית נוגעת בבהונות",
+        "יד אחת עולה, אחת יורדת"
+      ],
+      "clips": [
+        {
+          "id": "white_crane_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/white_crane_front.png",
+          "still": "stills/white_crane_front.jpg"
+        },
+        {
+          "id": "white_crane_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/white_crane_side.png",
+          "still": "stills/white_crane_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "white_crane",
+          "url": "audio/narration/white_crane.mp3",
+          "durationMs": 12959,
+          "text": "העגור הלבן פורש כנפיים. המשקל על רגל ימין, רגל שמאל נוגעת בבהונות. יד ימין עולה לגובה הגבות. יד שמאל יורדת ליד הירך.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "play_pipa",
+      "nameHe": "נגינה בפיפה",
+      "pinyin": "Shǒuhūi Pípá 手挥琵琶",
+      "track": "main",
+      "minWeek": 10,
+      "kneeLoad": "low",
+      "tips": [
+        "העקב הקדמי על הרצפה",
+        "כמו מחזיקים כלי מיתר",
+        "המרפקים רכים"
+      ],
+      "clips": [
+        {
+          "id": "play_pipa_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/play_pipa_front.png",
+          "still": "stills/play_pipa_front.jpg"
+        },
+        {
+          "id": "play_pipa_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/play_pipa_side.png",
+          "still": "stills/play_pipa_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "play_pipa",
+          "url": "audio/narration/play_pipa.mp3",
+          "durationMs": 11418,
+          "text": "נגינה בפיפה. רגל שמאל קדימה על העקב. יד שמאל קדימה בגובה הכתף, יד ימין ליד המרפק. כמו מחזיקים כלי מיתר.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "single_whip",
+      "nameHe": "שוט יחיד",
+      "pinyin": "Dān Biān 单鞭",
+      "track": "main",
+      "minWeek": 10,
+      "kneeLoad": "medium",
+      "tips": [
+        "צעד קטן",
+        "האצבעות מתכנסות למטה",
+        "העיניים אחרי היד הדוחפת"
+      ],
+      "clips": [
+        {
+          "id": "single_whip_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/single_whip_front.png",
+          "still": "stills/single_whip_front.jpg"
+        },
+        {
+          "id": "single_whip_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/single_whip_side.png",
+          "still": "stills/single_whip_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "single_whip",
+          "url": "audio/narration/single_whip.mp3",
+          "durationMs": 12959,
+          "text": "שוט יחיד. צעד קטן שמאלה. יד שמאל דוחפת קדימה. יד ימין נמתחת הצידה, האצבעות מתכנסות למטה. העיניים אחרי יד שמאל.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "high_pat_horse",
+      "nameHe": "טפיחה גבוהה על הסוס",
+      "pinyin": "Gāo Tàn Mǎ 高探马",
+      "track": "main",
+      "minWeek": 11,
+      "kneeLoad": "low",
+      "tips": [
+        "המשקל אחורה",
+        "כף היד בגובה הפנים",
+        "היד השנייה כף למעלה"
+      ],
+      "clips": [
+        {
+          "id": "high_pat_horse_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/high_pat_horse_front.png",
+          "still": "stills/high_pat_horse_front.jpg"
+        },
+        {
+          "id": "high_pat_horse_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/high_pat_horse_side.png",
+          "still": "stills/high_pat_horse_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "high_pat_horse",
+          "url": "audio/narration/high_pat_horse.mp3",
+          "durationMs": 12385,
+          "text": "טפיחה גבוהה על הסוס. המשקל אחורה. רגל שמאל נוגעת בבהונות. כף יד ימין פונה קדימה בגובה הפנים. יד שמאל מתחת, כף למעלה.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "strike_ears",
+      "nameHe": "מכה לאוזניים בשני אגרופים",
+      "pinyin": "Shuāngfēng Guàn-ěr 双峰贯耳",
+      "track": "main",
+      "minWeek": 12,
+      "kneeLoad": "medium",
+      "tips": [
+        "אגרופים רפויים",
+        "בלי כוח",
+        "המרפקים מעוגלים"
+      ],
+      "clips": [
+        {
+          "id": "strike_ears_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/strike_ears_front.png",
+          "still": "stills/strike_ears_front.jpg"
+        },
+        {
+          "id": "strike_ears_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/strike_ears_side.png",
+          "still": "stills/strike_ears_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "strike_ears",
+          "url": "audio/narration/strike_ears.mp3",
+          "durationMs": 11418,
+          "text": "מכה לאוזניים בשני אגרופים. צעד קטן. שני אגרופים רפויים עולים בקשת לגובה האוזניים. המרפקים רכים. בלי כוח.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "shuttle",
+      "nameHe": "העלמה אורגת במנול",
+      "pinyin": "Yùnǚ Chuānsuō 玉女穿梭",
+      "track": "main",
+      "minWeek": 12,
+      "kneeLoad": "medium",
+      "tips": [
+        "יד מעל המצח, כף החוצה",
+        "השנייה דוחפת בגובה החזה",
+        "צעד קטן"
+      ],
+      "clips": [
+        {
+          "id": "shuttle_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/shuttle_left_front.png",
+          "still": "stills/shuttle_left_front.jpg"
+        },
+        {
+          "id": "shuttle_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/shuttle_right_front.png",
+          "still": "stills/shuttle_right_front.jpg"
+        },
+        {
+          "id": "shuttle_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/shuttle_side.png",
+          "still": "stills/shuttle_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "shuttle",
+          "url": "audio/narration/shuttle.mp3",
+          "durationMs": 11679,
+          "text": "העלמה אורגת במנול. יד אחת מעל המצח, כף היד החוצה. היד השנייה דוחפת קדימה בגובה החזה. ואז הצד השני.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "needle_sea_bottom",
+      "nameHe": "מחט בקרקעית הים",
+      "pinyin": "Hǎidǐ Zhēn 海底针",
+      "track": "main",
+      "minWeek": 11,
+      "kneeLoad": "low",
+      "tips": [
+        "הגב נשאר ארוך",
+        "מתכופפים רק מעט מהירכיים",
+        "לא לעומק"
+      ],
+      "clips": [
+        {
+          "id": "needle_sea_bottom_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/needle_sea_bottom_front.png",
+          "still": "stills/needle_sea_bottom_front.jpg"
+        },
+        {
+          "id": "needle_sea_bottom_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/needle_sea_bottom_side.png",
+          "still": "stills/needle_sea_bottom_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "needle_sea_bottom",
+          "url": "audio/narration/needle_sea_bottom.mp3",
+          "durationMs": 13743,
+          "text": "מחט בקרקעית הים. הגרסה העדינה. המשקל אחורה. הגב נשאר ארוך, מתכופפים רק מעט מהירכיים. יד ימין יורדת לפני הברך. לא לעומק.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "fan_through_back",
+      "nameHe": "מניפה דרך הגב",
+      "pinyin": "Shān Tōng Bèi 扇通背",
+      "track": "main",
+      "minWeek": 11,
+      "kneeLoad": "low",
+      "tips": [
+        "יד ליד הרקה, כף החוצה",
+        "השנייה דוחפת קדימה",
+        "צעד קטן"
+      ],
+      "clips": [
+        {
+          "id": "fan_through_back_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/fan_through_back_front.png",
+          "still": "stills/fan_through_back_front.jpg"
+        },
+        {
+          "id": "fan_through_back_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/fan_through_back_side.png",
+          "still": "stills/fan_through_back_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "fan_through_back",
+          "url": "audio/narration/fan_through_back.mp3",
+          "durationMs": 11915,
+          "text": "מניפה דרך הגב. צעד קטן. יד שמאל דוחפת קדימה. יד ימין ליד הרקה, כף היד החוצה. כמו מניפה שנפתחת.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "parry_punch",
+      "nameHe": "הסטה, חסימה ואגרוף",
+      "pinyin": "Bānlánchuí 搬拦捶",
+      "track": "main",
+      "minWeek": 12,
+      "kneeLoad": "medium",
+      "tips": [
+        "קודם הכף, אחר כך האגרוף",
+        "לא לנעול את המרפק",
+        "לאט, בלי כוח"
+      ],
+      "clips": [
+        {
+          "id": "parry_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/parry_front.png",
+          "still": "stills/parry_front.jpg"
+        },
+        {
+          "id": "punch_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/punch_front.png",
+          "still": "stills/punch_front.jpg"
+        },
+        {
+          "id": "punch_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/punch_side.png",
+          "still": "stills/punch_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "parry_punch",
+          "url": "audio/narration/parry_punch.mp3",
+          "durationMs": 13508,
+          "text": "הסטה, חסימה, ואגרוף. קודם כף יד שמאל קדימה, האגרוף הימני ליד המותן. ואז האגרוף יוצא לאט, בגובה החזה. בלי לנעול את המרפק.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "apparent_close",
+      "nameHe": "סגירה לכאורה",
+      "pinyin": "Rúfēng Sìbì 如封似闭",
+      "track": "main",
+      "minWeek": 12,
+      "kneeLoad": "low",
+      "tips": [
+        "שתי הכפות קדימה",
+        "כמו סוגרים דלת",
+        "המשקל לרגל הקדמית"
+      ],
+      "clips": [
+        {
+          "id": "apparent_close_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/apparent_close_front.png",
+          "still": "stills/apparent_close_front.jpg"
+        },
+        {
+          "id": "apparent_close_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/apparent_close_side.png",
+          "still": "stills/apparent_close_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "apparent_close",
+          "url": "audio/narration/apparent_close.mp3",
+          "durationMs": 9903,
+          "text": "סגירה לכאורה. שתי הכפות קדימה, בגובה החזה. המשקל עובר לרגל הקדמית. כמו סוגרים דלת בעדינות.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_heaven",
+      "nameHe": "שתי ידיים תומכות בשמיים",
+      "pinyin": "Shuāng Shǒu Tuō Tiān",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "אצבעות משולבות",
+        "כפות הידיים למעלה",
+        "הכתפיים למטה"
+      ],
+      "clips": [
+        {
+          "id": "bdj_heaven_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_heaven_front.png",
+          "still": "stills/bdj_heaven_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        },
+        {
+          "id": "bdj_heaven_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_heaven_side.png",
+          "still": "stills/bdj_heaven_side.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_side.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_heaven",
+          "url": "audio/narration/bdj_heaven.mp3",
+          "durationMs": 12071,
+          "text": "שתי ידיים תומכות בשמיים. משלבים אצבעות. הידיים עולות מעל הראש, כפות הידיים למעלה. מותחים בעדינות. ויורדים.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_bow",
+      "nameHe": "משיכת הקשת",
+      "pinyin": "",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "האצבע מורה למעלה",
+        "מביטים לאורך היד",
+        "החזה נפתח"
+      ],
+      "clips": [
+        {
+          "id": "bdj_bow_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_bow_left_front.png",
+          "still": "stills/bdj_bow_left_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        },
+        {
+          "id": "bdj_bow_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_bow_right_front.png",
+          "still": "stills/bdj_bow_right_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_bow",
+          "url": "audio/narration/bdj_bow.mp3",
+          "durationMs": 14057,
+          "text": "משיכת הקשת. יד אחת נמתחת הצידה, האצבע מורה למעלה. היד השנייה מושכת מיתר אל הכתף. מביטים לאורך היד. ואז הצד השני.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_separate",
+      "nameHe": "הפרדת שמיים וארץ",
+      "pinyin": "",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "יד אחת למעלה כף למעלה",
+        "השנייה למטה כף למטה",
+        "הגב זקוף"
+      ],
+      "clips": [
+        {
+          "id": "bdj_separate_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_separate_left_front.png",
+          "still": "stills/bdj_separate_left_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        },
+        {
+          "id": "bdj_separate_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_separate_right_front.png",
+          "still": "stills/bdj_separate_right_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_separate",
+          "url": "audio/narration/bdj_separate.mp3",
+          "durationMs": 10060,
+          "text": "הפרדת שמיים וארץ. יד אחת עולה, כף למעלה. היד השנייה לוחצת למטה, כף למטה. מחליפים.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_lookback",
+      "nameHe": "הינשוף מביט לאחור",
+      "pinyin": "",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "הידיים על הירכיים",
+        "סיבוב איטי",
+        "האגן נשאר על הכיסא"
+      ],
+      "clips": [
+        {
+          "id": "bdj_lookback_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_lookback_left_front.png",
+          "still": "stills/bdj_lookback_left_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        },
+        {
+          "id": "bdj_lookback_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_lookback_right_front.png",
+          "still": "stills/bdj_lookback_right_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_lookback",
+          "url": "audio/narration/bdj_lookback.mp3",
+          "durationMs": 11418,
+          "text": "הינשוף מביט לאחור. הידיים על הירכיים. מסובבים לאט את הראש והגו, מביטים מעבר לכתף. וחזרה. ולצד השני.",
+          "qa": "pending"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_sway",
+      "nameHe": "נענוע הראש והזנב",
+      "pinyin": "",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "המרפקים החוצה",
+        "הטיה מהמותניים",
+        "הראש הולך עם הגו"
+      ],
+      "clips": [
+        {
+          "id": "bdj_sway_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_sway_left_front.png",
+          "still": "stills/bdj_sway_left_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        },
+        {
+          "id": "bdj_sway_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_sway_right_front.png",
+          "still": "stills/bdj_sway_right_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_sway",
+          "url": "audio/narration/bdj_sway.mp3",
+          "durationMs": 11836,
+          "text": "נענוע הראש והזנב. הידיים על הירכיים, המרפקים החוצה. מטים את הגו הצידה, הראש הולך אחריו. וחזרה. ולצד השני.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_feet",
+      "nameHe": "אחיזת כפות הרגליים",
+      "pinyin": "",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "מהירכיים, הגב ארוך",
+        "עד איפה שנוח",
+        "עולים לאט"
+      ],
+      "clips": [
+        {
+          "id": "bdj_feet_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_feet_side.png",
+          "still": "stills/bdj_feet_side.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_side.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_feet",
+          "url": "audio/narration/bdj_feet.mp3",
+          "durationMs": 12698,
+          "text": "אחיזת כפות הרגליים. מתכופפים קדימה מהירכיים, הגב ארוך. הידיים מחליקות לאורך השוקיים. עד איפה שנוח. ועולים לאט.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_fists",
+      "nameHe": "אגרופים ומבט",
+      "pinyin": "",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "אגרוף רפוי",
+        "לא לנעול את המרפק",
+        "העיניים קדימה"
+      ],
+      "clips": [
+        {
+          "id": "bdj_fists_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_fists_left_front.png",
+          "still": "stills/bdj_fists_left_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        },
+        {
+          "id": "bdj_fists_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/bdj_fists_right_front.png",
+          "still": "stills/bdj_fists_right_front.jpg",
+          "startKeyframe": "outputs/stage3/keyframes/seated_front.png"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_fists",
+          "url": "audio/narration/bdj_fists.mp3",
+          "durationMs": 10870,
+          "text": "אגרופים ומבט. אגרוף נמתח לאט קדימה, בגובה הכתף. העיניים מביטות קדימה. וחוזר. ואז השני.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
+    },
+    {
+      "id": "bdj_heels",
+      "nameHe": "עליות על העקבים",
+      "pinyin": "",
+      "track": "seated",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "רק הבהונות על הרצפה",
+        "מורידים ברכות",
+        "שבע פעמים"
+      ],
+      "clips": [
+        {
+          "id": "bdj_heels_side",
+          "view": "side",
+          "method": "still",
+          "durationMs": 0,
+          "qa": "still",
+          "qaNote": "סטיל + קריינות (הקליף לא שכנע)",
+          "still": "stills/bdj_heels_side.jpg"
+        }
+      ],
+      "narration": [
+        {
+          "id": "bdj_heels",
+          "url": "audio/narration/bdj_heels.mp3",
+          "durationMs": 10138,
+          "text": "עליות על העקבים. בישיבה: מרימים את שני העקבים, רק הבהונות על הרצפה. ומורידים ברכות. שבע פעמים.",
+          "qa": "approved"
+        }
+      ],
+      "approvedClips": 0
     }
   ],
   "narration": {

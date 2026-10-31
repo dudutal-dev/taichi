@@ -3,7 +3,7 @@ export type View = 'front' | 'side';
 export interface ManifestClip {
   id: string; view: View; method: string; durationMs: number; loop: 'pingpong';
   qa: 'approved' | 'pending' | 'rejected'; qaNote: string; attempt: number; keyframe: string;
-  url?: string; loopDurationMs?: number; hash?: string; bytes?: number;
+  url?: string; loopDurationMs?: number; hash?: string; bytes?: number; still?: string | null;
 }
 export interface NarrationItem { id: string; url: string; durationMs: number; text: string; qa: string }
 export interface ManifestMovement {
@@ -12,7 +12,7 @@ export interface ManifestMovement {
 }
 export interface Manifest {
   version: string; generatedAt: string;
-  character: { front: string; side: string };
+  character: { front: string; side: string; seatedFront?: string; seatedSide?: string };
   voice: { id: string; model: string };
   movements: ManifestMovement[];
   narration: Record<string, NarrationItem>;

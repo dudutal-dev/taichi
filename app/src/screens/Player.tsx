@@ -17,6 +17,9 @@ export default function Player() {
   const nav = useNavigate();
   const week = Number(weekParam ?? 1);
   const short = sp.get('short') === '1';
+  const track = (sp.get('track') as 'main' | 'joints' | 'seated' | null) ?? 'main';
+  const firstOfWeek = sp.get('first') === '1';
+  const skipBalance = sp.get('nobal') === '1';
 
   const [m, setM] = useState<Manifest | null>(null);
   const [started, setStarted] = useState(false);
@@ -46,7 +49,7 @@ export default function Player() {
   useEffect(() => { loadManifest().then(setM); getSettings().then(s => { setMirror(s.mirror); setMusicOn(s.music !== 'off'); if (s.music === 'nature') setMusicUrl(`audio/ambience/amb_${s.natureSound}_30s.mp3`); }); }, []);
   useEffect(() => { const mq = window.matchMedia('(orientation: portrait)'); const h = (e: MediaQueryListEvent) => setPortrait(e.matches); mq.addEventListener('change', h); return () => mq.removeEventListener('change', h); }, []);
   useEffect(() => { if (!toast) return; const t = window.setTimeout(() => setToast(null), 4000); return () => window.clearTimeout(t); }, [toast]);
-  const session = useMemo(() => (m ? buildSession(m, week, { short }) : null), [m, week, short]);
+  const session = useMemo(() => (m ? buildSession(m, week, { short, track: track === 'joints' ? 'main' : track, firstOfWeek, skipBalance }) : null), [m, week, short, track, firstOfWeek, skipBalance]); // joints: עד שרשימת TCA תאושר — המסלול הראשי
   const items = session?.items ?? [];
   const item: PlaylistItem | undefined = items[idx];
 

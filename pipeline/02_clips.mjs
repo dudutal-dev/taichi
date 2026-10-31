@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, config, generate, imageRef, copyTo } from './lib.mjs';
 import { KEYFRAME_CLIPS_4A, KEYFRAME_CLIPS_REDO } from './clips_4a.mjs';
+import { KEYFRAME_CLIPS_4B } from './clips_4b.mjs';
 
 const OUT = path.join(ROOT, 'outputs', 'stage3'); fs.mkdirSync(OUT, { recursive: true });
 
@@ -73,7 +74,7 @@ export const KEYFRAME_CLIPS = {
   weight_shift_front_right: { movement: 'weight_shift', view: 'front', text: 'Her pelvis glides slowly sideways to her right until the weight is fully on the right leg, the head staying at the same height. The feet never move, the arms stay relaxed at the sides.' },
 };
 
-Object.assign(KEYFRAME_CLIPS, KEYFRAME_CLIPS_4A, KEYFRAME_CLIPS_REDO);
+Object.assign(KEYFRAME_CLIPS, KEYFRAME_CLIPS_4A, KEYFRAME_CLIPS_REDO, KEYFRAME_CLIPS_4B);
 
 export function keyframeClipPrompt(k) {
   const c = KEYFRAME_CLIPS[k];
