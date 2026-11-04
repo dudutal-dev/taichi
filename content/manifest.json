@@ -1,6 +1,6 @@
 {
   "version": "4b",
-  "generatedAt": "2026-10-31",
+  "generatedAt": "2026-11-04",
   "character": {
     "front": "content/character/front.png",
     "side": "content/character/side.png",
@@ -2138,6 +2138,520 @@
           "qa": "approved"
         }
       ],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_commence",
+      "nameHe": "פתיחה (Sun)",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "רגליים ברוחב הכתפיים",
+        "הידיים צפות עד הכתפיים",
+        "הכתפיים למטה"
+      ],
+      "clips": [
+        {
+          "id": "tca_commence_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_commence_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_commence_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_commence_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_open_close",
+      "nameHe": "פתיחה וסגירה של הידיים",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "הכפות זו מול זו",
+        "פותחים לרוחב הכתפיים",
+        "המרפקים למטה"
+      ],
+      "clips": [
+        {
+          "id": "tca_open_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_open_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_close_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_close_front.png",
+          "still": null,
+          "startKeyframe": "outputs/stage3/keyframes/tca_open_front.png"
+        },
+        {
+          "id": "tca_open_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_open_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_single_whip",
+      "nameHe": "שוט יחיד (Sun)",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 2,
+      "kneeLoad": "low",
+      "tips": [
+        "שתי הכפות דוחפות הצידה",
+        "בלי צעד רחב",
+        "בגובה הכתפיים"
+      ],
+      "clips": [
+        {
+          "id": "tca_single_whip_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_single_whip_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_single_whip_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_single_whip_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_cloud_hands",
+      "nameHe": "ידיים כעננים (Sun)",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 3,
+      "kneeLoad": "low",
+      "tips": [
+        "יד בגובה הפנים, יד בגובה הבטן",
+        "המשקל עובר לפני היד",
+        "צעד עוקב קטן"
+      ],
+      "clips": [
+        {
+          "id": "tca_cloud_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_cloud_left_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_cloud_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_cloud_right_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_cloud_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_cloud_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_closing",
+      "nameHe": "סיום (Sun)",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 1,
+      "kneeLoad": "low",
+      "tips": [
+        "הידיים יורדות בנשיפה",
+        "הכתפיים משתחררות",
+        "רגע של שקט"
+      ],
+      "clips": [
+        {
+          "id": "tca_closing_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_closing_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_closing_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_closing_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_brush_knee",
+      "nameHe": "ליטוף ברך (Sun)",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 5,
+      "kneeLoad": "low-medium",
+      "tips": [
+        "צעד קטן, הרגל השנייה עוקבת",
+        "יד מלטפת, יד דוחפת",
+        "הברך מעל כף הרגל"
+      ],
+      "clips": [
+        {
+          "id": "tca_brush_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_brush_left_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_brush_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_brush_right_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_brush_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_brush_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_lute",
+      "nameHe": "נגינה בלאוטה",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 6,
+      "kneeLoad": "low",
+      "tips": [
+        "העקב הקדמי על הרצפה",
+        "המשקל אחורה",
+        "המרפקים רכים"
+      ],
+      "clips": [
+        {
+          "id": "tca_lute_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_lute_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_lute_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_lute_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_twist_step",
+      "nameHe": "ליטוף ברך וצעד מסובב",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 7,
+      "kneeLoad": "low-medium",
+      "tips": [
+        "הסיבוב מהגו",
+        "כף הרגל והברך לאותו כיוון",
+        "צעד קטן באלכסון"
+      ],
+      "clips": [
+        {
+          "id": "tca_twist_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_twist_left_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_twist_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_twist_right_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_twist_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_twist_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_block_close",
+      "nameHe": "חסימה וסגירה",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 8,
+      "kneeLoad": "low",
+      "tips": [
+        "המשקל אחורה",
+        "האמות אנכיות מול החזה",
+        "כמו סוגרים דלת"
+      ],
+      "clips": [
+        {
+          "id": "tca_block_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_block_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_block_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_block_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_push_mountain",
+      "nameHe": "דחיפת ההר",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 9,
+      "kneeLoad": "low-medium",
+      "tips": [
+        "המשקל קדימה, הרגל עוקבת",
+        "הדחיפה מהרגליים",
+        "המרפקים לא ננעלים"
+      ],
+      "clips": [
+        {
+          "id": "tca_mountain_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_mountain_front.png",
+          "still": null,
+          "startKeyframe": "outputs/stage3/keyframes/tca_block_front.png"
+        },
+        {
+          "id": "tca_mountain_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_mountain_side.png",
+          "still": null,
+          "startKeyframe": "outputs/stage3/keyframes/tca_block_side.png"
+        }
+      ],
+      "narration": [],
+      "approvedClips": 0
+    },
+    {
+      "id": "tca_wild_horse",
+      "nameHe": "פיצול רעמת הסוס (Sun)",
+      "pinyin": "",
+      "track": "joints",
+      "minWeek": 10,
+      "kneeLoad": "low-medium",
+      "tips": [
+        "צעד עוקב",
+        "יד עולה, יד יורדת",
+        "הגב ישר"
+      ],
+      "clips": [
+        {
+          "id": "tca_horse_left_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_horse_left_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_horse_right_front",
+          "view": "front",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_horse_right_front.png",
+          "still": null
+        },
+        {
+          "id": "tca_horse_side",
+          "view": "side",
+          "method": "keyframe",
+          "durationMs": 4000,
+          "loop": "pingpong",
+          "qa": "pending",
+          "qaNote": "אין רשומת QA",
+          "attempt": 1,
+          "keyframe": "outputs/stage3/keyframes/tca_horse_side.png",
+          "still": null
+        }
+      ],
+      "narration": [],
       "approvedClips": 0
     }
   ],

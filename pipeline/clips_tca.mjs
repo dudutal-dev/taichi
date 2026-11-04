@@ -1,0 +1,45 @@
+// מסלול מפרקים רגישים — תיאורי המעבר (נייטרלי → תמונת-מפתח) ל-27 קליפי Sun. נטען על ידי 02_clips.mjs (ארגומנט: tca).
+const NOFEET = 'The feet never move.';
+const FOLLOWSTEP = (foot) => `She slides the ${foot} foot one small step forward (half a foot length) and then the other foot follows up behind it so the feet end close together; the stance stays short, narrow and tall; knees only softly bent.`;
+const SUN = 'Everything is slow, soft and upright, Sun style: no lunge, no low posture.';
+
+export const KEYFRAME_CLIPS_TCA = {
+  // 1 פתיחה
+  tca_commence_front: { movement: 'tca_commence', view: 'front', text: `${NOFEET} Both arms float slowly forward and up to shoulder height, palms down, elbows soft, as if resting on water. Shoulders stay down. ${SUN}` },
+  tca_commence_side:  { movement: 'tca_commence', view: 'side',  text: `${NOFEET} Both arms float slowly forward and up to shoulder height, palms down, elbows soft. Spine vertical. ${SUN}` },
+  // 2 פתיחה וסגירה
+  tca_open_front:  { movement: 'tca_open_close', view: 'front', text: `${NOFEET} Both hands rise slowly to chest height in front of her, palms turning to face each other, and open gently apart to shoulder width as if holding a large ball; elbows down. ${SUN}` },
+  tca_close_front: { movement: 'tca_open_close', view: 'front', start: 'tca_open_front', text: `${NOFEET} From the open position the two hands drift slowly toward each other until they are a hand-width apart, palms still facing each other, as if gently compressing a ball; elbows soft, shoulders down. Nothing else moves. ${SUN}` },
+  tca_open_side:   { movement: 'tca_open_close', view: 'side',  text: `${NOFEET} Both hands rise slowly to chest height in front of her, palms facing each other, elbows down, and open gently apart. Spine vertical. ${SUN}` },
+  // 3 שוט יחיד
+  tca_single_whip_front: { movement: 'tca_single_whip', view: 'front', text: `${NOFEET} Both hands rise to chest height, palms facing each other, then open slowly outward to the sides until both arms are extended at shoulder height with the palms facing out, as if pushing two walls gently apart. ${SUN}` },
+  tca_single_whip_side:  { movement: 'tca_single_whip', view: 'side',  text: `${NOFEET} Both hands rise to chest height and open slowly outward to the sides until both arms are extended at shoulder height, palms facing out. Spine vertical. ${SUN}` },
+  // 4 ידיים כעננים (Sun)
+  tca_cloud_left_front:  { movement: 'tca_cloud_hands', view: 'front', text: `${NOFEET} The weight shifts slowly onto the left foot while the left hand floats up to face height with the palm facing her face and the right hand drifts down to belly height, palm facing the belly; the torso turns a little to the left and the eyes follow the upper hand. ${SUN}` },
+  tca_cloud_right_front: { movement: 'tca_cloud_hands', view: 'front', text: `${NOFEET} The weight shifts slowly onto the right foot while the right hand floats up to face height with the palm facing her face and the left hand drifts down to belly height, palm facing the belly; the torso turns a little to the right and the eyes follow the upper hand. ${SUN}` },
+  tca_cloud_side:        { movement: 'tca_cloud_hands', view: 'side',  text: `${NOFEET} The weight shifts slowly onto the far foot while the far hand floats up to face height with the palm facing her face and the near hand drifts down to belly height; the torso turns a little away from the camera. Spine vertical. ${SUN}` },
+  // 6 סיום
+  tca_closing_front: { movement: 'tca_closing', view: 'front', text: `${NOFEET} Both hands, starting at chest height with the palms down, sink slowly to the front of the thighs as she breathes out; shoulders soften, face calm. ${SUN}` },
+  tca_closing_side:  { movement: 'tca_closing', view: 'side',  text: `${NOFEET} Both hands sink slowly from chest height to the front of the thighs, palms down, as she breathes out. Spine vertical. ${SUN}` },
+  // 7 ליטוף ברך
+  tca_brush_left_front:  { movement: 'tca_brush_knee', view: 'front', text: `${FOLLOWSTEP('left')} At the same time the left hand sweeps slowly down past the left knee and settles beside the left hip, palm down, while the right palm pushes gently forward at shoulder height. Spine vertical. ${SUN}` },
+  tca_brush_right_front: { movement: 'tca_brush_knee', view: 'front', text: `${FOLLOWSTEP('right')} At the same time the right hand sweeps slowly down past the right knee and settles beside the right hip, palm down, while the left palm pushes gently forward at shoulder height. Spine vertical. ${SUN}` },
+  tca_brush_side:        { movement: 'tca_brush_knee', view: 'side',  text: `${FOLLOWSTEP('front')} At the same time the near hand sweeps slowly down past the knee and settles beside the hip, palm down, while the far palm pushes gently forward at shoulder height. Spine vertical, no leaning. ${SUN}` },
+  // 8 לאוטה
+  tca_lute_front: { movement: 'tca_lute', view: 'front', text: `The weight settles slowly onto the right leg and the left heel slides a little forward and rests on the floor with the toes up. At the same time both hands float up in front of the body, the left further forward at shoulder height and the right nearer at chest height, palms facing each other as if holding a lute. ${SUN}` },
+  tca_lute_side:  { movement: 'tca_lute', view: 'side',  text: `The weight settles slowly onto the back leg and the front heel slides a little forward and rests on the floor with the toes up. Both hands float up in front, one further forward at shoulder height, the other nearer at chest height, palms facing each other. Spine vertical. ${SUN}` },
+  // 9 ליטוף ברך וצעד מסובב
+  tca_twist_left_front:  { movement: 'tca_twist_step', view: 'front', text: `The torso turns slowly forty-five degrees to the left and the left foot steps one small step in that direction, the right foot following up behind it. At the same time the left hand sweeps down past the left knee to beside the hip, palm down, and the right palm pushes gently forward at shoulder height in the direction she now faces. Spine vertical. ${SUN}` },
+  tca_twist_right_front: { movement: 'tca_twist_step', view: 'front', text: `The torso turns slowly forty-five degrees to the right and the right foot steps one small step in that direction, the left foot following up behind it. At the same time the right hand sweeps down past the right knee to beside the hip, palm down, and the left palm pushes gently forward at shoulder height in the direction she now faces. Spine vertical. ${SUN}` },
+  tca_twist_side:        { movement: 'tca_twist_step', view: 'side',  text: `The torso turns slowly forty-five degrees toward the camera and the front foot steps one small step, the other following up. At the same time the near hand sweeps down past the knee to beside the hip and the far palm pushes gently forward at shoulder height. Spine vertical. ${SUN}` },
+  // 10 חסימה וסגירה
+  tca_block_front: { movement: 'tca_block_close', view: 'front', text: `The weight settles slowly back onto the right leg, the left foot a small step in front, while both forearms rise to vertical in front of the chest, shoulder-width apart, palms turning to face forward, elbows down, like calmly closing a door. ${SUN}` },
+  tca_block_side:  { movement: 'tca_block_close', view: 'side',  text: `The weight settles slowly back onto the rear leg, the front foot a small step ahead, while both forearms rise to vertical in front of the chest, palms facing forward, elbows down. Spine vertical. ${SUN}` },
+  // 11 דחיפת ההר
+  tca_mountain_front: { movement: 'tca_push_mountain', view: 'front', start: 'tca_block_front', text: `From the block position the weight moves slowly forward onto the left foot and both palms push gently forward to shoulder height, arms almost straight with soft elbows, as if moving something heavy very slowly; the right foot follows up half a step. Spine vertical, no leaning forward. ${SUN}` },
+  tca_mountain_side:  { movement: 'tca_push_mountain', view: 'side',  start: 'tca_block_side',  text: `From the block position the weight moves slowly forward onto the front foot and both palms push gently forward to shoulder height, elbows soft; the rear foot follows up half a step. Spine vertical, no leaning forward. ${SUN}` },
+  // 12 רעמת הסוס (Sun)
+  tca_horse_left_front:  { movement: 'tca_wild_horse', view: 'front', text: `${FOLLOWSTEP('left')} At the same time the left arm floats diagonally forward and up to shoulder height, palm up, and the right hand sinks beside the right hip, palm down. Spine vertical. ${SUN}` },
+  tca_horse_right_front: { movement: 'tca_wild_horse', view: 'front', text: `${FOLLOWSTEP('right')} At the same time the right arm floats diagonally forward and up to shoulder height, palm up, and the left hand sinks beside the left hip, palm down. Spine vertical. ${SUN}` },
+  tca_horse_side:        { movement: 'tca_wild_horse', view: 'side',  text: `${FOLLOWSTEP('front')} At the same time the far arm floats diagonally forward and up to shoulder height, palm up, and the near hand sinks beside the hip, palm down. Spine vertical. ${SUN}` },
+};

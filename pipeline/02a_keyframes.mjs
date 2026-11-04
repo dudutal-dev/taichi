@@ -5,6 +5,7 @@ import path from 'node:path';
 import { ROOT, config, generate, imageRef, copyTo } from './lib.mjs';
 import { KEYFRAMES_4A } from './keyframes_4a.mjs';
 import { KEYFRAMES_4B } from './keyframes_4b.mjs';
+import { KEYFRAMES_TCA } from './keyframes_tca.mjs';
 
 const OUT = path.join(ROOT, 'outputs', 'stage3', 'keyframes'); fs.mkdirSync(OUT, { recursive: true });
 
@@ -22,7 +23,7 @@ export const KEYFRAMES = {
   weight_shift_front_right: { ref: 'front', pose: 'Pose: basic weight shift, seen from the front. THE FEET DO NOT MOVE: both feet stay exactly where they are in the reference image, parallel, shoulder-width apart, both flat on the floor, same stance width as the reference. Only the pelvis has glided clearly sideways to her right, so the hips are visibly over the right foot and the weight is fully on the right leg; the left leg is light, the left foot still flat on the floor. The torso stays upright and centered over the right leg, the arms hang relaxed at the sides. The head is at the same height as in neutral standing: the hips moved horizontally, the body did not sink.' },
 };
 
-Object.assign(KEYFRAMES, KEYFRAMES_4A, KEYFRAMES_4B);
+Object.assign(KEYFRAMES, KEYFRAMES_4A, KEYFRAMES_4B, KEYFRAMES_TCA);
 
 export function keyframePrompt(k) { return [SAME, KEYFRAMES[k].pose, TALL, END].join(' '); }
 
@@ -37,7 +38,7 @@ export async function makeKeyframe(k) {
 
 if (process.argv[1] && import.meta.filename === path.resolve(process.argv[1])) {
   const arg = process.argv.slice(2);
-  const keys = arg[0] === '4a' ? Object.keys(KEYFRAMES_4A) : arg[0] === '4b' ? Object.keys(KEYFRAMES_4B).filter(k => !['neutral_chair_side', 'seated_front', 'seated_side'].includes(k)) : arg.length ? arg : Object.keys(KEYFRAMES);
+  const keys = arg[0] === '4a' ? Object.keys(KEYFRAMES_4A) : arg[0] === '4b' ? Object.keys(KEYFRAMES_4B).filter(k => !['neutral_chair_side', 'seated_front', 'seated_side'].includes(k)) : arg[0] === 'tca' ? Object.keys(KEYFRAMES_TCA) : arg.length ? arg : Object.keys(KEYFRAMES);
   for (let i = 0; i < keys.length; i += 7) {
     const batch = keys.slice(i, i + 7);
     const res = await Promise.allSettled(batch.map(makeKeyframe));

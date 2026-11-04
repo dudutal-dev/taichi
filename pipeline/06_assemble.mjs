@@ -45,6 +45,18 @@ const MOVEMENTS = {
   bdj_feet:     { nameHe: 'אחיזת כפות הרגליים', pinyin: '', track: 'seated', minWeek: 1, kneeLoad: 'low', tips: ['מהירכיים, הגב ארוך', 'עד איפה שנוח', 'עולים לאט'] },
   bdj_fists:    { nameHe: 'אגרופים ומבט', pinyin: '', track: 'seated', minWeek: 1, kneeLoad: 'low', tips: ['אגרוף רפוי', 'לא לנעול את המרפק', 'העיניים קדימה'] },
   bdj_heels:    { nameHe: 'עליות על העקבים', pinyin: '', track: 'seated', minWeek: 1, kneeLoad: 'low', tips: ['רק הבהונות על הרצפה', 'מורידים ברכות', 'שבע פעמים'] },
+  // מסלול מפרקים רגישים (Tai Chi for Arthritis, סגנון Sun) — הרשימה אושרה 31.10; תוכן ממתין לקרדיטים
+  tca_commence:      { nameHe: 'פתיחה (Sun)', pinyin: '', track: 'joints', minWeek: 1, kneeLoad: 'low', tips: ['רגליים ברוחב הכתפיים', 'הידיים צפות עד הכתפיים', 'הכתפיים למטה'] },
+  tca_open_close:    { nameHe: 'פתיחה וסגירה של הידיים', pinyin: '', track: 'joints', minWeek: 1, kneeLoad: 'low', tips: ['הכפות זו מול זו', 'פותחים לרוחב הכתפיים', 'המרפקים למטה'] },
+  tca_single_whip:   { nameHe: 'שוט יחיד (Sun)', pinyin: '', track: 'joints', minWeek: 2, kneeLoad: 'low', tips: ['שתי הכפות דוחפות הצידה', 'בלי צעד רחב', 'בגובה הכתפיים'] },
+  tca_cloud_hands:   { nameHe: 'ידיים כעננים (Sun)', pinyin: '', track: 'joints', minWeek: 3, kneeLoad: 'low', tips: ['יד בגובה הפנים, יד בגובה הבטן', 'המשקל עובר לפני היד', 'צעד עוקב קטן'] },
+  tca_closing:       { nameHe: 'סיום (Sun)', pinyin: '', track: 'joints', minWeek: 1, kneeLoad: 'low', tips: ['הידיים יורדות בנשיפה', 'הכתפיים משתחררות', 'רגע של שקט'] },
+  tca_brush_knee:    { nameHe: 'ליטוף ברך (Sun)', pinyin: '', track: 'joints', minWeek: 5, kneeLoad: 'low-medium', tips: ['צעד קטן, הרגל השנייה עוקבת', 'יד מלטפת, יד דוחפת', 'הברך מעל כף הרגל'] },
+  tca_lute:          { nameHe: 'נגינה בלאוטה', pinyin: '', track: 'joints', minWeek: 6, kneeLoad: 'low', tips: ['העקב הקדמי על הרצפה', 'המשקל אחורה', 'המרפקים רכים'] },
+  tca_twist_step:    { nameHe: 'ליטוף ברך וצעד מסובב', pinyin: '', track: 'joints', minWeek: 7, kneeLoad: 'low-medium', tips: ['הסיבוב מהגו', 'כף הרגל והברך לאותו כיוון', 'צעד קטן באלכסון'] },
+  tca_block_close:   { nameHe: 'חסימה וסגירה', pinyin: '', track: 'joints', minWeek: 8, kneeLoad: 'low', tips: ['המשקל אחורה', 'האמות אנכיות מול החזה', 'כמו סוגרים דלת'] },
+  tca_push_mountain: { nameHe: 'דחיפת ההר', pinyin: '', track: 'joints', minWeek: 9, kneeLoad: 'low-medium', tips: ['המשקל קדימה, הרגל עוקבת', 'הדחיפה מהרגליים', 'המרפקים לא ננעלים'] },
+  tca_wild_horse:    { nameHe: 'פיצול רעמת הסוס (Sun)', pinyin: '', track: 'joints', minWeek: 10, kneeLoad: 'low-medium', tips: ['צעד עוקב', 'יד עולה, יד יורדת', 'הגב ישר'] },
   weight_shift: { alias: 'opening' },
 };
 

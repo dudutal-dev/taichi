@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { buildSession } from './plan';
+import { buildSession, tcaReady, WEEKS_JOINTS, TCA_MOVEMENTS } from './plan';
 import type { Manifest } from './manifest';
 
 const manifest = JSON.parse(readFileSync(resolve(__dirname, '../../../content/manifest.json'), 'utf8')) as Manifest;
@@ -63,6 +63,33 @@ describe('בונה המפגש', () => {
     const s = buildSession(manifest, 3, { track: 'seated' });
     expect(s.items.filter(i => i.phase === 'warmup')).toHaveLength(0);
     expect(new Set(s.items.filter(i => i.phase === 'core').map(i => i.movementId)).size).toBe(8);
+  });
+});
+
+describe('מסלול מפרקים (TCA, אושר 31.10)', () => {
+  it('בלי תוכן TCA במניפסט: המסלול הראשי בלי תנועות בעומס ברך גבוה', () => {
+    expect(tcaReady(manifest)).toBe(false);
+    const j = buildSession(manifest, 6, { track: 'joints' });
+    expect(j.items.some(i => i.movementId === 'wild_horse' || i.movementId === 'repulse_monkey')).toBe(false);
+    expect(j.items.some(i => i.movementId === 'cloud_hands')).toBe(true);
+    const missing = j.items.flatMap(i => [...i.narration, ...i.narrationEnd]).filter(id => !manifest.narration[id]);
+    expect(missing).toEqual([]);
+  });
+  it('תוכנית 12 השבועות של TCA: כל ההנחיות שהיא מזכירה מוגדרות בתסריט tca.md', () => {
+    const script = readFileSync(resolve(__dirname, '../../../content/scripts/he/tca.md'), 'utf8');
+    const ids = new Set([...script.matchAll(/^id: (\S+) \|/gm)].map(m => m[1]));
+    const ref = new Set<string>();
+    for (const w of WEEKS_JOINTS) { ref.add(`session_open_j${w.week}`); for (const d of w.core) { if (d.intro) ref.add(d.intro); if (d.outro) ref.add(d.outro); for (const u of d.units) { u.cues.forEach(c => ref.add(c)); if (u.sideCue) ref.add(u.sideCue); } } }
+    ref.add('tca_form_intro');
+    expect([...ref].filter(id => !ids.has(id))).toEqual([]);
+    expect(WEEKS_JOINTS).toHaveLength(12);
+    expect(new Set(WEEKS_JOINTS[11]!.core.map(d => d.id)).size).toBe(11); // 12 תנועות, פתיחה-וסגירה פעמיים
+  });
+  it('כל תמונת-מפתח של TCA ב-plan.ts מוגדרת בצנרת (keyframes_tca + clips_tca)', async () => {
+    const kf = readFileSync(resolve(__dirname, '../../../pipeline/keyframes_tca.mjs'), 'utf8');
+    const cl = readFileSync(resolve(__dirname, '../../../pipeline/clips_tca.mjs'), 'utf8');
+    const used = TCA_MOVEMENTS.flatMap(d => d.units.flatMap(u => [u.front, u.side].filter(Boolean) as string[]));
+    expect(used.filter(id => !kf.includes(`${id}:`) || !cl.includes(`${id}:`))).toEqual([]);
   });
 });
 
